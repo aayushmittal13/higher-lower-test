@@ -10,28 +10,35 @@
     *::after {
       box-sizing: border-box;
     }
+    :root {
+      color-scheme: dark;
+    }
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
         sans-serif;
-      background: #050816;
+      background: radial-gradient(circle at top, #1d1b4c, #050816 50%, #020617);
       color: #f9fafb;
+      min-height: 100vh;
     }
     .app {
-      max-width: 960px;
+      min-height: 100vh;
+      max-width: 1200px;
       margin: 0 auto;
       padding: 16px;
+      display: flex;
+      flex-direction: column;
     }
     .header {
       display: flex;
       justify-content: space-between;
       gap: 16px;
       align-items: flex-end;
-      margin-bottom: 12px;
+      margin-bottom: 16px;
     }
     .header h1 {
       margin: 0 0 4px;
-      font-size: 1.6rem;
+      font-size: 1.8rem;
     }
     .subtitle {
       margin: 0;
@@ -43,11 +50,13 @@
       gap: 8px;
     }
     .score-box {
-      background: #111827;
-      padding: 8px 10px;
-      border-radius: 10px;
+      background: rgba(15, 23, 42, 0.9);
+      padding: 8px 12px;
+      border-radius: 12px;
       text-align: center;
-      min-width: 70px;
+      min-width: 80px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      backdrop-filter: blur(8px);
     }
     .score-box span {
       display: block;
@@ -55,110 +64,228 @@
       color: #9ca3af;
     }
     .score-box strong {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
     }
-    .controls {
+    .top-row {
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      gap: 8px;
-      margin-bottom: 16px;
-      flex-wrap: wrap;
+      margin-bottom: 12px;
+      gap: 12px;
     }
-    select {
-      padding: 6px 8px;
-      border-radius: 8px;
-      border: 1px solid #4b5563;
-      background: #020617;
-      color: #f9fafb;
+    .current-category-pill {
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: rgba(15, 23, 42, 0.7);
+      font-size: 0.8rem;
+      color: #e5e7eb;
     }
-    button {
-      cursor: pointer;
-      border: none;
-      font: inherit;
+    .current-category-pill span {
+      color: #9ca3af;
+      margin-right: 4px;
     }
     .secondary {
-      padding: 8px 12px;
+      cursor: pointer;
+      border: none;
+      padding: 8px 14px;
       border-radius: 999px;
-      background: #111827;
+      background: rgba(15, 23, 42, 0.9);
       color: #e5e7eb;
-      border: 1px solid #4b5563;
+      border: 1px solid rgba(148, 163, 184, 0.7);
       font-size: 0.8rem;
     }
-    .primary.wide {
-      width: 100%;
+    .secondary:hover {
+      background: rgba(30, 64, 175, 0.7);
     }
-    .game {
+    .category-screen {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+    }
+    .category-title {
+      font-size: 1.3rem;
+      margin-bottom: 4px;
+    }
+    .category-subtitle {
+      font-size: 0.9rem;
+      color: #9ca3af;
+      margin: 0 0 12px;
+    }
+    .category-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 12px;
-      margin-bottom: 16px;
-      align-items: center;
     }
-    .card {
-      background: radial-gradient(circle at top, #1f2937, #020617);
-      border-radius: 18px;
-      padding: 12px;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
-      border: 1px solid #1f2937;
+    .category-card {
       cursor: pointer;
+      border-radius: 18px;
+      padding: 14px;
+      background: radial-gradient(circle at top left, #1d4ed8, #020617 70%);
+      border: 1px solid rgba(129, 140, 248, 0.4);
+      color: #e5e7eb;
+      box-shadow: 0 14px 40px rgba(15, 23, 42, 0.9);
       transition: transform 0.12s ease, box-shadow 0.12s ease,
         border-color 0.12s ease;
+      position: relative;
+      overflow: hidden;
     }
-    .card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
-      border-color: #22c55e66;
+    .category-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(
+        circle at top right,
+        rgba(251, 191, 36, 0.3),
+        transparent 55%
+      );
+      opacity: 0;
+      transition: opacity 0.15s ease;
     }
-    .card-label {
-      margin: 0 0 6px;
-      font-size: 0.85rem;
-      color: #9ca3af;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
+    .category-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 50px rgba(15, 23, 42, 1);
+      border-color: rgba(251, 191, 36, 0.7);
+    }
+    .category-card:hover::after {
+      opacity: 1;
+    }
+    .category-card-title {
+      font-weight: 600;
+      margin: 0 0 4px;
+      font-size: 1rem;
+    }
+    .category-card-tag {
+      font-size: 0.75rem;
+      color: #d1d5db;
+    }
+    .hidden {
+      display: none !important;
+    }
+    .game-screen {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .game {
+      flex: 1;
+      display: flex;
+      gap: 16px;
+      align-items: stretch;
+      justify-content: center;
+      min-height: 60vh;
+    }
+    .card {
+      flex: 1;
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: 0 24px 60px rgba(15, 23, 42, 1);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: #020617;
+      min-height: 280px;
+      max-height: 520px;
     }
     .card-inner {
-      display: flex;
-      gap: 10px;
-      align-items: center;
+      position: relative;
+      width: 100%;
+      height: 100%;
     }
     .card-image {
-      width: 90px;
-      height: 90px;
-      border-radius: 12px;
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
-      background: #111827;
+      filter: brightness(0.65);
+      transform: scale(1.02);
+    }
+    .card-gradient {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(15, 23, 42, 0.9),
+        rgba(15, 23, 42, 0.2)
+      );
+    }
+    .card-top-label {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #e5e7eb;
     }
     .card-text {
-      flex: 1;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 14px 14px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
     }
     .card-title {
-      margin: 0 0 4px;
-      font-weight: 600;
+      margin: 0;
+      font-weight: 700;
+      font-size: 1.2rem;
     }
     .card-chip {
       display: inline-flex;
-      padding: 2px 8px;
+      padding: 3px 10px;
       border-radius: 999px;
-      background: #0f172a;
-      border: 1px solid #1f2937;
-      font-size: 0.7rem;
-      color: #9ca3af;
-      margin-bottom: 4px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(129, 140, 248, 0.7);
+      font-size: 0.75rem;
+      color: #c7d2fe;
+      margin-bottom: 2px;
     }
     .card-source {
       margin: 0;
-      font-size: 0.75rem;
-      color: #6b7280;
+      font-size: 0.8rem;
+      color: #e5e7eb;
     }
     .card-value {
-      margin: 6px 0 0;
-      font-size: 1rem;
-      font-weight: 600;
+      margin: 8px 0 0;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #fbbf24;
+    }
+    .card-hint {
+      margin: 2px 0 0;
+      font-size: 0.7rem;
+      color: #e5e7eb;
+      opacity: 0.8;
+    }
+    .card.disabled {
+      pointer-events: none;
+      opacity: 0.8;
+    }
+    .card.correct {
+      box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.9),
+        0 24px 60px rgba(22, 101, 52, 0.9);
+    }
+    .card.wrong {
+      box-shadow: 0 0 0 2px rgba(248, 113, 113, 0.9),
+        0 24px 60px rgba(127, 29, 29, 0.9);
     }
     .vs {
-      text-align: center;
-      font-weight: 700;
-      font-size: 1.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.5rem;
       color: #fbbf24;
     }
     .message {
@@ -167,28 +294,26 @@
       color: #e5e7eb;
       min-height: 18px;
     }
-    .hidden {
-      visibility: hidden;
-    }
     .overlay {
       position: fixed;
       inset: 0;
-      background: rgba(15, 23, 42, 0.8);
+      background: rgba(15, 23, 42, 0.9);
       display: flex;
       align-items: center;
       justify-content: center;
+      z-index: 20;
     }
     .overlay.hidden {
       display: none;
     }
     .overlay-box {
-      background: #020617;
+      background: radial-gradient(circle at top, #1f2937, #020617);
       border-radius: 18px;
       padding: 20px;
-      max-width: 320px;
+      max-width: 360px;
       width: 90%;
       box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8);
-      border: 1px solid #1f2937;
+      border: 1px solid rgba(148, 163, 184, 0.7);
       text-align: center;
     }
     .overlay-box h2 {
@@ -198,12 +323,40 @@
       font-size: 0.9rem;
       color: #d1d5db;
     }
-    @media (max-width: 768px) {
+    .primary {
+      cursor: pointer;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: linear-gradient(to right, #22c55e, #16a34a);
+      color: #022c22;
+      font-weight: 600;
+      margin-top: 8px;
+    }
+    .primary:hover {
+      filter: brightness(1.05);
+    }
+    .primary.wide {
+      width: 100%;
+    }
+    @media (max-width: 900px) {
       .game {
-        grid-template-columns: 1fr;
+        flex-direction: column;
       }
       .vs {
         order: -1;
+      }
+      .card {
+        max-height: none;
+        min-height: 260px;
+      }
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .header-right {
+        align-self: stretch;
+        justify-content: flex-start;
       }
     }
   </style>
@@ -214,8 +367,8 @@
       <div>
         <h1>Higher or Lower – India Edition</h1>
         <p class="subtitle">
-          Tap the card you think has the <strong>higher value</strong>
-          (population, GDP, followers, members, etc.).
+          Tap the card you think has the <strong>higher number</strong>
+          (followers, subs, population, etc.).
         </p>
       </div>
       <div class="header-right">
@@ -230,45 +383,63 @@
       </div>
     </header>
 
-    <section class="controls">
-      <label for="categorySelect">Category:</label>
-      <select id="categorySelect">
-        <option value="all">All categories</option>
-      </select>
-      <button id="restartBtn" class="secondary">Restart</button>
+    <div class="top-row">
+      <div id="currentCategoryPill" class="current-category-pill hidden">
+        <span>Category:</span>
+        <strong id="currentCategoryName"></strong>
+      </div>
+      <button id="changeCategoryBtn" class="secondary hidden">
+        Change category
+      </button>
+    </div>
+
+    <section id="categoryScreen" class="category-screen">
+      <div>
+        <p class="category-title">Choose a category to start playing</p>
+        <p class="category-subtitle">
+          You’ll only compare items within that category. Tap to begin.
+        </p>
+      </div>
+      <div id="categoryGrid" class="category-grid"></div>
     </section>
 
-    <main class="game">
-      <div class="card card-current">
-        <h2 class="card-label">Left</h2>
-        <div class="card-inner">
-          <img id="currentImage" class="card-image" alt="">
-          <div class="card-text">
-            <p id="currentName" class="card-title"></p>
-            <p id="currentCategory" class="card-chip"></p>
-            <p id="currentSource" class="card-source"></p>
-            <p id="currentValue" class="card-value hidden"></p>
+    <section id="gameScreen" class="game-screen hidden">
+      <main class="game">
+        <div class="card card-current">
+          <div class="card-inner">
+            <img id="currentImage" class="card-image" alt="">
+            <div class="card-gradient"></div>
+            <div class="card-top-label">Left</div>
+            <div class="card-text">
+              <p id="currentName" class="card-title"></p>
+              <p id="currentCategory" class="card-chip"></p>
+              <p id="currentSource" class="card-source"></p>
+              <p id="currentValue" class="card-value hidden"></p>
+              <p class="card-hint">Tap the card you think is higher.</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="vs">VS</div>
+        <div class="vs">VS</div>
 
-      <div class="card card-next">
-        <h2 class="card-label">Right</h2>
-        <div class="card-inner">
-          <img id="nextImage" class="card-image" alt="">
-          <div class="card-text">
-            <p id="nextName" class="card-title"></p>
-            <p id="nextCategory" class="card-chip"></p>
-            <p id="nextSource" class="card-source"></p>
-            <p id="nextValue" class="card-value hidden"></p>
+        <div class="card card-next">
+          <div class="card-inner">
+            <img id="nextImage" class="card-image" alt="">
+            <div class="card-gradient"></div>
+            <div class="card-top-label">Right</div>
+            <div class="card-text">
+              <p id="nextName" class="card-title"></p>
+              <p id="nextCategory" class="card-chip"></p>
+              <p id="nextSource" class="card-source"></p>
+              <p id="nextValue" class="card-value hidden"></p>
+              <p class="card-hint">Tap the card you think is higher.</p>
+            </div>
           </div>
         </div>
-      </div>
-    </main>
+      </main>
 
-    <section id="message" class="message"></section>
+      <section id="message" class="message"></section>
+    </section>
 
     <div id="overlay" class="overlay hidden">
       <div class="overlay-box">
@@ -280,110 +451,123 @@
   </div>
 
   <script>
-    // --- DATA: seed list with example values ---
     const ITEMS = [
       {
         category: "Instagram",
         name: "Mr Faisu",
         value: 30900000,
         source: "Instagram followers (approx)",
-        image_url: "https://images.unsplash.com/photo-1525130413817-d45c1d127c42?auto=format&fit=crop&w=400&q=80"
+        image_url:
+          "https://images.unsplash.com/photo-1525130413817-d45c1d127c42?auto=format&fit=crop&w=900&q=80"
       },
       {
         category: "Instagram",
         name: "Anushka Sen",
         value: 39000000,
         source: "Instagram followers (approx)",
-        image_url: "https://images.unsplash.com/photo-1531747056595-07f6cbbe10ad?auto=format&fit=crop&w=400&q=80"
+        image_url:
+          "https://images.unsplash.com/photo-1531747056595-07f6cbbe10ad?auto=format&fit=crop&w=900&q=80"
       },
       {
         category: "Instagram",
         name: "Awez Darbar",
         value: 31000000,
         source: "Instagram followers (approx)",
-        image_url: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80"
+        image_url:
+          "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80"
       },
       {
         category: "YouTube",
         name: "Triggered Insaan",
         value: 25000000,
         source: "YouTube subs (approx)",
-        image_url: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=400&q=80"
+        image_url:
+          "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80"
       },
       {
         category: "YouTube",
         name: "Harsh Beniwal",
         value: 16000000,
         source: "YouTube subs (approx)",
-        image_url: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80"
+        image_url:
+          "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80"
       },
       {
         category: "YouTube",
         name: "Village Cooking Channel",
         value: 20900000,
         source: "YouTube subs (approx)",
-        image_url: "https://images.unsplash.com/photo-1528715471579-d1bcf0ba5e83?auto=format&fit=crop&w=400&q=80"
+        image_url:
+          "https://images.unsplash.com/photo-1528715471579-d1bcf0ba5e83?auto=format&fit=crop&w=900&q=80"
       },
       {
         category: "Subreddit",
         name: "r/india",
         value: 1900000,
         source: "Reddit members (approx)",
-        image_url: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=80"
+        image_url:
+          "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80"
       },
       {
         category: "Subreddit",
         name: "r/bangalore",
         value: 390000,
         source: "Reddit members (approx)",
-        image_url: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=80"
+        image_url:
+          "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80"
       },
       {
         category: "Subreddit",
         name: "r/IndianGaming",
         value: 640000,
         source: "Reddit members (approx)",
-        image_url: "https://images.unsplash.com/photo-1589241062272-c0a000072efd?auto=format&fit=crop&w=400&q=80"
+        image_url:
+          "https://images.unsplash.com/photo-1589241062272-c0a000072efd?auto=format&fit=crop&w=900&q=80"
       },
       {
         category: "Population",
         name: "Mumbai",
         value: 20141000,
         source: "Population (approx)",
-        image_url: "https://images.unsplash.com/photo-1587474260584-13657452865d?auto=format&fit=crop&w=400&q=80"
+        image_url:
+          "https://images.unsplash.com/photo-1587474260584-13657452865d?auto=format&fit=crop&w=900&q=80"
       },
       {
         category: "Population",
         name: "Delhi",
         value: 32900000,
         source: "Population (approx)",
-        image_url: "https://images.unsplash.com/photo-1596162954151-38b9aba5676e?auto=format&fit=crop&w=400&q=80"
+        image_url:
+          "https://images.unsplash.com/photo-1596162954151-38b9aba5676e?auto=format&fit=crop&w=900&q=80"
       },
       {
         category: "Population",
         name: "Bangalore",
         value: 12340000,
         source: "Population (approx)",
-        image_url: "https://images.unsplash.com/photo-1533107862482-0e6974b06ec4?auto=format&fit=crop&w=400&q=80"
+        image_url:
+          "https://images.unsplash.com/photo-1533107862482-0e6974b06ec4?auto=format&fit=crop&w=900&q=80"
       },
       {
         category: "GDP (State)",
         name: "Maharashtra",
         value: 327600000000,
         source: "GDP (approx)",
-        image_url: "https://images.unsplash.com/photo-1558432904-6c1fca220b9b?auto=format&fit=crop&w=400&q=80"
+        image_url:
+          "https://images.unsplash.com/photo-1558432904-6c1fca220b9b?auto=format&fit=crop&w=900&q=80"
       },
       {
         category: "GDP (State)",
         name: "Tamil Nadu",
         value: 183200000000,
         source: "GDP (approx)",
-        image_url: "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=400&q=80"
+        image_url:
+          "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=900&q=80"
       }
     ];
 
     const PLACEHOLDER_IMAGE =
-      "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=400&q=80";
+      "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&q=80";
 
     let filteredItems = [];
     let leftItem = null;
@@ -391,15 +575,26 @@
     let score = 0;
     let highScore = 0;
     let isLocked = false;
+    let currentCategory = null;
+    let revealTimeoutId = null;
 
     const scoreEl = document.getElementById("score");
     const highScoreEl = document.getElementById("highScore");
-    const categorySelect = document.getElementById("categorySelect");
-    const restartBtn = document.getElementById("restartBtn");
     const messageEl = document.getElementById("message");
     const overlay = document.getElementById("overlay");
     const overlayText = document.getElementById("overlayText");
     const playAgainBtn = document.getElementById("playAgainBtn");
+    const categoryScreen = document.getElementById("categoryScreen");
+    const gameScreen = document.getElementById("gameScreen");
+    const categoryGrid = document.getElementById("categoryGrid");
+    const currentCategoryPill = document.getElementById(
+      "currentCategoryPill"
+    );
+    const currentCategoryNameEl = document.getElementById(
+      "currentCategoryName"
+    );
+    const changeCategoryBtn = document.getElementById("changeCategoryBtn");
+    const restartBtn = document.getElementById("restartBtn");
 
     const leftCard = document.querySelector(".card-current");
     const rightCard = document.querySelector(".card-next");
@@ -476,16 +671,19 @@
     }
 
     function setCategoryFilter(cat) {
-      if (cat === "all") {
-        filteredItems = [...ITEMS];
-      } else {
-        filteredItems = ITEMS.filter((it) => it.category === cat);
-      }
+      filteredItems = ITEMS.filter((it) => it.category === cat);
     }
 
     function startRound() {
+      if (revealTimeoutId) {
+        clearTimeout(revealTimeoutId);
+        revealTimeoutId = null;
+      }
+
       currentValueEl.classList.add("hidden");
       nextValueEl.classList.add("hidden");
+      leftCard.classList.remove("correct", "wrong", "disabled");
+      rightCard.classList.remove("correct", "wrong", "disabled");
 
       if (filteredItems.length < 2) {
         showMessage("Not enough items for this category.");
@@ -504,16 +702,30 @@
       isLocked = false;
     }
 
-    function startGame() {
+    function startGameForCategory(cat) {
+      currentCategory = cat;
+      currentCategoryNameEl.textContent = cat;
+      currentCategoryPill.classList.remove("hidden");
+      changeCategoryBtn.classList.remove("hidden");
+
+      categoryScreen.classList.add("hidden");
+      gameScreen.classList.remove("hidden");
+
       score = 0;
       scoreEl.textContent = "0";
       overlay.classList.add("hidden");
-      setCategoryFilter(categorySelect.value);
+
+      setCategoryFilter(cat);
+      if (filteredItems.length < 2) {
+        showMessage("Not enough items in this category yet.");
+        return;
+      }
       startRound();
     }
 
     function endGame() {
       overlay.classList.remove("hidden");
+      document.getElementById("overlayTitle").textContent = "Game Over";
       overlayText.textContent = `Final score: ${score}`;
     }
 
@@ -523,42 +735,86 @@
 
       currentValueEl.classList.remove("hidden");
       nextValueEl.classList.remove("hidden");
+      leftCard.classList.add("disabled");
+      rightCard.classList.add("disabled");
 
       const chosen = chosenSide === "left" ? leftItem : rightItem;
       const other = chosenSide === "left" ? rightItem : leftItem;
 
+      const chosenCard = chosenSide === "left" ? leftCard : rightCard;
+      const otherCard = chosenSide === "left" ? rightCard : leftCard;
+
       const correct = chosen.value > other.value;
 
       if (correct) {
-        showMessage("✅ Correct! Next round…");
+        chosenCard.classList.add("correct");
+        showMessage("✅ Correct! New pair coming…");
         updateScore(1);
-        setTimeout(() => {
-          startRound();
-        }, 700);
       } else {
+        chosenCard.classList.add("wrong");
+        otherCard.classList.add("correct");
         showMessage("❌ Wrong guess.");
-        setTimeout(() => endGame(), 600);
       }
+
+      // 10 seconds before moving on
+      revealTimeoutId = setTimeout(() => {
+        if (correct) {
+          startRound();
+        } else {
+          endGame();
+        }
+      }, 10000);
     }
 
     leftCard.addEventListener("click", () => handleGuess("left"));
     rightCard.addEventListener("click", () => handleGuess("right"));
-    restartBtn.addEventListener("click", startGame);
-    playAgainBtn.addEventListener("click", startGame);
-    categorySelect.addEventListener("change", startGame);
+
+    playAgainBtn.addEventListener("click", () => {
+      overlay.classList.add("hidden");
+      if (currentCategory) {
+        startGameForCategory(currentCategory);
+      } else {
+        categoryScreen.classList.remove("hidden");
+        gameScreen.classList.add("hidden");
+      }
+    });
+
+    changeCategoryBtn.addEventListener("click", () => {
+      overlay.classList.add("hidden");
+      gameScreen.classList.add("hidden");
+      categoryScreen.classList.remove("hidden");
+      currentCategory = null;
+      currentCategoryPill.classList.remove("hidden");
+    });
+
+    restartBtn.addEventListener("click", () => {
+      if (!currentCategory) return;
+      startGameForCategory(currentCategory);
+    });
+
+    function initCategories() {
+      const uniqueCats = Array.from(
+        new Set(ITEMS.map((i) => i.category))
+      ).sort();
+
+      categoryGrid.innerHTML = "";
+      uniqueCats.forEach((cat) => {
+        const card = document.createElement("div");
+        card.className = "category-card";
+        card.innerHTML = `
+          <p class="category-card-title">${cat}</p>
+          <p class="category-card-tag">${
+            ITEMS.filter((i) => i.category === cat).length
+          } items, tap to play</p>
+        `;
+        card.addEventListener("click", () => startGameForCategory(cat));
+        categoryGrid.appendChild(card);
+      });
+    }
 
     function init() {
       loadHighScore();
-
-      const cats = Array.from(new Set(ITEMS.map((it) => it.category))).sort();
-      for (const cat of cats) {
-        const opt = document.createElement("option");
-        opt.value = cat;
-        opt.textContent = cat;
-        categorySelect.appendChild(opt);
-      }
-
-      startGame();
+      initCategories();
     }
 
     init();
