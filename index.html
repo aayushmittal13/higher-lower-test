@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Higher or Lower – India Edition</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: #050816;
+      color: #f9fafb;
+    }
+    .app {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: flex-end;
+      margin-bottom: 12px;
+    }
+    .header h1 {
+      margin: 0 0 4px;
+      font-size: 1.6rem;
+    }
+    .subtitle {
+      margin: 0;
+      color: #9ca3af;
+      font-size: 0.9rem;
+    }
+    .header-right {
+      display: flex;
+      gap: 8px;
+    }
+    .score-box {
+      background: #111827;
+      padding: 8px 10px;
+      border-radius: 10px;
+      text-align: center;
+      min-width: 70px;
+    }
+    .score-box span {
+      display: block;
+      font-size: 0.7rem;
+      color: #9ca3af;
+    }
+    .score-box strong {
+      font-size: 1.2rem;
+    }
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    select {
+      padding: 6px 8px;
+      border-radius: 8px;
+      border: 1px solid #4b5563;
+      background: #020617;
+      color: #f9fafb;
+    }
+    button {
+      cursor: pointer;
+      border: none;
+      font: inherit;
+    }
+    .primary {
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: #22c55e;
+      color: #022c22;
+      font-weight: 600;
+    }
+    .primary.ghost {
+      background: transparent;
+      color: #22c55e;
+      border: 1px solid #22c55e;
+    }
+    .secondary {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: #111827;
+      color: #e5e7eb;
+      border: 1px solid #4b5563;
+      font-size: 0.8rem;
+    }
+    .primary.wide {
+      width: 100%;
+    }
+    .game {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-bottom: 16px;
+      align-items: center;
+    }
+    .card {
+      background: radial-gradient(circle at top, #1f2937, #020617);
+      border-radius: 18px;
+      padding: 12px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+      border: 1px solid #1f2937;
+    }
+    .card-label {
+      margin: 0 0 6px;
+      font-size: 0.85rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .card-inner {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .card-image {
+      width: 90px;
+      height: 90px;
+      border-radius: 12px;
+      object-fit: cover;
+      background: #111827;
+    }
+    .card-text {
+      flex: 1;
+    }
+    .card-title {
+      margin: 0 0 4px;
+      font-weight: 600;
+    }
+    .card-chip {
+      display: inline-flex;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: #0f172a;
+      border: 1px solid #1f2937;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      margin-bottom: 4px;
+    }
+    .card-source {
+      margin: 0;
+      font-size: 0.75rem;
+      color: #6b7280;
+    }
+    .card-value {
+      margin: 6px 0 0;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .vs {
+      text-align: center;
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: #fbbf24;
+    }
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .message {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #e5e7eb;
+      min-height: 18px;
+    }
+    .hidden {
+      visibility: hidden;
+    }
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .overlay.hidden {
+      display: none;
+    }
+    .overlay-box {
+      background: #020617;
+      border-radius: 18px;
+      padding: 20px;
+      max-width: 320px;
+      width: 90%;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8);
+      border: 1px solid #1f2937;
+      text-align: center;
+    }
+    .overlay-box h2 {
+      margin-top: 0;
+    }
+    .overlay-box p {
+      font-size: 0.9rem;
+      color: #d1d5db;
+    }
+    @media (max-width: 768px) {
+      .game {
+        grid-template-columns: 1fr;
+      }
+      .vs {
+        order: -1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div>
+        <h1>Higher or Lower – India Edition</h1>
+        <p class="subtitle">
+          Guess which has the <strong>higher number</strong> based on the value (population, GDP, followers, etc.).
+        </p>
+      </div>
+      <div class="header-right">
+        <div class="score-box">
+          <span>Score</span>
+          <strong id="score">0</strong>
+        </div>
+        <div class="score-box">
+          <span>Best</span>
+          <strong id="highScore">0</strong>
+        </div>
+      </div>
+    </header>
+
+    <section class="controls">
+      <label for="categorySelect">Category:</label>
+      <select id="categorySelect">
+        <option value="all">All categories</option>
+      </select>
+      <button id="restartBtn" class="secondary">Restart</button>
+    </section>
+
+    <main class="game">
+      <div class="card card-current">
+        <h2 class="card-label">Current</h2>
+        <div class="card-inner">
+          <img id="currentImage" class="card-image" alt="">
+          <div class="card-text">
+            <p id="currentName" class="card-title"></p>
+            <p id="currentCategory" class="card-chip"></p>
+            <p id="currentSource" class="card-source"></p>
+            <p id="currentValue" class="card-value"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="vs">VS</div>
+
+      <div class="card card-next">
+        <h2 class="card-label">Next</h2>
+        <div class="card-inner">
+          <img id="nextImage" class="card-image" alt="">
+          <div class="card-text">
+            <p id="nextName" class="card-title"></p>
+            <p id="nextCategory" class="card-chip"></p>
+            <p id="nextSource" class="card-source"></p>
+            <p id="nextValue" class="card-value hidden"></p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <section class="buttons">
+      <button id="higherBtn" class="primary">Higher ↑</button>
+      <button id="lowerBtn" class="primary ghost">Lower ↓</button>
+    </section>
+
+    <section id="message" class="message"></section>
+
+    <div id="overlay" class="overlay hidden">
+      <div class="overlay-box">
+        <h2 id="overlayTitle">Game Over</h2>
+        <p id="overlayText"></p>
+        <button id="playAgainBtn" class="primary wide">Play Again</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // --- DATA: seed list with REAL-ish values ---
+    const ITEMS = [
+      {
+        category: "Population",
+        name: "Mumbai",
+        value: 20141000,
+        source: "Census (approx)",
+        image_url: "https://images.unsplash.com/photo-1587474260584-13657452865d?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        category: "Population",
+        name: "Delhi",
+        value: 32900000,
+        source: "Census (approx)",
+        image_url: "https://images.unsplash.com/photo-1596162954151-38b9aba5676e?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        category: "Population",
+        name: "Bangalore",
+        value: 12340000,
+        source: "Census (approx)",
+        image_url: "https://images.unsplash.com/photo-1533107862482-0e6974b06ec4?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        category: "Population",
+        name: "Kolkata",
+        value: 14850000,
+        source: "Census (approx)",
+        image_url: "https://images.unsplash.com/photo-1587474308963-3e4baf58ff59?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        category: "GDP (State)",
+        name: "Maharashtra",
+        value: 327600000000,
+        source: "Economic Survey (approx)",
+        image_url: "https://images.unsplash.com/photo-1558432904-6c1fca220b9b?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        category: "GDP (State)",
+        name: "Tamil Nadu",
+        value: 183200000000,
+        source: "Economic Survey (approx)",
+        image_url: "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        category: "GDP (State)",
+        name: "Karnataka",
+        value: 160400000000,
+        source: "Economic Survey (approx)",
+        image_url: "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        category: "YouTube",
+        name: "Triggered Insaan",
+        value: 25000000,
+        source: "YouTube subs (approx)",
+        image_url: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        category: "YouTube",
+        name: "Harsh Beniwal",
+        value: 16000000,
+        source: "YouTube subs (approx)",
+        image_url: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        category: "YouTube",
+        name: "Village Cooking Channel",
+        value: 20900000,
+        source: "YouTube subs (approx)",
+        image_url: "https://images.unsplash.com/photo-1528715471579-d1bcf0ba5e83?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        category: "Instagram",
+        name: "Mr Faisu",
+        value: 30900000,
+        source: "Instagram followers (approx)",
+        image_url: "https://images.unsplash.com/photo-1525130413817-d45c1d127c42?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        category: "Instagram",
+        name: "Anushka Sen",
+        value: 39000000,
+        source: "Instagram followers (approx)",
+        image_url: "https://images.unsplash.com/photo-1531747056595-07f6cbbe10ad?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        category: "Instagram",
+        name: "Awez Darbar",
+        value: 31000000,
+        source: "Instagram followers (approx)",
+        image_url: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        category: "Subreddit",
+        name: "r/india",
+        value: 1900000,
+        source: "Reddit members (approx)",
+        image_url: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        category: "Subreddit",
+        name: "r/bangalore",
+        value: 390000,
+        source: "Reddit members (approx)",
+        image_url: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        category: "Subreddit",
+        name: "r/IndianGaming",
+        value: 640000,
+        source: "Reddit members (approx)",
+        image_url: "https://images.unsplash.com/photo-1589241062272-c0a000072efd?auto=format&fit=crop&w=400&q=80"
+      }
+    ];
+
+    const PLACEHOLDER_IMAGE =
+      "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=400&q=80";
+
+    let filteredItems = [];
+    let current = null;
+    let nextItem = null;
+    let score = 0;
+    let highScore = 0;
+
+    const scoreEl = document.getElementById("score");
+    const highScoreEl = document.getElementById("highScore");
+    const categorySelect = document.getElementById("categorySelect");
+    const restartBtn = document.getElementById("restartBtn");
+    const higherBtn = document.getElementById("higherBtn");
+    const lowerBtn = document.getElementById("lowerBtn");
+    const messageEl = document.getElementById("message");
+    const overlay = document.getElementById("overlay");
+    const overlayTitle = document.getElementById("overlayTitle");
+    const overlayText = document.getElementById("overlayText");
+    const playAgainBtn = document.getElementById("playAgainBtn");
+
+    const currentNameEl = document.getElementById("currentName");
+    const currentCategoryEl = document.getElementById("currentCategory");
+    const currentSourceEl = document.getElementById("currentSource");
+    const currentValueEl = document.getElementById("currentValue");
+    const currentImageEl = document.getElementById("currentImage");
+
+    const nextNameEl = document.getElementById("nextName");
+    const nextCategoryEl = document.getElementById("nextCategory");
+    const nextSourceEl = document.getElementById("nextSource");
+    const nextValueEl = document.getElementById("nextValue");
+    const nextImageEl = document.getElementById("nextImage");
+
+    function formatNumber(n) {
+      if (n >= 1_000_000_000) return (n / 1_000_000_000).toFixed(1) + "B";
+      if (n >= 1_000_000) return (n / 1_000_000).toFixed(1) + "M";
+      if (n >= 1_000) return (n / 1_000).toFixed(1) + "K";
+      return n.toString();
+    }
+
+    function showMessage(text) {
+      messageEl.textContent = text;
+    }
+
+    function loadHighScore() {
+      const stored = localStorage.getItem("india_hl_high_score");
+      if (stored) {
+        highScore = parseInt(stored, 10) || 0;
+        highScoreEl.textContent = highScore;
+      }
+    }
+
+    function saveHighScore() {
+      localStorage.setItem("india_hl_high_score", String(highScore));
+    }
+
+    function pickRandom(excludeName = null) {
+      if (!filteredItems.length) return null;
+      let candidates = filteredItems;
+      if (excludeName) {
+        candidates = filteredItems.filter((it) => it.name !== excludeName);
+      }
+      if (!candidates.length) return null;
+      const idx = Math.floor(Math.random() * candidates.length);
+      return candidates[idx];
+    }
+
+    function renderCard(item, prefix) {
+      const nameEl = prefix === "current" ? currentNameEl : nextNameEl;
+      const catEl = prefix === "current" ? currentCategoryEl : nextCategoryEl;
+      const srcEl = prefix === "current" ? currentSourceEl : nextSourceEl;
+      const valueEl = prefix === "current" ? currentValueEl : nextValueEl;
+      const imgEl = prefix === "current" ? currentImageEl : nextImageEl;
+
+      nameEl.textContent = item.name;
+      catEl.textContent = item.category;
+      srcEl.textContent = item.source || "";
+      valueEl.textContent = formatNumber(item.value);
+      imgEl.src = item.image_url || PLACEHOLDER_IMAGE;
+      imgEl.alt = item.name;
+    }
+
+    function updateScore(delta) {
+      score += delta;
+      scoreEl.textContent = score;
+      if (score > highScore) {
+        highScore = score;
+        highScoreEl.textContent = highScore;
+        saveHighScore();
+      }
+    }
+
+    function setCategoryFilter(cat) {
+      if (cat === "all") {
+        filteredItems = [...ITEMS];
+      } else {
+        filteredItems = ITEMS.filter((it) => it.category === cat);
+      }
+    }
+
+    function startGame() {
+      score = 0;
+      scoreEl.textContent = "0";
+      showMessage("Make your guess!");
+      overlay.classList.add("hidden");
+      nextValueEl.classList.add("hidden");
+
+      setCategoryFilter(categorySelect.value);
+
+      if (filteredItems.length < 2) {
+        showMessage("Not enough items for this category.");
+        return;
+      }
+
+      current = pickRandom();
+      nextItem = pickRandom(current.name);
+
+      renderCard(current, "current");
+      renderCard(nextItem, "next");
+      nextValueEl.classList.add("hidden");
+    }
+
+    function endGame() {
+      overlay.classList.remove("hidden");
+      overlayTitle.textContent = "Game Over";
+      overlayText.textContent = `Final score: ${score}`;
+    }
+
+    function handleGuess(direction) {
+      if (!current || !nextItem) return;
+
+      nextValueEl.classList.remove("hidden");
+
+      const isHigher = nextItem.value > current.value;
+      const userThinksHigher = direction === "higher";
+      const correct =
+        (isHigher && userThinksHigher) || (!isHigher && !userThinksHigher);
+
+      if (correct) {
+        showMessage("✅ Correct! Next round…");
+        updateScore(1);
+
+        setTimeout(() => {
+          current = nextItem;
+          nextItem = pickRandom(current.name);
+          if (!nextItem) {
+            endGame();
+            return;
+          }
+          renderCard(current, "current");
+          renderCard(nextItem, "next");
+          nextValueEl.classList.add("hidden");
+          showMessage("Make your guess!");
+        }, 700);
+      } else {
+        showMessage("❌ Wrong guess.");
+        endGame();
+      }
+    }
+
+    higherBtn.addEventListener("click", () => handleGuess("higher"));
+    lowerBtn.addEventListener("click", () => handleGuess("lower"));
+    restartBtn.addEventListener("click", startGame);
+    playAgainBtn.addEventListener("click", startGame);
+    categorySelect.addEventListener("change", startGame);
+
+    function init() {
+      loadHighScore();
+      showMessage("Loading data…");
+
+      const cats = Array.from(new Set(ITEMS.map((it) => it.category))).sort();
+      for (const cat of cats) {
+        const opt = document.createElement("option");
+        opt.value = cat;
+        opt.textContent = cat;
+        categorySelect.appendChild(opt);
+      }
+
+      startGame();
+    }
+
+    init();
+  </script>
+</body>
+</html>
