@@ -76,18 +76,6 @@
       border: none;
       font: inherit;
     }
-    .primary {
-      padding: 10px 18px;
-      border-radius: 999px;
-      background: #22c55e;
-      color: #022c22;
-      font-weight: 600;
-    }
-    .primary.ghost {
-      background: transparent;
-      color: #22c55e;
-      border: 1px solid #22c55e;
-    }
     .secondary {
       padding: 8px 12px;
       border-radius: 999px;
@@ -112,6 +100,14 @@
       padding: 12px;
       box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
       border: 1px solid #1f2937;
+      cursor: pointer;
+      transition: transform 0.12s ease, box-shadow 0.12s ease,
+        border-color 0.12s ease;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+      border-color: #22c55e66;
     }
     .card-label {
       margin: 0 0 6px;
@@ -164,12 +160,6 @@
       font-weight: 700;
       font-size: 1.3rem;
       color: #fbbf24;
-    }
-    .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      margin-bottom: 12px;
     }
     .message {
       text-align: center;
@@ -224,7 +214,8 @@
       <div>
         <h1>Higher or Lower – India Edition</h1>
         <p class="subtitle">
-          Guess which has the <strong>higher number</strong> based on the value (population, GDP, followers, etc.).
+          Tap the card you think has the <strong>higher value</strong>
+          (population, GDP, followers, members, etc.).
         </p>
       </div>
       <div class="header-right">
@@ -249,14 +240,14 @@
 
     <main class="game">
       <div class="card card-current">
-        <h2 class="card-label">Current</h2>
+        <h2 class="card-label">Left</h2>
         <div class="card-inner">
           <img id="currentImage" class="card-image" alt="">
           <div class="card-text">
             <p id="currentName" class="card-title"></p>
             <p id="currentCategory" class="card-chip"></p>
             <p id="currentSource" class="card-source"></p>
-            <p id="currentValue" class="card-value"></p>
+            <p id="currentValue" class="card-value hidden"></p>
           </div>
         </div>
       </div>
@@ -264,7 +255,7 @@
       <div class="vs">VS</div>
 
       <div class="card card-next">
-        <h2 class="card-label">Next</h2>
+        <h2 class="card-label">Right</h2>
         <div class="card-inner">
           <img id="nextImage" class="card-image" alt="">
           <div class="card-text">
@@ -276,11 +267,6 @@
         </div>
       </div>
     </main>
-
-    <section class="buttons">
-      <button id="higherBtn" class="primary">Higher ↑</button>
-      <button id="lowerBtn" class="primary ghost">Lower ↓</button>
-    </section>
 
     <section id="message" class="message"></section>
 
@@ -294,56 +280,28 @@
   </div>
 
   <script>
-    // --- DATA: seed list with REAL-ish values ---
+    // --- DATA: seed list with example values ---
     const ITEMS = [
       {
-        category: "Population",
-        name: "Mumbai",
-        value: 20141000,
-        source: "Census (approx)",
-        image_url: "https://images.unsplash.com/photo-1587474260584-13657452865d?auto=format&fit=crop&w=400&q=80"
+        category: "Instagram",
+        name: "Mr Faisu",
+        value: 30900000,
+        source: "Instagram followers (approx)",
+        image_url: "https://images.unsplash.com/photo-1525130413817-d45c1d127c42?auto=format&fit=crop&w=400&q=80"
       },
       {
-        category: "Population",
-        name: "Delhi",
-        value: 32900000,
-        source: "Census (approx)",
-        image_url: "https://images.unsplash.com/photo-1596162954151-38b9aba5676e?auto=format&fit=crop&w=400&q=80"
+        category: "Instagram",
+        name: "Anushka Sen",
+        value: 39000000,
+        source: "Instagram followers (approx)",
+        image_url: "https://images.unsplash.com/photo-1531747056595-07f6cbbe10ad?auto=format&fit=crop&w=400&q=80"
       },
       {
-        category: "Population",
-        name: "Bangalore",
-        value: 12340000,
-        source: "Census (approx)",
-        image_url: "https://images.unsplash.com/photo-1533107862482-0e6974b06ec4?auto=format&fit=crop&w=400&q=80"
-      },
-      {
-        category: "Population",
-        name: "Kolkata",
-        value: 14850000,
-        source: "Census (approx)",
-        image_url: "https://images.unsplash.com/photo-1587474308963-3e4baf58ff59?auto=format&fit=crop&w=400&q=80"
-      },
-      {
-        category: "GDP (State)",
-        name: "Maharashtra",
-        value: 327600000000,
-        source: "Economic Survey (approx)",
-        image_url: "https://images.unsplash.com/photo-1558432904-6c1fca220b9b?auto=format&fit=crop&w=400&q=80"
-      },
-      {
-        category: "GDP (State)",
-        name: "Tamil Nadu",
-        value: 183200000000,
-        source: "Economic Survey (approx)",
-        image_url: "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=400&q=80"
-      },
-      {
-        category: "GDP (State)",
-        name: "Karnataka",
-        value: 160400000000,
-        source: "Economic Survey (approx)",
-        image_url: "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=400&q=80"
+        category: "Instagram",
+        name: "Awez Darbar",
+        value: 31000000,
+        source: "Instagram followers (approx)",
+        image_url: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80"
       },
       {
         category: "YouTube",
@@ -367,27 +325,6 @@
         image_url: "https://images.unsplash.com/photo-1528715471579-d1bcf0ba5e83?auto=format&fit=crop&w=400&q=80"
       },
       {
-        category: "Instagram",
-        name: "Mr Faisu",
-        value: 30900000,
-        source: "Instagram followers (approx)",
-        image_url: "https://images.unsplash.com/photo-1525130413817-d45c1d127c42?auto=format&fit=crop&w=400&q=80"
-      },
-      {
-        category: "Instagram",
-        name: "Anushka Sen",
-        value: 39000000,
-        source: "Instagram followers (approx)",
-        image_url: "https://images.unsplash.com/photo-1531747056595-07f6cbbe10ad?auto=format&fit=crop&w=400&q=80"
-      },
-      {
-        category: "Instagram",
-        name: "Awez Darbar",
-        value: 31000000,
-        source: "Instagram followers (approx)",
-        image_url: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80"
-      },
-      {
         category: "Subreddit",
         name: "r/india",
         value: 1900000,
@@ -407,6 +344,41 @@
         value: 640000,
         source: "Reddit members (approx)",
         image_url: "https://images.unsplash.com/photo-1589241062272-c0a000072efd?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        category: "Population",
+        name: "Mumbai",
+        value: 20141000,
+        source: "Population (approx)",
+        image_url: "https://images.unsplash.com/photo-1587474260584-13657452865d?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        category: "Population",
+        name: "Delhi",
+        value: 32900000,
+        source: "Population (approx)",
+        image_url: "https://images.unsplash.com/photo-1596162954151-38b9aba5676e?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        category: "Population",
+        name: "Bangalore",
+        value: 12340000,
+        source: "Population (approx)",
+        image_url: "https://images.unsplash.com/photo-1533107862482-0e6974b06ec4?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        category: "GDP (State)",
+        name: "Maharashtra",
+        value: 327600000000,
+        source: "GDP (approx)",
+        image_url: "https://images.unsplash.com/photo-1558432904-6c1fca220b9b?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        category: "GDP (State)",
+        name: "Tamil Nadu",
+        value: 183200000000,
+        source: "GDP (approx)",
+        image_url: "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=400&q=80"
       }
     ];
 
@@ -414,22 +386,23 @@
       "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=400&q=80";
 
     let filteredItems = [];
-    let current = null;
-    let nextItem = null;
+    let leftItem = null;
+    let rightItem = null;
     let score = 0;
     let highScore = 0;
+    let isLocked = false;
 
     const scoreEl = document.getElementById("score");
     const highScoreEl = document.getElementById("highScore");
     const categorySelect = document.getElementById("categorySelect");
     const restartBtn = document.getElementById("restartBtn");
-    const higherBtn = document.getElementById("higherBtn");
-    const lowerBtn = document.getElementById("lowerBtn");
     const messageEl = document.getElementById("message");
     const overlay = document.getElementById("overlay");
-    const overlayTitle = document.getElementById("overlayTitle");
     const overlayText = document.getElementById("overlayText");
     const playAgainBtn = document.getElementById("playAgainBtn");
+
+    const leftCard = document.querySelector(".card-current");
+    const rightCard = document.querySelector(".card-next");
 
     const currentNameEl = document.getElementById("currentName");
     const currentCategoryEl = document.getElementById("currentCategory");
@@ -477,12 +450,12 @@
       return candidates[idx];
     }
 
-    function renderCard(item, prefix) {
-      const nameEl = prefix === "current" ? currentNameEl : nextNameEl;
-      const catEl = prefix === "current" ? currentCategoryEl : nextCategoryEl;
-      const srcEl = prefix === "current" ? currentSourceEl : nextSourceEl;
-      const valueEl = prefix === "current" ? currentValueEl : nextValueEl;
-      const imgEl = prefix === "current" ? currentImageEl : nextImageEl;
+    function renderCard(item, isLeft) {
+      const nameEl = isLeft ? currentNameEl : nextNameEl;
+      const catEl = isLeft ? currentCategoryEl : nextCategoryEl;
+      const srcEl = isLeft ? currentSourceEl : nextSourceEl;
+      const valueEl = isLeft ? currentValueEl : nextValueEl;
+      const imgEl = isLeft ? currentImageEl : nextImageEl;
 
       nameEl.textContent = item.name;
       catEl.textContent = item.category;
@@ -510,75 +483,72 @@
       }
     }
 
-    function startGame() {
-      score = 0;
-      scoreEl.textContent = "0";
-      showMessage("Make your guess!");
-      overlay.classList.add("hidden");
+    function startRound() {
+      currentValueEl.classList.add("hidden");
       nextValueEl.classList.add("hidden");
-
-      setCategoryFilter(categorySelect.value);
 
       if (filteredItems.length < 2) {
         showMessage("Not enough items for this category.");
+        leftItem = null;
+        rightItem = null;
         return;
       }
 
-      current = pickRandom();
-      nextItem = pickRandom(current.name);
+      leftItem = pickRandom();
+      rightItem = pickRandom(leftItem.name);
 
-      renderCard(current, "current");
-      renderCard(nextItem, "next");
-      nextValueEl.classList.add("hidden");
+      renderCard(leftItem, true);
+      renderCard(rightItem, false);
+
+      showMessage("Tap the card you think is higher.");
+      isLocked = false;
+    }
+
+    function startGame() {
+      score = 0;
+      scoreEl.textContent = "0";
+      overlay.classList.add("hidden");
+      setCategoryFilter(categorySelect.value);
+      startRound();
     }
 
     function endGame() {
       overlay.classList.remove("hidden");
-      overlayTitle.textContent = "Game Over";
       overlayText.textContent = `Final score: ${score}`;
     }
 
-    function handleGuess(direction) {
-      if (!current || !nextItem) return;
+    function handleGuess(chosenSide) {
+      if (!leftItem || !rightItem || isLocked) return;
+      isLocked = true;
 
+      currentValueEl.classList.remove("hidden");
       nextValueEl.classList.remove("hidden");
 
-      const isHigher = nextItem.value > current.value;
-      const userThinksHigher = direction === "higher";
-      const correct =
-        (isHigher && userThinksHigher) || (!isHigher && !userThinksHigher);
+      const chosen = chosenSide === "left" ? leftItem : rightItem;
+      const other = chosenSide === "left" ? rightItem : leftItem;
+
+      const correct = chosen.value > other.value;
 
       if (correct) {
         showMessage("✅ Correct! Next round…");
         updateScore(1);
-
         setTimeout(() => {
-          current = nextItem;
-          nextItem = pickRandom(current.name);
-          if (!nextItem) {
-            endGame();
-            return;
-          }
-          renderCard(current, "current");
-          renderCard(nextItem, "next");
-          nextValueEl.classList.add("hidden");
-          showMessage("Make your guess!");
+          startRound();
         }, 700);
       } else {
         showMessage("❌ Wrong guess.");
-        endGame();
+        setTimeout(() => endGame(), 600);
       }
     }
 
-    higherBtn.addEventListener("click", () => handleGuess("higher"));
-    lowerBtn.addEventListener("click", () => handleGuess("lower"));
+    leftCard.addEventListener("click", () => handleGuess("left"));
+    rightCard.addEventListener("click", () => handleGuess("right"));
     restartBtn.addEventListener("click", startGame);
     playAgainBtn.addEventListener("click", startGame);
     categorySelect.addEventListener("change", startGame);
 
     function init() {
       loadHighScore();
-      showMessage("Loading data…");
 
       const cats = Array.from(new Set(ITEMS.map((it) => it.category))).sort();
       for (const cat of cats) {
