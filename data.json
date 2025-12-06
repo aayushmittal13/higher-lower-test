@@ -1,810 +1,315 @@
-{
-  "categories": [
-    {
-      "name": "Instagram Followers of Top Indian Cricketers (2025, in Millions)",
-      "type": "serious",
-      "items": [
-        {"name": "Virat Kohli", "value": 280, "image_url": "https://images.unsplash.com/photo-1611003229186-25b9ae9c1a69?w=200&h=200&fit=crop"},
-        {"name": "Rohit Sharma", "value": 52, "image_url": "https://images.unsplash.com/photo-1622299054469-0f2f3f0c8b0a?w=200&h=200&fit=crop"},
-        {"name": "Hardik Pandya", "value": 38, "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop"},
-        {"name": "KL Rahul", "value": 42, "image_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop"},
-        {"name": "Jasprit Bumrah", "value": 15, "image_url": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=200&h=200&fit=crop"},
-        {"name": "Suryakumar Yadav", "value": 8.5, "image_url": "https://images.unsplash.com/photo-1517457373958-b7bdd4587206?w=200&h=200&fit=crop"},
-        {"name": "Rishabh Pant", "value": 20, "image_url": "https://images.unsplash.com/photo-1626773217439-3b7e6e7c7f4e?w=200&h=200&fit=crop"},
-        {"name": "Shubman Gill", "value": 12, "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop"},
-        {"name": "Ishan Kishan", "value": 10, "image_url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=200&fit=crop"},
-        {"name": "Yuzvendra Chahal", "value": 7, "image_url": "https://images.unsplash.com/photo-1611003229186-25b9ae9c1a69?w=200&h=200&fit=crop"},
-        {"name": "Deepak Chahar", "value": 4.5, "image_url": "https://images.unsplash.com/photo-1622299054469-0f2f3f0c8b0a?w=200&h=200&fit=crop"},
-        {"name": "Ruturaj Gaikwad", "value": 3.2, "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop"},
-        {"name": "Axar Patel", "value": 2.8, "image_url": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=200&h=200&fit=crop"},
-        {"name": "Washington Sundar", "value": 1.9, "image_url": "https://images.unsplash.com/photo-1517457373958-b7bdd4587206?w=200&h=200&fit=crop"},
-        {"name": "Rahul Tewatia", "value": 1.5, "image_url": "https://images.unsplash.com/photo-1626773217439-3b7e6e7c7f4e?w=200&h=200&fit=crop"},
-        {"name": "Devdutt Padikkal", "value": 1.2, "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop"},
-        {"name": "Nitish Rana", "value": 2.1, "image_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop"},
-        {"name": "Venkatesh Iyer", "value": 1.8, "image_url": "https://images.unsplash.com/photo-1611003229186-25b9ae9c1a69?w=200&h=200&fit=crop"},
-        {"name": "Prithvi Shaw", "value": 3.5, "image_url": "https://images.unsplash.com/photo-1622299054469-0f2f3f0c8b0a?w=200&h=200&fit=crop"},
-        {"name": "Yashasvi Jaiswal", "value": 4.0, "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop"},
-        {"name": "Tilak Varma", "value": 2.4, "image_url": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=200&h=200&fit=crop"},
-        {"name": "Ravi Bishnoi", "value": 1.1, "image_url": "https://images.unsplash.com/photo-1517457373958-b7bdd4587206?w=200&h=200&fit=crop"},
-        {"name": "Avesh Khan", "value": 0.9, "image_url": "https://images.unsplash.com/photo-1626773217439-3b7e6e7c7f4e?w=200&h=200&fit=crop"},
-        {"name": "Harshal Patel", "value": 1.3, "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop"},
-        {"name": "Umran Malik", "value": 0.7, "image_url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=200&fit=crop"}
-      ]
-    },
-    {
-      "name": "1 Gram Gold Price by Major Indian Cities (Dec 2025, in INR)",
-      "type": "serious",
-      "items": [
-        {"name": "Mumbai", "value": 7800, "image_url": "https://images.unsplash.com/photo-1579586337278-2c4014d1f7e0?w=200&h=200&fit=crop"},
-        {"name": "Delhi", "value": 7820, "image_url": "https://images.unsplash.com/photo-151699806986-1604c2da28b1?w=200&h=200&fit=crop"},
-        {"name": "Kolkata", "value": 7780, "image_url": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=200&h=200&fit=crop"},
-        {"name": "Chennai", "value": 7790, "image_url": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=200&h=200&fit=crop"},
-        {"name": "Bangalore", "value": 7810, "image_url": "https://images.unsplash.com/photo-1532330443808-c6a8b077f16e?w=200&h=200&fit=crop"},
-        {"name": "Hyderabad", "value": 7770, "image_url": "https://images.unsplash.com/photo-1590191429829-5e9ff5d6b7a1?w=200&h=200&fit=crop"},
-        {"name": "Pune", "value": 7830, "image_url": "https://images.unsplash.com/photo-151699806986-1604c2da28b1?w=200&h=200&fit=crop"},
-        {"name": "Ahmedabad", "value": 7760, "image_url": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=200&h=200&fit=crop"},
-        {"name": "Jaipur", "value": 7840, "image_url": "https://images.unsplash.com/photo-1579586337278-2c4014d1f7e0?w=200&h=200&fit=crop"},
-        {"name": "Lucknow", "value": 7750, "image_url": "https://images.unsplash.com/photo-151699806986-1604c2da28b1?w=200&h=200&fit=crop"},
-        {"name": "Kanpur", "value": 7825, "image_url": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=200&h=200&fit=crop"},
-        {"name": "Nagpur", "value": 7805, "image_url": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=200&h=200&fit=crop"},
-        {"name": "Indore", "value": 7795, "image_url": "https://images.unsplash.com/photo-1532330443808-c6a8b077f16e?w=200&h=200&fit=crop"},
-        {"name": "Thane", "value": 7815, "image_url": "https://images.unsplash.com/photo-1590191429829-5e9ff5d6b7a1?w=200&h=200&fit=crop"},
-        {"name": "Bhopal", "value": 7775, "image_url": "https://images.unsplash.com/photo-1579586337278-2c4014d1f7e0?w=200&h=200&fit=crop"},
-        {"name": "Visakhapatnam", "value": 7785, "image_url": "https://images.unsplash.com/photo-151699806986-1604c2da28b1?w=200&h=200&fit=crop"},
-        {"name": "Pimpri-Chinchwad", "value": 7835, "image_url": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=200&h=200&fit=crop"},
-        {"name": "Patna", "value": 7745, "image_url": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=200&h=200&fit=crop"},
-        {"name": "Vadodara", "value": 7825, "image_url": "https://images.unsplash.com/photo-1532330443808-c6a8b077f16e?w=200&h=200&fit=crop"},
-        {"name": "Ghaziabad", "value": 7815, "image_url": "https://images.unsplash.com/photo-1590191429829-5e9ff5d6b7a1?w=200&h=200&fit=crop"},
-        {"name": "Ludhiana", "value": 7795, "image_url": "https://images.unsplash.com/photo-1579586337278-2c4014d1f7e0?w=200&h=200&fit=crop"},
-        {"name": "Nashik", "value": 7805, "image_url": "https://images.unsplash.com/photo-151699806986-1604c2da28b1?w=200&h=200&fit=crop"},
-        {"name": "Faridabad", "value": 7835, "image_url": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=200&h=200&fit=crop"},
-        {"name": "Meerut", "value": 7765, "image_url": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=200&h=200&fit=crop"},
-        {"name": "Rajkot", "value": 7775, "image_url": "https://images.unsplash.com/photo-1532330443808-c6a8b077f16e?w=200&h=200&fit=crop"}
-      ]
-    },
-    {
-      "name": "Average Zomato Delivery Time in Minutes (Top 20 Indian Cities, 2025)",
-      "type": "niche",
-      "items": [
-        {"name": "Mumbai", "value": 28, "image_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=200&h=200&fit=crop"},
-        {"name": "Delhi", "value": 32, "image_url": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=200&h=200&fit=crop"},
-        {"name": "Bangalore", "value": 35, "image_url": "https://images.unsplash.com/photo-1532330443808-c6a8b077f16e?w=200&h=200&fit=crop"},
-        {"name": "Hyderabad", "value": 29, "image_url": "https://images.unsplash.com/photo-1590191429829-5e9ff5d6b7a1?w=200&h=200&fit=crop"},
-        {"name": "Chennai", "value": 31, "image_url": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=200&h=200&fit=crop"},
-        {"name": "Kolkata", "value": 27, "image_url": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=200&h=200&fit=crop"},
-        {"name": "Pune", "value": 30, "image_url": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=200&h=200&fit=crop"},
-        {"name": "Ahmedabad", "value": 33, "image_url": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=200&h=200&fit=crop"},
-        {"name": "Jaipur", "value": 26, "image_url": "https://images.unsplash.com/photo-1532330443808-c6a8b077f16e?w=200&h=200&fit=crop"},
-        {"name": "Lucknow", "value": 34, "image_url": "https://images.unsplash.com/photo-1590191429829-5e9ff5d6b7a1?w=200&h=200&fit=crop"},
-        {"name": "Indore", "value": 25, "image_url": "https://images.unsplash.com/photo-1579586337278-2c4014d1f7e0?w=200&h=200&fit=crop"},
-        {"name": "Bhopal", "value": 36, "image_url": "https://images.unsplash.com/photo-151699806986-1604c2da28b1?w=200&h=200&fit=crop"},
-        {"name": "Chandigarh", "value": 24, "image_url": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=200&h=200&fit=crop"},
-        {"name": "Kochi", "value": 29, "image_url": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=200&h=200&fit=crop"},
-        {"name": "Coimbatore", "value": 28, "image_url": "https://images.unsplash.com/photo-1532330443808-c6a8b077f16e?w=200&h=200&fit=crop"},
-        {"name": "Vadodara", "value": 31, "image_url": "https://images.unsplash.com/photo-1590191429829-5e9ff5d6b7a1?w=200&h=200&fit=crop"},
-        {"name": "Visakhapatnam", "value": 30, "image_url": "https://images.unsplash.com/photo-1579586337278-2c4014d1f7e0?w=200&h=200&fit=crop"},
-        {"name": "Nagpur", "value": 27, "image_url": "https://images.unsplash.com/photo-151699806986-1604c2da28b1?w=200&h=200&fit=crop"},
-        {"name": "Madurai", "value": 32, "image_url": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=200&h=200&fit=crop"},
-        {"name": "Vijayawada", "value": 26, "image_url": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=200&h=200&fit=crop"},
-        {"name": "Surat", "value": 29, "image_url": "https://images.unsplash.com/photo-1532330443808-c6a8b077f16e?w=200&h=200&fit=crop"},
-        {"name": "Ghaziabad", "value": 33, "image_url": "https://images.unsplash.com/photo-1590191429829-5e9ff5d6b7a1?w=200&h=200&fit=crop"},
-        {"name": "Hubli-Dharwad", "value": 28, "image_url": "https://images.unsplash.com/photo-1579586337278-2c4014d1f7e0?w=200&h=200&fit=crop"},
-        {"name": "Mysore", "value": 25, "image_url": "https://images.unsplash.com/photo-151699806986-1604c2da28b1?w=200&h=200&fit=crop"},
-        {"name": "Guntur", "value": 30, "image_url": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=200&h=200&fit=crop"}
-      ]
-    },
-    {
-      "name": "JEE Main 2025 Ranks of Famous Indian YouTubers Who Cracked It",
-      "type": "niche",
-      "items": [
-        {"name": "Physics Wallah (Alakh Pandey)", "value": 150, "image_url": "https://images.unsplash.com/photo-1524178232363-9330f4d7b4d4?w=200&h=200&fit=crop"},
-        {"name": "Unacademy (Various)", "value": 500, "image_url": "https://images.unsplash.com/photo-1524178232363-9330f4d7b4d4?w=200&h=200&fit=crop"},
-        {"name": "Vedantu (Various)", "value": 800, "image_url": "https://images.unsplash.com/photo-1524178232363-9330f4d7b4d4?w=200&h=200&fit=crop"},
-        {"name": "BYJU'S Topper", "value": 200, "image_url": "https://images.unsplash.com/photo-1524178232363-9330f4d7b4d4?w=200&h=200&fit=crop"},
-        {"name": "Khan Sir Patna", "value": 1200, "image_url": "https://images.unsplash.com/photo-1524178232363-9330f4d7b4d4?w=200&h=200&fit=crop"},
-        {"name": "Technical Guruji (Gaurav Chaudhary)", "value": 3500, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "Mythpat (Mithilesh Patankar)", "value": 4500, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "CarryMinati (Ajey Nagar)", "value": 2800, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "BB Ki Vines (Bhuvan Bam)", "value": 5200, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "Ashish Chanchlani", "value": 3800, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "Amit Bhadana", "value": 6100, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "Flying Beast (Gaurav Taneja)", "value": 2900, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "Mumbiker Nikhil", "value": 4200, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "Tech Burner (Shlok Srivastava)", "value": 3400, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "Be YouNick", "value": 4800, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "Slayy Point (Gautami Kawale)", "value": 5500, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "Triggered Insaan (Nischay Malhan)", "value": 3100, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "Abhishek Upmanyu", "value": 3900, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "Prajakta Koli (Mostly Sane)", "value": 4600, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "Kusha Kapila", "value": 5700, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "Zakir Khan", "value": 2700, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "Anubhav Singh Bassi", "value": 3300, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "Biswa Kalyan Rath", "value": 4100, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "Kunal Kamra", "value": 3700, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "Aishwarya Sakhuja", "value": 4900, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"}
-      ]
-    },
-    {
-      "name": "Average Number of Aunties Judging Outfits at Indian Weddings (Per 100 Guests, Lighthearted Estimate)",
-      "type": "funny",
-      "items": [
-        {"name": "Delhi Shaadi", "value": 45, "image_url": "https://images.unsplash.com/photo-1519741497674-611481863552?w=200&h=200&fit=crop"},
-        {"name": "Mumbai Reception", "value": 38, "image_url": "https://images.unsplash.com/photo-1519741497674-611481863552?w=200&h=200&fit=crop"},
-        {"name": "Punjabi Baraat", "value": 52, "image_url": "https://images.unsplash.com/photo-1519741497674-611481863552?w=200&h=200&fit=crop"},
-        {"name": "South Indian Ceremony", "value": 30, "image_url": "https://images.unsplash.com/photo-1519741497674-611481863552?w=200&h=200&fit=crop"},
-        {"name": "Bengali Wedding", "value": 42, "image_url": "https://images.unsplash.com/photo-1519741497674-611481863552?w=200&h=200&fit=crop"},
-        {"name": "Gujarati Sangeet", "value": 48, "image_url": "https://images.unsplash.com/photo-1519741497674-611481863552?w=200&h=200&fit=crop"},
-        {"name": "Hyderabadi Nikaah", "value": 35, "image_url": "https://images.unsplash.com/photo-1519741497674-611481863552?w=200&h=200&fit=crop"},
-        {"name": "Rajasthani Mehendi", "value": 40, "image_url": "https://images.unsplash.com/photo-1519741497674-611481863552?w=200&h=200&fit=crop"},
-        {"name": "Kerala Onam-Style", "value": 28, "image_url": "https://images.unsplash.com/photo-1519741497674-611481863552?w=200&h=200&fit=crop"},
-        {"name": "Tamil Brahmin", "value": 32, "image_url": "https://images.unsplash.com/photo-1519741497674-611481863552?w=200&h=200&fit=crop"},
-        {"name": "Marwari Function", "value": 50, "image_url": "https://images.unsplash.com/photo-1519741497674-611481863552?w=200&h=200&fit=crop"},
-        {"name": "Kashmiri Pandit", "value": 36, "image_url": "https://images.unsplash.com/photo-1519741497674-611481863552?w=200&h=200&fit=crop"},
-        {"name": "Assamese Bihu Bash", "value": 25, "image_url": "https://images.unsplash.com/photo-1519741497674-611481863552?w=200&h=200&fit=crop"},
-        {"name": "Odia Jagannath", "value": 41, "image_url": "https://images.unsplash.com/photo-1519741497674-611481863552?w=200&h=200&fit=crop"},
-        {"name": "Goan Catholic", "value": 29, "image_url": "https://images.unsplash.com/photo-1519741497674-611481863552?w=200&h=200&fit=crop"},
-        {"name": "Parsi Reception", "value": 33, "image_url": "https://images.unsplash.com/photo-1519741497674-611481863552?w=200&h=200&fit=crop"},
-        {"name": "Sikh Anand Karaj", "value": 47, "image_url": "https://images.unsplash.com/photo-1519741497674-611481863552?w=200&h=200&fit=crop"},
-        {"name": "Christian Malayali", "value": 31, "image_url": "https://images.unsplash.com/photo-1519741497674-611481863552?w=200&h=200&fit=crop"},
-        {"name": "Jain Tera", "value": 39, "image_url": "https://images.unsplash.com/photo-1519741497674-611481863552?w=200&h=200&fit=crop"},
-        {"name": "Buddhist Ladakhi", "value": 22, "image_url": "https://images.unsplash.com/photo-1519741497674-611481863552?w=200&h=200&fit=crop"},
-        {"name": "Sindhi Soorajmukhi", "value": 44, "image_url": "https://images.unsplash.com/photo-1519741497674-611481863552?w=200&h=200&fit=crop"},
-        {"name": "Manipuri Ras Leela", "value": 26, "image_url": "https://images.unsplash.com/photo-1519741497674-611481863552?w=200&h=200&fit=crop"},
-        {"name": "Haryanvi Holi", "value": 49, "image_url": "https://images.unsplash.com/photo-1519741497674-611481863552?w=200&h=200&fit=crop"},
-        {"name": "Bihari Chhath", "value": 37, "image_url": "https://images.unsplash.com/photo-1519741497674-611481863552?w=200&h=200&fit=crop"},
-        {"name": "Uttarakhandi Kumaoni", "value": 34, "image_url": "https://images.unsplash.com/photo-1519741497674-611481863552?w=200&h=200&fit=crop"}
-      ]
-    },
-    {
-      "name": "Box Office Opening Day Collections of Bollywood Movies (2025, in Crores INR)",
-      "type": "serious",
-      "items": [
-        {"name": "Fighter", "value": 25, "image_url": "https://images.unsplash.com/photo-1489599169671-6a7d5b1c4f53?w=200&h=200&fit=crop"},
-        {"name": "Bade Miyan Chote Miyan", "value": 16, "image_url": "https://images.unsplash.com/photo-1489599169671-6a7d5b1c4f53?w=200&h=200&fit=crop"},
-        {"name": "Crew", "value": 10, "image_url": "https://images.unsplash.com/photo-1489599169671-6a7d5b1c4f53?w=200&h=200&fit=crop"},
-        {"name": "Article 370", "value": 8, "image_url": "https://images.unsplash.com/photo-1489599169671-6a7d5b1c4f53?w=200&h=200&fit=crop"},
-        {"name": "Shaitaan", "value": 14, "image_url": "https://images.unsplash.com/photo-1489599169671-6a7d5b1c4f53?w=200&h=200&fit=crop"},
-        {"name": "Teri Baaton Mein Aisa Uljha Jiya", "value": 11, "image_url": "https://images.unsplash.com/photo-1489599169671-6a7d5b1c4f53?w=200&h=200&fit=crop"},
-        {"name": "Crakk", "value": 6, "image_url": "https://images.unsplash.com/photo-1489599169671-6a7d5b1c4f53?w=200&h=200&fit=crop"},
-        {"name": "Laapataa Ladies", "value": 4, "image_url": "https://images.unsplash.com/photo-1489599169671-6a7d5b1c4f53?w=200&h=200&fit=crop"},
-        {"name": "Mr And Mrs Mahi", "value": 9, "image_url": "https://images.unsplash.com/photo-1489599169671-6a7d5b1c4f53?w=200&h=200&fit=crop"},
-        {"name": "Chandu Champion", "value": 7, "image_url": "https://images.unsplash.com/photo-1489599169671-6a7d5b1c4f53?w=200&h=200&fit=crop"},
-        {"name": "Singham Again", "value": 30, "image_url": "https://images.unsplash.com/photo-1489599169671-6a7d5b1c4f53?w=200&h=200&fit=crop"},
-        {"name": "Sky Force", "value": 12, "image_url": "https://images.unsplash.com/photo-1489599169671-6a7d5b1c4f53?w=200&h=200&fit=crop"},
-        {"name": "Deva", "value": 5, "image_url": "https://images.unsplash.com/photo-1489599169671-6a7d5b1c4f53?w=200&h=200&fit=crop"},
-        {"name": "Housefull 5", "value": 18, "image_url": "https://images.unsplash.com/photo-1489599169671-6a7d5b1c4f53?w=200&h=200&fit=crop"},
-        {"name": "Raid 2", "value": 13, "image_url": "https://images.unsplash.com/photo-1489599169671-6a7d5b1c4f53?w=200&h=200&fit=crop"},
-        {"name": "Bhool Bhulaiyaa 3", "value": 20, "image_url": "https://images.unsplash.com/photo-1489599169671-6a7d5b1c4f53?w=200&h=200&fit=crop"},
-        {"name": "Sitaare Zameen Par", "value": 3, "image_url": "https://images.unsplash.com/photo-1489599169671-6a7d5b1c4f53?w=200&h=200&fit=crop"},
-        {"name": "The Raja Saab", "value": 15, "image_url": "https://images.unsplash.com/photo-1489599169671-6a7d5b1c4f53?w=200&h=200&fit=crop"},
-        {"name": "War 2", "value": 35, "image_url": "https://images.unsplash.com/photo-1489599169671-6a7d5b1c4f53?w=200&h=200&fit=crop"},
-        {"name": "Chhaava", "value": 22, "image_url": "https://images.unsplash.com/photo-1489599169671-6a7d5b1c4f53?w=200&h=200&fit=crop"},
-        {"name": "Welcome to the Jungle", "value": 19, "image_url": "https://images.unsplash.com/photo-1489599169671-6a7d5b1c4f53?w=200&h=200&fit=crop"},
-        {"name": "Mufasa: The Lion King", "value": 28, "image_url": "https://images.unsplash.com/photo-1489599169671-6a7d5b1c4f53?w=200&h=200&fit=crop"},
-        {"name": "Singham Again Sequel", "value": 32, "image_url": "https://images.unsplash.com/photo-1489599169671-6a7d5b1c4f53?w=200&h=200&fit=crop"},
-        {"name": "Khel Khel Mein", "value": 8, "image_url": "https://images.unsplash.com/photo-1489599169671-6a7d5b1c4f53?w=200&h=200&fit=crop"},
-        {"name": "Stree 2", "value": 21, "image_url": "https://images.unsplash.com/photo-1489599169671-6a7d5b1c4f53?w=200&h=200&fit=crop"}
-      ]
-    },
-    {
-      "name": "Spotify Monthly Listeners for Hindi Songs (2025, in Millions)",
-      "type": "niche",
-      "items": [
-        {"name": "Aashiqui 3 Title Track", "value": 45, "image_url": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=200&h=200&fit=crop"},
-        {"name": "Pasoori (Remix)", "value": 32, "image_url": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=200&h=200&fit=crop"},
-        {"name": "Raatan Lambiyan", "value": 28, "image_url": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=200&h=200&fit=crop"},
-        {"name": "Kesariya", "value": 50, "image_url": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=200&h=200&fit=crop"},
-        {"name": "Mon Amour", "value": 22, "image_url": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=200&h=200&fit=crop"},
-        {"name": "Tum Hi Ho", "value": 40, "image_url": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=200&h=200&fit=crop"},
-        {"name": "Dil Diyan Gallan", "value": 35, "image_url": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=200&h=200&fit=crop"},
-        {"name": "Channa Mereya", "value": 38, "image_url": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=200&h=200&fit=crop"},
-        {"name": "Gerua", "value": 25, "image_url": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=200&h=200&fit=crop"},
-        {"name": "Malhari", "value": 18, "image_url": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=200&h=200&fit=crop"},
-        {"name": "Jhoome Jo Pathaan", "value": 42, "image_url": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=200&h=200&fit=crop"},
-        {"name": "Besharam Rang", "value": 30, "image_url": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=200&h=200&fit=crop"},
-        {"name": "What Jhumka", "value": 26, "image_url": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=200&h=200&fit=crop"},
-        {"name": "Atrangi Re Title Track", "value": 20, "image_url": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=200&h=200&fit=crop"},
-        {"name": "Raataan Lambiyan Remix", "value": 33, "image_url": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=200&h=200&fit=crop"},
-        {"name": "Shubh Mangal", "value": 15, "image_url": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=200&h=200&fit=crop"},
-        {"name": "Tumse Pyaar", "value": 24, "image_url": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=200&h=200&fit=crop"},
-        {"name": "Naina", "value": 29, "image_url": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=200&h=200&fit=crop"},
-        {"name": "Haan Main Galat", "value": 17, "image_url": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=200&h=200&fit=crop"},
-        {"name": "Lut Gaye", "value": 37, "image_url": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=200&h=200&fit=crop"},
-        {"name": "Pani Pani", "value": 23, "image_url": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=200&h=200&fit=crop"},
-        {"name": "Maan Meri Jaan", "value": 31, "image_url": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=200&h=200&fit=crop"},
-        {"name": "Heeriye", "value": 27, "image_url": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=200&h=200&fit=crop"},
-        {"name": "Rangisari", "value": 19, "image_url": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=200&h=200&fit=crop"},
-        {"name": "Doobey", "value": 21, "image_url": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=200&h=200&fit=crop"}
-      ]
-    },
-    {
-      "name": "Average Delhi Metro Delays in Minutes (Peak Hours, 2025)",
-      "type": "niche",
-      "items": [
-        {"name": "Yellow Line", "value": 5, "image_url": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=200&h=200&fit=crop"},
-        {"name": "Blue Line", "value": 8, "image_url": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=200&h=200&fit=crop"},
-        {"name": "Red Line", "value": 4, "image_url": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=200&h=200&fit=crop"},
-        {"name": "Green Line", "value": 6, "image_url": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=200&h=200&fit=crop"},
-        {"name": "Violet Line", "value": 7, "image_url": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=200&h=200&fit=crop"},
-        {"name": "Orange Line", "value": 3, "image_url": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=200&h=200&fit=crop"},
-        {"name": "Pink Line", "value": 9, "image_url": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=200&h=200&fit=crop"},
-        {"name": "Magenta Line", "value": 5, "image_url": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=200&h=200&fit=crop"},
-        {"name": "RapidX", "value": 2, "image_url": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=200&h=200&fit=crop"},
-        {"name": "Airport Express", "value": 1, "image_url": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=200&h=200&fit=crop"},
-        {"name": "Huda City Centre Branch", "value": 10, "image_url": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=200&h=200&fit=crop"},
-        {"name": "Noida Extension", "value": 6, "image_url": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=200&h=200&fit=crop"},
-        {"name": "Vaishali Branch", "value": 4, "image_url": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=200&h=200&fit=crop"},
-        {"name": "Kashmere Gate Interchange", "value": 12, "image_url": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=200&h=200&fit=crop"},
-        {"name": "Rajiv Chowk", "value": 11, "image_url": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=200&h=200&fit=crop"},
-        {"name": "Central Secretariat", "value": 3, "image_url": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=200&h=200&fit=crop"},
-        {"name": "Dwarka Sec-21", "value": 7, "image_url": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=200&h=200&fit=crop"},
-        {"name": "Noida Sec-62", "value": 5, "image_url": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=200&h=200&fit=crop"},
-        {"name": "Botanical Garden", "value": 8, "image_url": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=200&h=200&fit=crop"},
-        {"name": "Yamuna Bank", "value": 9, "image_url": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=200&h=200&fit=crop"},
-        {"name": "Rithala", "value": 6, "image_url": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=200&h=200&fit=crop"},
-        {"name": "Janakpuri West", "value": 4, "image_url": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=200&h=200&fit=crop"},
-        {"name": "Rajouri Garden", "value": 10, "image_url": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=200&h=200&fit=crop"},
-        {"name": "Mukundpur", "value": 2, "image_url": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=200&h=200&fit=crop"},
-        {"name": "Majlis Park", "value": 5, "image_url": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=200&h=200&fit=crop"}
-      ]
-    },
-    {
-      "name": "YouTube Subscribers of Indian Tech Reviewers (2025, in Millions)",
-      "type": "serious",
-      "items": [
-        {"name": "Technical Guruji", "value": 23.5, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "Tech Burner", "value": 12.8, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "Trakin Tech", "value": 8.2, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "Beebom", "value": 7.1, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "Gadget 360", "value": 5.4, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "Mrwhosetheboss (Indian Origin)", "value": 18.9, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "MKBHD (Collaborations)", "value": 15.6, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "Prasadtech", "value": 4.3, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "Gogi Tech", "value": 3.9, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "Geekyranjit", "value": 2.7, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "Technology Gyan", "value": 6.5, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "Ankur Warikoo Tech", "value": 1.8, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "Bypass Galaxy", "value": 5.2, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "Ranjit Yadav", "value": 4.1, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "TechBar", "value": 3.5, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "India Tech", "value": 2.9, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "GadgetByte Nepal (Indian Focus)", "value": 1.5, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "Tech Reviews India", "value": 4.8, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "Smartprix", "value": 3.2, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "91Mobiles", "value": 2.4, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "Digit India", "value": 1.9, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "FoneArena", "value": 2.1, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "Android Authority India", "value": 6.0, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "Gadgets 360", "value": 4.7, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"},
-        {"name": "Techlusive", "value": 3.6, "image_url": "https://images.unsplash.com/photo-1611940387056-3f85f1f8ffdf?w=200&h=200&fit=crop"}
-      ]
-    },
-    {
-      "name": "Average Spice Level in Regional Indian Street Foods (Out of 10)",
-      "type": "funny",
-      "items": [
-        {"name": "Mumbai Vada Pav", "value": 6, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Delhi Chaat", "value": 8, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Kolkata Kathi Roll", "value": 4, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Hyderabad Biryani", "value": 9, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Chennai Dosa", "value": 5, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Pune Misal Pav", "value": 7, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Bangalore Masala Dosa", "value": 6, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Lucknow Kebab", "value": 3, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Jaipur Dal Baati", "value": 5, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Amritsar Kulcha", "value": 4, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Goa Fish Curry", "value": 7, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Kerala Appam", "value": 2, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Indore Poha", "value": 3, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Bhopal Seekh Kebab", "value": 8, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Patna Litti Chokha", "value": 6, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Surat Undhiyu", "value": 5, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Kochi Puttu", "value": 1, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Nagpur Tarri Poha", "value": 4, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Vadodara Sev Usal", "value": 7, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Mysore Bisi Bele Bath", "value": 6, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Guwahati Thukpa", "value": 3, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Shillong Dohkhlieh", "value": 2, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Chandigarh Chana Madra", "value": 5, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Bhubaneswar Dahibara", "value": 4, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Dehradun Momos", "value": 8, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"}
-      ]
-    },
-    {
-      "name": "IPL 2025 Player Batting Averages (Top Batsmen)",
-      "type": "serious",
-      "items": [
-        {"name": "Virat Kohli", "value": 45.2, "image_url": "https://images.unsplash.com/photo-1611003229186-25b9ae9c1a69?w=200&h=200&fit=crop"},
-        {"name": "Rohit Sharma", "value": 38.7, "image_url": "https://images.unsplash.com/photo-1622299054469-0f2f3f0c8b0a?w=200&h=200&fit=crop"},
-        {"name": "Shubman Gill", "value": 42.1, "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop"},
-        {"name": "KL Rahul", "value": 40.5, "image_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop"},
-        {"name": "Suryakumar Yadav", "value": 47.8, "image_url": "https://images.unsplash.com/photo-1517457373958-b7bdd4587206?w=200&h=200&fit=crop"},
-        {"name": "Jos Buttler", "value": 44.3, "image_url": "https://images.unsplash.com/photo-1626773217439-3b7e6e7c7f4e?w=200&h=200&fit=crop"},
-        {"name": "Faf du Plessis", "value": 39.2, "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop"},
-        {"name": "Quinton de Kock", "value": 36.9, "image_url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=200&fit=crop"},
-        {"name": "David Warner", "value": 41.6, "image_url": "https://images.unsplash.com/photo-1611003229186-25b9ae9c1a69?w=200&h=200&fit=crop"},
-        {"name": "Ishan Kishan", "value": 35.4, "image_url": "https://images.unsplash.com/photo-1622299054469-0f2f3f0c8b0a?w=200&h=200&fit=crop"},
-        {"name": "Ruturaj Gaikwad", "value": 43.0, "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop"},
-        {"name": "Yashasvi Jaiswal", "value": 37.8, "image_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop"},
-        {"name": "Rishabh Pant", "value": 34.1, "image_url": "https://images.unsplash.com/photo-1517457373958-b7bdd4587206?w=200&h=200&fit=crop"},
-        {"name": "Tilak Varma", "value": 40.9, "image_url": "https://images.unsplash.com/photo-1626773217439-3b7e6e7c7f4e?w=200&h=200&fit=crop"},
-        {"name": "Rajvardhan Hangargekar", "value": 32.5, "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop"},
-        {"name": "Prithvi Shaw", "value": 38.2, "image_url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=200&fit=crop"},
-        {"name": "Devon Conway", "value": 46.7, "image_url": "https://images.unsplash.com/photo-1611003229186-25b9ae9c1a69?w=200&h=200&fit=crop"},
-        {"name": "Nicholas Pooran", "value": 39.5, "image_url": "https://images.unsplash.com/photo-1622299054469-0f2f3f0c8b0a?w=200&h=200&fit=crop"},
-        {"name": "Heinrich Klaasen", "value": 44.8, "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop"},
-        {"name": "Glenn Phillips", "value": 35.7, "image_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop"},
-        {"name": "Riyan Parag", "value": 41.3, "image_url": "https://images.unsplash.com/photo-1517457373958-b7bdd4587206?w=200&h=200&fit=crop"},
-        {"name": "Abhishek Sharma", "value": 36.4, "image_url": "https://images.unsplash.com/photo-1626773217439-3b7e6e7c7f4e?w=200&h=200&fit=crop"},
-        {"name": "Travis Head", "value": 42.6, "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop"},
-        {"name": "Jake Fraser-McGurk", "value": 33.9, "image_url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=200&fit=crop"},
-        {"name": "Mayank Agarwal", "value": 37.1, "image_url": "https://images.unsplash.com/photo-1611003229186-25b9ae9c1a69?w=200&h=200&fit=crop"}
-      ]
-    },
-    {
-      "name": "Average Price of Regional Sarees in INR (2025)",
-      "type": "niche",
-      "items": [
-        {"name": "Banarasi Silk", "value": 15000, "image_url": "https://images.unsplash.com/photo-1608251748280-8b8c5f9b0e0b?w=200&h=200&fit=crop"},
-        {"name": "Kanchipuram Silk", "value": 12000, "image_url": "https://images.unsplash.com/photo-1608251748280-8b8c5f9b0e0b?w=200&h=200&fit=crop"},
-        {"name": "Kanjeevaram Cotton", "value": 8000, "image_url": "https://images.unsplash.com/photo-1608251748280-8b8c5f9b0e0b?w=200&h=200&fit=crop"},
-        {"name": "Tant Saree", "value": 5000, "image_url": "https://images.unsplash.com/photo-1608251748280-8b8c5f9b0e0b?w=200&h=200&fit=crop"},
-        {"name": "Chanderi Silk", "value": 7000, "image_url": "https://images.unsplash.com/photo-1608251748280-8b8c5f9b0e0b?w=200&h=200&fit=crop"},
-        {"name": "Mysore Silk", "value": 10000, "image_url": "https://images.unsplash.com/photo-1608251748280-8b8c5f9b0e0b?w=200&h=200&fit=crop"},
-        {"name": "Paithani", "value": 20000, "image_url": "https://images.unsplash.com/photo-1608251748280-8b8c5f9b0e0b?w=200&h=200&fit=crop"},
-        {"name": "Bandhani", "value": 6000, "image_url": "https://images.unsplash.com/photo-1608251748280-8b8c5f9b0e0b?w=200&h=200&fit=crop"},
-        {"name": "Kalamkari", "value": 4500, "image_url": "https://images.unsplash.com/photo-1608251748280-8b8c5f9b0e0b?w=200&h=200&fit=crop"},
-        {"name": "Ikkat", "value": 5500, "image_url": "https://images.unsplash.com/photo-1608251748280-8b8c5f9b0e0b?w=200&h=200&fit=crop"},
-        {"name": "Phulkari", "value": 9000, "image_url": "https://images.unsplash.com/photo-1608251748280-8b8c5f9b0e0b?w=200&h=200&fit=crop"},
-        {"name": "Sambalpuri", "value": 4000, "image_url": "https://images.unsplash.com/photo-1608251748280-8b8c5f9b0e0b?w=200&h=200&fit=crop"},
-        {"name": "Gadwal", "value": 11000, "image_url": "https://images.unsplash.com/photo-1608251748280-8b8c5f9b0e0b?w=200&h=200&fit=crop"},
-        {"name": "Pochampally", "value": 8500, "image_url": "https://images.unsplash.com/photo-1608251748280-8b8c5f9b0e0b?w=200&h=200&fit=crop"},
-        {"name": "Chiripolavu", "value": 6500, "image_url": "https://images.unsplash.com/photo-1608251748280-8b8c5f9b0e0b?w=200&h=200&fit=crop"},
-        {"name": "Kasavu", "value": 3000, "image_url": "https://images.unsplash.com/photo-1608251748280-8b8c5f9b0e0b?w=200&h=200&fit=crop"},
-        {"name": "Bomkai", "value": 7500, "image_url": "https://images.unsplash.com/photo-1608251748280-8b8c5f9b0e0b?w=200&h=200&fit=crop"},
-        {"name": "Kovai Cora", "value": 3500, "image_url": "https://images.unsplash.com/photo-1608251748280-8b8c5f9b0e0b?w=200&h=200&fit=crop"},
-        {"name": "Baluchari", "value": 9500, "image_url": "https://images.unsplash.com/photo-1608251748280-8b8c5f9b0e0b?w=200&h=200&fit=crop"},
-        {"name": "Dharmavaram", "value": 13000, "image_url": "https://images.unsplash.com/photo-1608251748280-8b8c5f9b0e0b?w=200&h=200&fit=crop"},
-        {"name": "Narayanpet", "value": 5500, "image_url": "https://images.unsplash.com/photo-1608251748280-8b8c5f9b0e0b?w=200&h=200&fit=crop"},
-        {"name": "Saree from Assam", "value": 4500, "image_url": "https://images.unsplash.com/photo-1608251748280-8b8c5f9b0e0b?w=200&h=200&fit=crop"},
-        {"name": "Malmal", "value": 2500, "image_url": "https://images.unsplash.com/photo-1608251748280-8b8c5f9b0e0b?w=200&h=200&fit=crop"},
-        {"name": "Kerala Set Saree", "value": 4000, "image_url": "https://images.unsplash.com/photo-1608251748280-8b8c5f9b0e0b?w=200&h=200&fit=crop"},
-        {"name": "Tussar Silk", "value": 6000, "image_url": "https://images.unsplash.com/photo-1608251748280-8b8c5f9b0e0b?w=200&h=200&fit=crop"}
-      ]
-    },
-    {
-      "name": "Average Diwali Spending on Sweets in INR per Family (2025)",
-      "type": "niche",
-      "items": [
-        {"name": "Mumbai Families", "value": 2500, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Delhi Families", "value": 3000, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Bangalore Families", "value": 2200, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Kolkata Families", "value": 1800, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Chennai Families", "value": 2000, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Hyderabad Families", "value": 2800, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Pune Families", "value": 2400, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Ahmedabad Families", "value": 2600, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Jaipur Families", "value": 2100, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Lucknow Families", "value": 1900, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Indore Families", "value": 2300, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Bhopal Families", "value": 1700, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Chandigarh Families", "value": 2700, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Kochi Families", "value": 1600, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Coimbatore Families", "value": 1950, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Vadodara Families", "value": 2550, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Visakhapatnam Families", "value": 2150, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Nagpur Families", "value": 2050, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Madurai Families", "value": 1750, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Vijayawada Families", "value": 2250, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Surat Families", "value": 2650, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Ghaziabad Families", "value": 2350, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Hubli-Dharwad Families", "value": 1850, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Mysore Families", "value": 1950, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"},
-        {"name": "Guntur Families", "value": 2100, "image_url": "https://images.unsplash.com/photo-1579586143593-7771a75a31e8?w=200&h=200&fit=crop"}
-      ]
-    },
-    {
-      "name": "Number of TikTok Views for Viral Indian Dance Challenges (2025, in Millions)",
-      "type": "funny",
-      "items": [
-        {"name": "Kala Chashma Challenge", "value": 1200, "image_url": "https://images.unsplash.com/photo-1542013565621-56c0e3d7b1e4?w=200&h=200&fit=crop"},
-        {"name": "Garmi Dance-Off", "value": 950, "image_url": "https://images.unsplash.com/photo-1542013565621-56c0e3d7b1e4?w=200&h=200&fit=crop"},
-        {"name": "Naatu Naatu Remix", "value": 1800, "image_url": "https://images.unsplash.com/photo-1542013565621-56c0e3d7b1e4?w=200&h=200&fit=crop"},
-        {"name": "Jalebi Baby Trend", "value": 750, "image_url": "https://images.unsplash.com/photo-1542013565621-56c0e3d7b1e4?w=200&h=200&fit=crop"},
-        {"name": "Rasmalai Step", "value": 600, "image_url": "https://images.unsplash.com/photo-1542013565621-56c0e3d7b1e4?w=200&h=200&fit=crop"},
-        {"name": "Bhangra Pop", "value": 1100, "image_url": "https://images.unsplash.com/photo-1542013565621-56c0e3d7b1e4?w=200&h=200&fit=crop"},
-        {"name": "Garba Glow", "value": 850, "image_url": "https://images.unsplash.com/photo-1542013565621-56c0e3d7b1e4?w=200&h=200&fit=crop"},
-        {"name": "Kolaveri Di Flip", "value": 400, "image_url": "https://images.unsplash.com/photo-1542013565621-56c0e3d7b1e4?w=200&h=200&fit=crop"},
-        {"name": "Dhol Beat Battle", "value": 1300, "image_url": "https://images.unsplash.com/photo-1542013565621-56c0e3d7b1e4?w=200&h=200&fit=crop"},
-        {"name": "Mehndi Laga Ke", "value": 700, "image_url": "https://images.unsplash.com/photo-1542013565621-56c0e3d7b1e4?w=200&h=200&fit=crop"},
-        {"name": "Yorker Dance", "value": 550, "image_url": "https://images.unsplash.com/photo-1542013565621-56c0e3d7b1e4?w=200&h=200&fit=crop"},
-        {"name": "Saree Swirl", "value": 900, "image_url": "https://images.unsplash.com/photo-1542013565621-56c0e3d7b1e4?w=200&h=200&fit=crop"},
-        {"name": "Pawri Ho Gaya", "value": 1400, "image_url": "https://images.unsplash.com/photo-1542013565621-56c0e3d7b1e4?w=200&h=200&fit=crop"},
-        {"name": "Thumka Lagake", "value": 650, "image_url": "https://images.unsplash.com/photo-1542013565621-56c0e3d7b1e4?w=200&h=200&fit=crop"},
-        {"name": "Chaka Chak", "value": 800, "image_url": "https://images.unsplash.com/photo-1542013565621-56c0e3d7b1e4?w=200&h=200&fit=crop"},
-        {"name": "Diwali Dhamaka", "value": 1000, "image_url": "https://images.unsplash.com/photo-1542013565621-56c0e3d7b1e4?w=200&h=200&fit=crop"},
-        {"name": "Holi Splash Step", "value": 500, "image_url": "https://images.unsplash.com/photo-1542013565621-56c0e3d7b1e4?w=200&h=200&fit=crop"},
-        {"name": "Monsoon Moves", "value": 450, "image_url": "https://images.unsplash.com/photo-1542013565621-56c0e3d7b1e4?w=200&h=200&fit=crop"},
-        {"name": "Eid Groove", "value": 950, "image_url": "https://images.unsplash.com/photo-1542013565621-56c0e3d7b1e4?w=200&h=200&fit=crop"},
-        {"name": "Christmas Carol Dance", "value": 350, "image_url": "https://images.unsplash.com/photo-1542013565621-56c0e3d7b1e4?w=200&h=200&fit=crop"},
-        {"name": "New Year Twist", "value": 1200, "image_url": "https://images.unsplash.com/photo-1542013565621-56c0e3d7b1e4?w=200&h=200&fit=crop"},
-        {"name": "Rang Barse Remix", "value": 700, "image_url": "https://images.unsplash.com/photo-1542013565621-56c0e3d7b1e4?w=200&h=200&fit=crop"},
-        {"name": "Bollywood Medley", "value": 1600, "image_url": "https://images.unsplash.com/photo-1542013565621-56c0e3d7b1e4?w=200&h=200&fit=crop"},
-        {"name": "Folk Fusion", "value": 550, "image_url": "https://images.unsplash.com/photo-1542013565621-56c0e3d7b1e4?w=200&h=200&fit=crop"},
-        {"name": "Retro Roll", "value": 850, "image_url": "https://images.unsplash.com/photo-1542013565621-56c0e3d7b1e4?w=200&h=200&fit=crop"}
-      ]
-    },
-    {
-      "name": "Average Temperature in Indian Cities During Summer (2025, in Celsius)",
-      "type": "serious",
-      "items": [
-        {"name": "Delhi", "value": 42, "image_url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=200&fit=crop"},
-        {"name": "Ahmedabad", "value": 44, "image_url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=200&fit=crop"},
-        {"name": "Jaipur", "value": 43, "image_url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=200&fit=crop"},
-        {"name": "Nagpur", "value": 41, "image_url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=200&fit=crop"},
-        {"name": "Bhopal", "value": 40, "image_url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=200&fit=crop"},
-        {"name": "Raipur", "value": 42, "image_url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=200&fit=crop"},
-        {"name": "Gwalior", "value": 41, "image_url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=200&fit=crop"},
-        {"name": "Jodhpur", "value": 45, "image_url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=200&fit=crop"},
-        {"name": "Amritsar", "value": 39, "image_url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=200&fit=crop"},
-        {"name": "Ludhiana", "value": 40, "image_url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=200&fit=crop"},
-        {"name": "Kanpur", "value": 41, "image_url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=200&fit=crop"},
-        {"name": "Lucknow", "value": 40, "image_url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=200&fit=crop"},
-        {"name": "Patna", "value": 39, "image_url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=200&fit=crop"},
-        {"name": "Ranchi", "value": 38, "image_url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=200&fit=crop"},
-        {"name": "Varanasi", "value": 42, "image_url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=200&fit=crop"},
-        {"name": "Indore", "value": 40, "image_url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=200&fit=crop"},
-        {"name": "Bhopal", "value": 41, "image_url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=200&fit=crop"},
-        {"name": "Jabalpur", "value": 39, "image_url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=200&fit=crop"},
-        {"name": "Ujjain", "value": 42, "image_url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=200&fit=crop"},
-        {"name": "Sagar", "value": 40, "image_url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=200&fit=crop"},
-        {"name": "Ratlam", "value": 43, "image_url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=200&fit=crop"},
-        {"name": "Satna", "value": 41, "image_url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=200&fit=crop"},
-        {"name": "Rewa", "value": 40, "image_url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=200&fit=crop"},
-        {"name": "Murwara", "value": 39, "image_url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=200&fit=crop"},
-        {"name": "Singrauli", "value": 38, "image_url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=200&fit=crop"}
-      ]
-    },
-    {
-      "name": "Number of Followers for Indian Fashion Influencers on Instagram (2025, in Millions)",
-      "type": "niche",
-      "items": [
-        {"name": "Kareena Kapoor Khan", "value": 68, "image_url": "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=200&h=200&fit=crop"},
-        {"name": "Deepika Padukone", "value": 78, "image_url": "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=200&h=200&fit=crop"},
-        {"name": "Priyanka Chopra", "value": 85, "image_url": "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=200&h=200&fit=crop"},
-        {"name": "Alia Bhatt", "value": 72, "image_url": "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=200&h=200&fit=crop"},
-        {"name": "Katrina Kaif", "value": 65, "image_url": "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=200&h=200&fit=crop"},
-        {"name": "Anushka Sharma", "value": 58, "image_url": "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=200&h=200&fit=crop"},
-        {"name": "Shraddha Kapoor", "value": 60, "image_url": "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=200&h=200&fit=crop"},
-        {"name": "Sonam Kapoor", "value": 55, "image_url": "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=200&h=200&fit=crop"},
-        {"name": "Jacqueline Fernandez", "value": 62, "image_url": "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=200&h=200&fit=crop"},
-        {"name": "Lisa Haydon", "value": 12, "image_url": "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=200&h=200&fit=crop"},
-        {"name": "Masaba Gupta", "value": 8, "image_url": "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=200&h=200&fit=crop"},
-        {"name": "Kalki Koechlin", "value": 5, "image_url": "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=200&h=200&fit=crop"},
-        {"name": "Dia Mirza", "value": 10, "image_url": "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=200&h=200&fit=crop"},
-        {"name": "Richa Chadha", "value": 4, "image_url": "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=200&h=200&fit=crop"},
-        {"name": "Neha Dhupia", "value": 6, "image_url": "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=200&h=200&fit=crop"},
-        {"name": "Pooja Hegde", "value": 15, "image_url": "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=200&h=200&fit=crop"},
-        {"name": "Tamannaah Bhatia", "value": 20, "image_url": "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=200&h=200&fit=crop"},
-        {"name": "Samantha Ruth Prabhu", "value": 25, "image_url": "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=200&h=200&fit=crop"},
-        {"name": "Rashmika Mandanna", "value": 30, "image_url": "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=200&h=200&fit=crop"},
-        {"name": "Kiara Advani", "value": 35, "image_url": "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=200&h=200&fit=crop"},
-        {"name": "Janhvi Kapoor", "value": 22, "image_url": "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=200&h=200&fit=crop"},
-        {"name": "Sara Ali Khan", "value": 28, "image_url": "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=200&h=200&fit=crop"},
-        {"name": "Ananya Panday", "value": 18, "image_url": "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=200&h=200&fit=crop"},
-        {"name": "Tara Sutaria", "value": 14, "image_url": "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=200&h=200&fit=crop"},
-        {"name": "Shanaya Kapoor", "value": 9, "image_url": "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=200&h=200&fit=crop"}
-      ]
-    },
-    {
-      "name": "Average Price of Startup Funding Rounds in India (2025, in Crores INR)",
-      "type": "serious",
-      "items": [
-        {"name": "Fintech Startups", "value": 150, "image_url": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=200&h=200&fit=crop"},
-        {"name": "Edtech Startups", "value": 80, "image_url": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=200&h=200&fit=crop"},
-        {"name": "Healthtech Startups", "value": 120, "image_url": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=200&h=200&fit=crop"},
-        {"name": "E-commerce Startups", "value": 200, "image_url": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=200&h=200&fit=crop"},
-        {"name": "Agritech Startups", "value": 50, "image_url": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=200&h=200&fit=crop"},
-        {"name": "Logistics Startups", "value": 90, "image_url": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=200&h=200&fit=crop"},
-        {"name": "SaaS Startups", "value": 70, "image_url": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=200&h=200&fit=crop"},
-        {"name": "Gaming Startups", "value": 60, "image_url": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=200&h=200&fit=crop"},
-        {"name": "Proptech Startups", "value": 40, "image_url": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=200&h=200&fit=crop"},
-        {"name": "Cleantech Startups", "value": 100, "image_url": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=200&h=200&fit=crop"},
-        {"name": "Media Startups", "value": 55, "image_url": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=200&h=200&fit=crop"},
-        {"name": "Insurtech Startups", "value": 110, "image_url": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=200&h=200&fit=crop"},
-        {"name": "Foodtech Startups", "value": 75, "image_url": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=200&h=200&fit=crop"},
-        {"name": "Mobility Startups", "value": 130, "image_url": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=200&h=200&fit=crop"},
-        {"name": "Cybersecurity Startups", "value": 85, "image_url": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=200&h=200&fit=crop"},
-        {"name": "AR/VR Startups", "value": 65, "image_url": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=200&h=200&fit=crop"},
-        {"name": "Blockchain Startups", "value": 95, "image_url": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=200&h=200&fit=crop"},
-        {"name": "Biotech Startups", "value": 140, "image_url": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=200&h=200&fit=crop"},
-        {"name": "Fashiontech Startups", "value": 45, "image_url": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=200&h=200&fit=crop"},
-        {"name": "Traveltech Startups", "value": 105, "image_url": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=200&h=200&fit=crop"},
-        {"name": "Adtech Startups", "value": 35, "image_url": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=200&h=200&fit=crop"},
-        {"name": "HRtech Startups", "value": 55, "image_url": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=200&h=200&fit=crop"},
-        {"name": "Legaltech Startups", "value": 30, "image_url": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=200&h=200&fit=crop"},
-        {"name": "Real Estate Startups", "value": 125, "image_url": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=200&h=200&fit=crop"},
-        {"name": "Climate Tech Startups", "value": 115, "image_url": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=200&h=200&fit=crop"}
-      ]
-    },
-    {
-      "name": "Average Number of Likes on Viral Indian Memes (2025, in Thousands)",
-      "type": "funny",
-      "items": [
-        {"name": "Auntie Ji Meme", "value": 250, "image_url": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=200&h=200&fit=crop"},
-        {"name": "Chai Lover", "value": 180, "image_url": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=200&h=200&fit=crop"},
-        {"name": "Traffic Jam Desi", "value": 300, "image_url": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=200&h=200&fit=crop"},
-        {"name": "Exam Pressure", "value": 220, "image_url": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=200&h=200&fit=crop"},
-        {"name": "Wedding Drama", "value": 190, "image_url": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=200&h=200&fit=crop"},
-        {"name": "Monsoon Fail", "value": 160, "image_url": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=200&h=200&fit=crop"},
-        {"name": "IPL Fever", "value": 350, "image_url": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=200&h=200&fit=crop"},
-        {"name": "Boss vs Employee", "value": 140, "image_url": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=200&h=200&fit=crop"},
-        {"name": "Foodie Struggle", "value": 210, "image_url": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=200&h=200&fit=crop"},
-        {"name": "Relatives Reunion", "value": 170, "image_url": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=200&h=200&fit=crop"},
-        {"name": "Gym Motivation Fail", "value": 130, "image_url": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=200&h=200&fit=crop"},
-        {"name": "Selfie Queen", "value": 200, "image_url": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=200&h=200&fit=crop"},
-        {"name": "Train Journey", "value": 280, "image_url": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=200&h=200&fit=crop"},
-        {"name": "Biryani Wars", "value": 240, "image_url": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=200&h=200&fit=crop"},
-        {"name": "Auto Rickshaw", "value": 150, "image_url": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=200&h=200&fit=crop"},
-        {"name": "Festival Fiasco", "value": 110, "image_url": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=200&h=200&fit=crop"},
-        {"name": "Doge Desi", "value": 320, "image_url": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=200&h=200&fit=crop"},
-        {"name": "Office Chai Break", "value": 120, "image_url": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=200&h=200&fit=crop"},
-        {"name": "Shaadi.com Ad Parody", "value": 260, "image_url": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=200&h=200&fit=crop"},
-        {"name": "Pet Memes", "value": 100, "image_url": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=200&h=200&fit=crop"},
-        {"name": "Bollywood Logic", "value": 290, "image_url": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=200&h=200&fit=crop"},
-        {"name": "Jugaad Genius", "value": 230, "image_url": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=200&h=200&fit=crop"},
-        {"name": "Mama Miya", "value": 180, "image_url": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=200&h=200&fit=crop"},
-        {"name": "Raju Ki Shaadi", "value": 270, "image_url": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=200&h=200&fit=crop"},
-        {"name": "Viral Relo", "value": 140, "image_url": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=200&h=200&fit=crop"}
-      ]
-    },
-    {
-      "name": "Average Number of Rides per User on Ola/Uber in Major Cities (2025)",
-      "type": "niche",
-      "items": [
-        {"name": "Mumbai", "value": 25, "image_url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=200&fit=crop"},
-        {"name": "Delhi", "value": 30, "image_url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=200&fit=crop"},
-        {"name": "Bangalore", "value": 35, "image_url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=200&fit=crop"},
-        {"name": "Hyderabad", "value": 22, "image_url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=200&fit=crop"},
-        {"name": "Chennai", "value": 20, "image_url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=200&fit=crop"},
-        {"name": "Kolkata", "value": 18, "image_url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=200&fit=crop"},
-        {"name": "Pune", "value": 28, "image_url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=200&fit=crop"},
-        {"name": "Ahmedabad", "value": 24, "image_url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=200&fit=crop"},
-        {"name": "Jaipur", "value": 19, "image_url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=200&fit=crop"},
-        {"name": "Lucknow", "value": 21, "image_url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=200&fit=crop"},
-        {"name": "Indore", "value": 23, "image_url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=200&fit=crop"},
-        {"name": "Bhopal", "value": 17, "image_url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=200&fit=crop"},
-        {"name": "Chandigarh", "value": 26, "image_url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=200&fit=crop"},
-        {"name": "Kochi", "value": 16, "image_url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=200&fit=crop"},
-        {"name": "Coimbatore", "value": 19, "image_url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=200&fit=crop"},
-        {"name": "Vadodara", "value": 22, "image_url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=200&fit=crop"},
-        {"name": "Visakhapatnam", "value": 20, "image_url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=200&fit=crop"},
-        {"name": "Nagpur", "value": 21, "image_url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=200&fit=crop"},
-        {"name": "Madurai", "value": 15, "image_url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=200&fit=crop"},
-        {"name": "Vijayawada", "value": 18, "image_url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=200&fit=crop"},
-        {"name": "Surat", "value": 25, "image_url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=200&fit=crop"},
-        {"name": "Ghaziabad", "value": 27, "image_url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=200&fit=crop"},
-        {"name": "Hubli-Dharwad", "value": 14, "image_url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=200&fit=crop"},
-        {"name": "Mysore", "value": 19, "image_url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=200&fit=crop"},
-        {"name": "Guntur", "value": 17, "image_url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&h=200&fit=crop"}
-      ]
-    },
-    {
-      "name": "Average Annual Rainfall in Indian States (2025, in mm)",
-      "type": "serious",
-      "items": [
-        {"name": "Maharashtra", "value": 1180, "image_url": "https://images.unsplash.com/photo-1438105606813-7bb5c6d7e93a?w=200&h=200&fit=crop"},
-        {"name": "Kerala", "value": 3100, "image_url": "https://images.unsplash.com/photo-1438105606813-7bb5c6d7e93a?w=200&h=200&fit=crop"},
-        {"name": "Tamil Nadu", "value": 970, "image_url": "https://images.unsplash.com/photo-1438105606813-7bb5c6d7e93a?w=200&h=200&fit=crop"},
-        {"name": "Karnataka", "value": 1150, "image_url": "https://images.unsplash.com/photo-1438105606813-7bb5c6d7e93a?w=200&h=200&fit=crop"},
-        {"name": "Andhra Pradesh", "value": 1030, "image_url": "https://images.unsplash.com/photo-1438105606813-7bb5c6d7e93a?w=200&h=200&fit=crop"},
-        {"name": "Telangana", "value": 900, "image_url": "https://images.unsplash.com/photo-1438105606813-7bb5c6d7e93a?w=200&h=200&fit=crop"},
-        {"name": "Goa", "value": 3200, "image_url": "https://images.unsplash.com/photo-1438105606813-7bb5c6d7e93a?w=200&h=200&fit=crop"},
-        {"name": "Gujarat", "value": 810, "image_url": "https://images.unsplash.com/photo-1438105606813-7bb5c6d7e93a?w=200&h=200&fit=crop"},
-        {"name": "Rajasthan", "value": 580, "image_url": "https://images.unsplash.com/photo-1438105606813-7bb5c6d7e93a?w=200&h=200&fit=crop"},
-        {"name": "Madhya Pradesh", "value": 1140, "image_url": "https://images.unsplash.com/photo-1438105606813-7bb5c6d7e93a?w=200&h=200&fit=crop"},
-        {"name": "Chhattisgarh", "value": 1400, "image_url": "https://images.unsplash.com/photo-1438105606813-7bb5c6d7e93a?w=200&h=200&fit=crop"},
-        {"name": "Odisha", "value": 1450, "image_url": "https://images.unsplash.com/photo-1438105606813-7bb5c6d7e93a?w=200&h=200&fit=crop"},
-        {"name": "West Bengal", "value": 1450, "image_url": "https://images.unsplash.com/photo-1438105606813-7bb5c6d7e93a?w=200&h=200&fit=crop"},
-        {"name": "Jharkhand", "value": 1300, "image_url": "https://images.unsplash.com/photo-1438105606813-7bb5c6d7e93a?w=200&h=200&fit=crop"},
-        {"name": "Bihar", "value": 1200, "image_url": "https://images.unsplash.com/photo-1438105606813-7bb5c6d7e93a?w=200&h=200&fit=crop"},
-        {"name": "Uttar Pradesh", "value": 1000, "image_url": "https://images.unsplash.com/photo-1438105606813-7bb5c6d7e93a?w=200&h=200&fit=crop"},
-        {"name": "Uttarakhand", "value": 1600, "image_url": "https://images.unsplash.com/photo-1438105606813-7bb5c6d7e93a?w=200&h=200&fit=crop"},
-        {"name": "Himachal Pradesh", "value": 1400, "image_url": "https://images.unsplash.com/photo-1438105606813-7bb5c6d7e93a?w=200&h=200&fit=crop"},
-        {"name": "Punjab", "value": 650, "image_url": "https://images.unsplash.com/photo-1438105606813-7bb5c6d7e93a?w=200&h=200&fit=crop"},
-        {"name": "Haryana", "value": 650, "image_url": "https://images.unsplash.com/photo-1438105606813-7bb5c6d7e93a?w=200&h=200&fit=crop"},
-        {"name": "Delhi", "value": 780, "image_url": "https://images.unsplash.com/photo-1438105606813-7bb5c6d7e93a?w=200&h=200&fit=crop"},
-        {"name": "Jammu & Kashmir", "value": 650, "image_url": "https://images.unsplash.com/photo-1438105606813-7bb5c6d7e93a?w=200&h=200&fit=crop"},
-        {"name": "Ladakh", "value": 100, "image_url": "https://images.unsplash.com/photo-1438105606813-7bb5c6d7e93a?w=200&h=200&fit=crop"},
-        {"name": "Arunachal Pradesh", "value": 2700, "image_url": "https://images.unsplash.com/photo-1438105606813-7bb5c6d7e93a?w=200&h=200&fit=crop"},
-        {"name": "Assam", "value": 2800, "image_url": "https://images.unsplash.com/photo-1438105606813-7bb5c6d7e93a?w=200&h=200&fit=crop"}
-      ]
-    },
-    {
-      "name": "Average Price of Electric Vehicles in India (2025, in Lakhs INR)",
-      "type": "niche",
-      "items": [
-        {"name": "Tata Nexon EV", "value": 15, "image_url": "https://images.unsplash.com/photo-1502877338535-766e3a6052c0?w=200&h=200&fit=crop"},
-        {"name": "MG ZS EV", "value": 22, "image_url": "https://images.unsplash.com/photo-1502877338535-766e3a6052c0?w=200&h=200&fit=crop"},
-        {"name": "Hyundai Kona EV", "value": 25, "image_url": "https://images.unsplash.com/photo-1502877338535-766e3a6052c0?w=200&h=200&fit=crop"},
-        {"name": "Mahindra e-Verito", "value": 10, "image_url": "https://images.unsplash.com/photo-1502877338535-766e3a6052c0?w=200&h=200&fit=crop"},
-        {"name": "Tata Tigor EV", "value": 12, "image_url": "https://images.unsplash.com/photo-1502877338535-766e3a6052c0?w=200&h=200&fit=crop"},
-        {"name": "MG Hector EV", "value": 28, "image_url": "https://images.unsplash.com/photo-1502877338535-766e3a6052c0?w=200&h=200&fit=crop"},
-        {"name": "Kia EV6", "value": 60, "image_url": "https://images.unsplash.com/photo-1502877338535-766e3a6052c0?w=200&h=200&fit=crop"},
-        {"name": "BYD Atto 3", "value": 33, "image_url": "https://images.unsplash.com/photo-1502877338535-766e3a6052c0?w=200&h=200&fit=crop"},
-        {"name": "Tata Tiago EV", "value": 9, "image_url": "https://images.unsplash.com/photo-1502877338535-766e3a6052c0?w=200&h=200&fit=crop"},
-        {"name": "Ather 450X (Scooter)", "value": 1.5, "image_url": "https://images.unsplash.com/photo-1502877338535-766e3a6052c0?w=200&h=200&fit=crop"},
-        {"name": "Ola S1 Pro (Scooter)", "value": 1.3, "image_url": "https://images.unsplash.com/photo-1502877338535-766e3a6052c0?w=200&h=200&fit=crop"},
-        {"name": "Bajaj Chetak EV", "value": 1.2, "image_url": "https://images.unsplash.com/photo-1502877338535-766e3a6052c0?w=200&h=200&fit=crop"},
-        {"name": "Hero Electric Optima", "value": 0.8, "image_url": "https://images.unsplash.com/photo-1502877338535-766e3a6052c0?w=200&h=200&fit=crop"},
-        {"name": "Ampere Magnus", "value": 1.0, "image_url": "https://images.unsplash.com/photo-1502877338535-766e3a6052c0?w=200&h=200&fit=crop"},
-        {"name": "Mahindra Treo Zor", "value": 1.1, "image_url": "https://images.unsplash.com/photo-1502877338535-766e3a6052c0?w=200&h=200&fit=crop"},
-        {"name": "Tata Ace EV", "value": 8, "image_url": "https://images.unsplash.com/photo-1502877338535-766e3a6052c0?w=200&h=200&fit=crop"},
-        {"name": "Eicher Pro 2049 EV", "value": 20, "image_url": "https://images.unsplash.com/photo-1502877338535-766e3a6052c0?w=200&h=200&fit=crop"},
-        {"name": "JBM ECS 2.0", "value": 18, "image_url": "https://images.unsplash.com/photo-1502877338535-766e3a6052c0?w=200&h=200&fit=crop"},
-        {"name": "Volvo XC40 Recharge", "value": 55, "image_url": "https://images.unsplash.com/photo-1502877338535-766e3a6052c0?w=200&h=200&fit=crop"},
-        {"name": "BMW iX", "value": 130, "image_url": "https://images.unsplash.com/photo-1502877338535-766e3a6052c0?w=200&h=200&fit=crop"},
-        {"name": "Mercedes EQS", "value": 120, "image_url": "https://images.unsplash.com/photo-1502877338535-766e3a6052c0?w=200&h=200&fit=crop"},
-        {"name": "Audi e-tron", "value": 100, "image_url": "https://images.unsplash.com/photo-1502877338535-766e3a6052c0?w=200&h=200&fit=crop"},
-        {"name": "Porsche Taycan", "value": 150, "image_url": "https://images.unsplash.com/photo-1502877338535-766e3a6052c0?w=200&h=200&fit=crop"},
-        {"name": "Tesla Model 3 (Expected)", "value": 45, "image_url": "https://images.unsplash.com/photo-1502877338535-766e3a6052c0?w=200&h=200&fit=crop"},
-        {"name": "Mahindra XUV400", "value": 16, "image_url": "https://images.unsplash.com/photo-1502877338535-766e3a6052c0?w=200&h=200&fit=crop"}
-      ]
-    },
-    {
-      "name": "Average Number of Books Read per Year by Indian Cities' Residents (2025)",
-      "type": "niche",
-      "items": [
-        {"name": "Delhi", "value": 12, "image_url": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=200&h=200&fit=crop"},
-        {"name": "Mumbai", "value": 10, "image_url": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=200&h=200&fit=crop"},
-        {"name": "Bangalore", "value": 15, "image_url": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=200&h=200&fit=crop"},
-        {"name": "Kolkata", "value": 18, "image_url": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=200&h=200&fit=crop"},
-        {"name": "Chennai", "value": 14, "image_url": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=200&h=200&fit=crop"},
-        {"name": "Hyderabad", "value": 11, "image_url": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=200&h=200&fit=crop"},
-        {"name": "Pune", "value": 13, "image_url": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=200&h=200&fit=crop"},
-        {"name": "Ahmedabad", "value": 9, "image_url": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=200&h=200&fit=crop"},
-        {"name": "Jaipur", "value": 8, "image_url": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=200&h=200&fit=crop"},
-        {"name": "Lucknow", "value": 10, "image_url": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=200&h=200&fit=crop"},
-        {"name": "Indore", "value": 12, "image_url": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=200&h=200&fit=crop"},
-        {"name": "Bhopal", "value": 7, "image_url": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=200&h=200&fit=crop"},
-        {"name": "Chandigarh", "value": 14, "image_url": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=200&h=200&fit=crop"},
-        {"name": "Kochi", "value": 16, "image_url": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=200&h=200&fit=crop"},
-        {"name": "Coimbatore", "value": 11, "image_url": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=200&h=200&fit=crop"},
-        {"name": "Vadodara", "value": 9, "image_url": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=200&h=200&fit=crop"},
-        {"name": "Visakhapatnam", "value": 10, "image_url": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=200&h=200&fit=crop"},
-        {"name": "Nagpur", "value": 8, "image_url": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=200&h=200&fit=crop"},
-        {"name": "Madurai", "value": 13, "image_url": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=200&h=200&fit=crop"},
-        {"name": "Vijayawada", "value": 9, "image_url": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=200&h=200&fit=crop"},
-        {"name": "Surat", "value": 7, "image_url": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=200&h=200&fit=crop"},
-        {"name": "Ghaziabad", "value": 11, "image_url": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=200&h=200&fit=crop"},
-        {"name": "Hubli-Dharwad", "value": 6, "image_url": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=200&h=200&fit=crop"},
-        {"name": "Mysore", "value": 15, "image_url": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=200&h=200&fit=crop"},
-        {"name": "Guntur", "value": 10, "image_url": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=200&h=200&fit=crop"}
-      ]
-    },
-    {
-      "name": "Average Cost of Home Delivery Groceries in Major Cities (2025, in INR per Order)",
-      "type": "niche",
-      "items": [
-        {"name": "Mumbai", "value": 120, "image_url": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=200&h=200&fit=crop"},
-        {"name": "Delhi", "value": 110, "image_url": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=200&h=200&fit=crop"},
-        {"name": "Bangalore", "value": 130, "image_url": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=200&h=200&fit=crop"},
-        {"name": "Hyderabad", "value": 100, "image_url": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=200&h=200&fit=crop"},
-        {"name": "Chennai", "value": 105, "image_url": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=200&h=200&fit=crop"},
-        {"name": "Kolkata", "value": 95, "image_url": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=200&h=200&fit=crop"},
-        {"name": "Pune", "value": 115, "image_url": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=200&h=200&fit=crop"},
-        {"name": "Ahmedabad", "value": 90, "image_url": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=200&h=200&fit=crop"},
-        {"name": "Jaipur", "value": 85, "image_url": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=200&h=200&fit=crop"},
-        {"name": "Lucknow", "value": 100, "image_url": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=200&h=200&fit=crop"},
-        {"name": "Indore", "value": 95, "image_url": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=200&h=200&fit=crop"},
-        {"name": "Bhopal", "value": 80, "image_url": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=200&h=200&fit=crop"},
-        {"name": "Chandigarh", "value": 110, "image_url": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=200&h=200&fit=crop"},
-        {"name": "Kochi", "value": 105, "image_url": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=200&h=200&fit=crop"},
-        {"name": "Coimbatore", "value": 90, "image_url": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=200&h=200&fit=crop"},
-        {"name": "Vadodara", "value": 85, "image_url": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=200&h=200&fit=crop"},
-        {"name": "Visakhapatnam", "value": 95, "image_url": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=200&h=200&fit=crop"},
-        {"name": "Nagpur", "value": 100, "image_url": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=200&h=200&fit=crop"},
-        {"name": "Madurai", "value": 75, "image_url": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=200&h=200&fit=crop"},
-        {"name": "Vijayawada", "value": 90, "image_url": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=200&h=200&fit=crop"},
-        {"name": "Surat", "value": 80, "image_url": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=200&h=200&fit=crop"},
-        {"name": "Ghaziabad", "value": 105, "image_url": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=200&h=200&fit=crop"},
-        {"name": "Hubli-Dharwad", "value": 70, "image_url": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=200&h=200&fit=crop"},
-        {"name": "Mysore", "value": 95, "image_url": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=200&h=200&fit=crop"},
-        {"name": "Guntur", "value": 85, "image_url": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=200&h=200&fit=crop"}
-      ]
-    },
-    {
-      "name": "Average Number of Steps Walked Daily in Indian Cities (2025)",
-      "type": "serious",
-      "items": [
-        {"name": "Mumbai", "value": 8500, "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop"},
-        {"name": "Delhi", "value": 7200, "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop"},
-        {"name": "Bangalore", "value": 9500, "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop"},
-        {"name": "Hyderabad", "value": 6800, "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop"},
-        {"name": "Chennai", "value": 7800, "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop"},
-        {"name": "Kolkata", "value": 9100, "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop"},
-        {"name": "Pune", "value": 8400, "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop"},
-        {"name": "Ahmedabad", "value": 6500, "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop"},
-        {"name": "Jaipur", "value": 7000, "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop"},
-        {"name": "Lucknow", "value": 7600, "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop"},
-        {"name": "Indore", "value": 8200, "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop"},
-        {"name": "Bhopal", "value": 6900, "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop"},
-        {"name": "Chandigarh", "value": 8800, "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop"},
-        {"name": "Kochi", "value": 7400, "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop"},
-        {"name": "Coimbatore", "value": 7900, "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop"},
-        {"name": "Vadodara", "value": 6700, "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop"},
-        {"name": "Visakhapatnam", "value": 7100, "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop"},
-        {"name": "Nagpur", "value": 7700, "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop"},
-        {"name": "Madurai", "value": 7300, "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop"},
-        {"name": "Vijayawada", "value": 6800, "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop"},
-        {"name": "Surat", "value": 6400, "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop"},
-        {"name": "Ghaziabad", "value": 7500, "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop"},
-        {"name": "Hubli-Dharwad", "value": 6200, "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop"},
-        {"name": "Mysore", "value": 8000, "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop"},
-        {"name": "Guntur", "value": 6900, "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&h=200&fit=crop"}
-      ]
-    },
-    {
-      "name": "Average Price of Biryani in Street Vendors (2025, in INR per Plate)",
-      "type": "funny",
-      "items": [
-        {"name": "Hyderabadi", "value": 150, "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=200&h=200&fit=crop"},
-        {"name": "Kolkata", "value": 80, "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=200&h=200&fit=crop"},
-        {"name": "Mumbai", "value": 120, "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=200&h=200&fit=crop"},
-        {"name": "Delhi", "value": 100, "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=200&h=200&fit=crop"},
-        {"name": "Lucknow", "value": 200, "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=200&h=200&fit=crop"},
-        {"name": "Chennai", "value": 90, "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=200&h=200&fit=crop"},
-        {"name": "Bangalore", "value": 110, "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=200&h=200&fit=crop"},
-        {"name": "Pune", "value": 95, "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=200&h=200&fit=crop"},
-        {"name": "Indore", "value": 70, "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=200&h=200&fit=crop"},
-        {"name": "Jaipur", "value": 85, "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=200&h=200&fit=crop"},
-        {"name": "Amritsar", "value": 60, "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=200&h=200&fit=crop"},
-        {"name": "Kochi", "value": 75, "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=200&h=200&fit=crop"},
-        {"name": "Nagpur", "value": 105, "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=200&h=200&fit=crop"},
-        {"name": "Bhopal", "value": 65, "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=200&h=200&fit=crop"},
-        {"name": "Vadodara", "value": 90, "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=200&h=200&fit=crop"},
-        {"name": "Surat", "value": 55, "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=200&h=200&fit=crop"},
-        {"name": "Patna", "value": 80, "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=200&h=200&fit=crop"},
-        {"name": "Madurai", "value": 70, "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=200&h=200&fit=crop"},
-        {"name": "Visakhapatnam", "value": 95, "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=200&h=200&fit=crop"},
-        {"name": "Coimbatore", "value": 85, "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=200&h=200&fit=crop"},
-        {"name": "Mysore", "value": 100, "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=200&h=200&fit=crop"},
-        {"name": "Guntur", "value": 75, "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=200&h=200&fit=crop"},
-        {"name": "Hubli", "value": 60, "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=200&h=200&fit=crop"},
-        {"name": "Ghaziabad", "value": 110, "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=200&h=200&fit=crop"},
-        {"name": "Vijayawada", "value": 80, "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=200&h=200&fit=crop"}
-      ]
-    },
-    {
-      "name": "Average Number of Coffee Cups Consumed Daily in IT Hubs (2025)",
-      "type": "funny",
-      "items": [
-        {"name": "Bangalore", "value": 4, "image_url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=200&h=200&fit=crop"},
-        {"name": "Hyderabad", "value": 3, "image_url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=200&h=200&fit=crop"},
-        {"name": "Pune", "value": 3.5, "image_url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=200&h=200&fit=crop"},
-        {"name": "Chennai", "value": 2.5, "image_url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=200&h=200&fit=crop"},
-        {"name": "Mumbai", "value": 2, "image_url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=200&h=200&fit=crop"},
-        {"name": "Noida", "value": 3.8, "image_url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=200&h=200&fit=crop"},
-        {"name": "Gurgaon", "value": 4.2, "image_url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=200&h=200&fit=crop"},
-        {"name": "Kochi", "value": 2.8, "image_url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=200&h=200&fit=crop"},
-        {"name": "Indore", "value": 1.5, "image_url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=200&h=200&fit=crop"},
-        {"name": "Thiruvananthapuram", "value": 2.2, "image_url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=200&h=200&fit=crop"},
-        {"name": "Ahmedabad", "value": 1.8, "image_url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=200&h=200&fit=crop"},
-        {"name": "Jaipur", "value": 1.2, "image_url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=200&h=200&fit=crop"},
-        {"name": "Lucknow", "value": 2.1, "image_url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=200&h=200&fit=crop"},
-        {"name": "Nagpur", "value": 3.0, "image_url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=200&h=200&fit=crop"},
-        {"name": "Coimbatore", "value": 2.4, "image_url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=200&h=200&fit=crop"},
-        {"name": "Vadodara", "value": 1.6, "image_url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=200&h=200&fit=crop"},
-        {"name": "Surat", "value": 1.4, "image_url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=200&h=200&fit=crop"},
-        {"name": "Visakhapatnam", "value": 2.7, "image_url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=200&h=200&fit=crop"},
-        {"name": "Madurai", "value": 1.9, "image_url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=200&h=200&fit=crop"},
-        {"name": "Vijayawada", "value": 2.3, "image_url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=200&h=200&fit=crop"},
-        {"name": "Mysore", "value": 2.6, "image_url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=200&h=200&fit=crop"},
-        {"name": "Guntur", "value": 1.7, "image_url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=200&h=200&fit=crop"},
-        {"name": "Hubli", "value": 1.1, "image_url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=200&h=200&fit=crop"},
-        {"name": "Ghaziabad", "value": 3.3, "image_url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=200&h=200&fit=crop"},
-        {"name": "Bhopal", "value": 1.3, "image_url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=200&h=200&fit=crop"}
-      ]
-    }
-  ]
-}
+Category,Subcategory,Rank,Name,Value
+Bollywood & Indian Cinema,Highest Grossing Hindi Movies (All Time India + Overseas),1,Jawan,1153 Cr
+Bollywood & Indian Cinema,Highest Grossing Hindi Movies (All Time India + Overseas),2,Stree 2,862 Cr
+Bollywood & Indian Cinema,Highest Grossing Hindi Movies (All Time India + Overseas),3,Animal,917 Cr
+Bollywood & Indian Cinema,Highest Grossing Hindi Movies (All Time India + Overseas),4,Pathaan,1050 Cr
+Bollywood & Indian Cinema,Highest Grossing Hindi Movies (All Time India + Overseas),5,Gadar 2,691 Cr
+Bollywood & Indian Cinema,Highest Grossing Hindi Movies (All Time India + Overseas),6,Baahubali 2 (Hindi),1031 Cr
+Bollywood & Indian Cinema,Highest Grossing Hindi Movies (All Time India + Overseas),7,KGF Chapter 2 (Hindi),1034 Cr
+Bollywood & Indian Cinema,Highest Grossing Hindi Movies (All Time India + Overseas),8,Dangal,1744 Cr
+Bollywood & Indian Cinema,Highest Grossing Hindi Movies (All Time India + Overseas),9,RRR (Hindi),905 Cr
+Bollywood & Indian Cinema,Highest Grossing Hindi Movies (All Time India + Overseas),10,Bajrangi Bhaijaan,922 Cr
+Bollywood & Indian Cinema,Highest Grossing Hindi Movies (All Time India + Overseas),11,PK,792 Cr
+Bollywood & Indian Cinema,Highest Grossing Hindi Movies (All Time India + Overseas),12,Sanju,586 Cr
+Bollywood & Indian Cinema,Highest Grossing Hindi Movies (All Time India + Overseas),13,Tiger Zinda Hai,565 Cr
+Bollywood & Indian Cinema,Highest Grossing Hindi Movies (All Time India + Overseas),14,War,475 Cr
+Bollywood & Indian Cinema,Highest Grossing Hindi Movies (All Time India + Overseas),15,Padmaavat,585 Cr
+Bollywood & Indian Cinema,Highest Grossing Hindi Movies (All Time India + Overseas),16,Sultan,623 Cr
+Bollywood & Indian Cinema,Highest Grossing Hindi Movies (All Time India + Overseas),17,3 Idiots,460 Cr
+Bollywood & Indian Cinema,Highest Grossing Hindi Movies (All Time India + Overseas),18,Chennai Express,423 Cr
+Bollywood & Indian Cinema,Highest Grossing Hindi Movies (All Time India + Overseas),19,Dilwale,394 Cr
+Bollywood & Indian Cinema,Highest Grossing Hindi Movies (All Time India + Overseas),20,Kick,402 Cr
+
+Cricket,Most Runs in IPL History (Till 2025),1,Virat Kohli,8104
+Cricket,Most Runs in IPL History (Till 2025),2,Shikhar Dhawan,6769
+Cricket,Most Runs in IPL History (Till 2025),3,Rohit Sharma,6935
+Cricket,Most Runs in IPL History (Till 2025),4,David Warner,6932
+Cricket,Most Runs in IPL History (Till 2025),5,Suresh Raina,5528
+Cricket,Most Runs in IPL History (Till 2025),6,MS Dhoni,5418
+Cricket,Most Runs in IPL History (Till 2025),7,AB de Villiers,5162
+Cricket,Most Runs in IPL History (Till 2025),8,Chris Gayle,4965
+Cricket,Most Runs in IPL History (Till 2025),9,Robin Uthappa,4952
+Cricket,Most Runs in IPL History (Till 2025),10,KL Rahul,4892
+Cricket,Most Runs in IPL History (Till 2025),11,Faf du Plessis,4756
+Cricket,Most Runs in IPL History (Till 2025),12,Sanju Samson,4578
+Cricket,Most Runs in IPL History (Till 2025),13,Shreyas Iyer,3789
+Cricket,Most Runs in IPL History (Till 2025),14,Rishabh Pant,3689
+Cricket,Most Runs in IPL History (Till 2025),15,Suryakumar Yadav,3956
+Cricket,Most Runs in IPL History (Till 2025),16,Jos Buttler,3589
+Cricket,Most Runs in IPL History (Till 2025),17,Quinton de Kock,3189
+Cricket,Most Runs in IPL History (Till 2025),18,Ishan Kishan,2890
+Cricket,Most Runs in IPL History (Till 2025),19,Hardik Pandya,2745
+Cricket,Most Runs in IPL History (Till 2025),20,Yuvraj Singh,2750
+
+Indian Celebrities & Influencers,Most Followed Indians on Instagram (Dec 2025),1,Virat Kohli,271M
+Indian Celebrities & Influencers,Most Followed Indians on Instagram (Dec 2025),2,Priyanka Chopra,91M
+Indian Celebrities & Influencers,Most Followed Indians on Instagram (Dec 2025),3,Shraddha Kapoor,92M
+Indian Celebrities & Influencers,Most Followed Indians on Instagram (Dec 2025),4,Alia Bhatt,86M
+Indian Celebrities & Influencers,Most Followed Indians on Instagram (Dec 2025),5,Deepika Padukone,81M
+Indian Celebrities & Influencers,Most Followed Indians on Instagram (Dec 2025),6,Katrina Kaif,80M
+Indian Celebrities & Influencers,Most Followed Indians on Instagram (Dec 2025),7,Neha Kakkar,78M
+Indian Celebrities & Influencers,Most Followed Indians on Instagram (Dec 2025),8,Salman Khan,71M
+Indian Celebrities & Influencers,Most Followed Indians on Instagram (Dec 2025),9,Anushka Sharma,69M
+Indian Celebrities & Influencers,Most Followed Indians on Instagram (Dec 2025),10,Jacqueline Fernandez,69M
+Indian Celebrities & Influencers,Most Followed Indians on Instagram (Dec 2025),11,Akshay Kumar,68M
+Indian Celebrities & Influencers,Most Followed Indians on Instagram (Dec 2025),12,Uravashi Rautela,67M
+Indian Celebrities & Influencers,Most Followed Indians on Instagram (Dec 2025),13,Disha Patani,61M
+Indian Celebrities & Influencers,Most Followed Indians on Instagram (Dec 2025),14,Sunny Leone,57M
+Indian Celebrities & Influencers,Most Followed Indians on Instagram (Dec 2025),15,Kartik Aaryan,56M
+Indian Celebrities & Influencers,Most Followed Indians on Instagram (Dec 2025),16,Shah Rukh Khan,47M
+Indian Celebrities & Influencers,Most Followed Indians on Instagram (Dec 2025),17,Ranveer Singh,47M
+Indian Celebrities & Influencers,Most Followed Indians on Instagram (Dec 2025),18,Shahid Kapoor,48M
+Indian Celebrities & Influencers,Most Followed Indians on Instagram (Dec 2025),19,Varun Dhawan,47M
+Indian Celebrities & Influencers,Most Followed Indians on Instagram (Dec 2025),20,Rashmika Mandanna,46M
+
+Indian YouTube,Most Subscribed Indian YouTube Channels (Dec 2025),1,T-Series,282M
+Indian YouTube,Most Subscribed Indian YouTube Channels (Dec 2025),2,SET India,182M
+Indian YouTube,Most Subscribed Indian YouTube Channels (Dec 2025),3,Zee Music Company,116M
+Indian YouTube,Most Subscribed Indian YouTube Channels (Dec 2025),4,Goldmines Telefilms,102M
+Indian YouTube,Most Subscribed Indian YouTube Channels (Dec 2025),5,Sony SAB,98M
+Indian YouTube,Most Subscribed Indian YouTube Channels (Dec 2025),6,ChuChu TV Nursery Rhymes,92M
+Indian YouTube,Most Subscribed Indian YouTube Channels (Dec 2025),7,Colors TV,78M
+Indian YouTube,Most Subscribed Indian YouTube Channels (Dec 2025),8,Zee TV,76M
+Indian YouTube,Most Subscribed Indian YouTube Channels (Dec 2025),9,CarryMinati,44M
+Indian YouTube,Most Subscribed Indian YouTube Channels (Dec 2025),10,MR. INDIAN HACKER,42M
+Indian YouTube,Most Subscribed Indian YouTube Channels (Dec 2025),11,Total Gaming,41M
+Indian YouTube,Most Subscribed Indian YouTube Channels (Dec 2025),12,Techno Gamerz,41M
+Indian YouTube,Most Subscribed Indian YouTube Channels (Dec 2025),13,Round2hell,39M
+Indian YouTube,Most Subscribed Indian YouTube Channels (Dec 2025),14,Ashish Chanchlani Vines,33M
+Indian YouTube,Most Subscribed Indian YouTube Channels (Dec 2025),15,BB Ki Vines,27M
+Indian YouTube,Most Subscribed Indian YouTube Channels (Dec 2025),16,Technical Guruji,25M
+Indian YouTube,Most Subscribed Indian YouTube Channels (Dec 2025),17,Dr. Vivek Bindra,24M
+Indian YouTube,Most Subscribed Indian YouTube Channels (Dec 2025),18,FactTechz,23M
+Indian YouTube,Most Subscribed Indian YouTube Channels (Dec 2025),19,Triggered Insaan,22M
+Indian YouTube,Most Subscribed Indian YouTube Channels (Dec 2025),20,Harsh Beniwal,19M
+
+Indian Brands & Companies,Richest Indian Billionaires (Hurun 2025),1,Mukesh Ambani,120.4 Billion USD
+Indian Brands & Companies,Richest Indian Billionaires (Hurun 2025),2,Gautam Adani,92 Billion USD
+Indian Brands & Companies,Richest Indian Billionaires (Hurun 2025),3,Shiv Nadar,38 Billion USD
+Indian Brands & Companies,Richest Indian Billionaires (Hurun 2025),4,Savitri Jindal,35 Billion USD
+Indian Brands & Companies,Richest Indian Billionaires (Hurun 2025),5,Cyrus Poonawalla,28 Billion USD
+Indian Brands & Companies,Richest Indian Billionaires (Hurun 2025),6,Dilip Shanghvi,26 Billion USD
+Indian Brands & Companies,Richest Indian Billionaires (Hurun 2025),7,Radhakishan Damani,25 Billion USD
+Indian Brands & Companies,Richest Indian Billionaires (Hurun 2025),8,Kumar Mangalam Birla,23 Billion USD
+Indian Brands & Companies,Richest Indian Billionaires (Hurun 2025),9,Lakshmi Mittal,18 Billion USD
+Indian Brands & Companies,Richest Indian Billionaires (Hurun 2025),10,Uday Kotak,16 Billion USD
+Indian Brands & Companies,Richest Indian Billionaires (Hurun 2025),11,Sunil Mittal,15 Billion USD
+Indian Brands & Companies,Richest Indian Billionaires (Hurun 2025),12,Bajaj Brothers,14 Billion USD
+Indian Brands & Companies,Richest Indian Billionaires (Hurun 2025),13,Hinduja Brothers,14 Billion USD
+Indian Brands & Companies,Richest Indian Billionaires (Hurun 2025),14,Azim Premji,13 Billion USD
+Indian Brands & Companies,Richest Indian Billionaires (Hurun 2025),15,Vinod Goenka,12 Billion USD
+Indian Brands & Companies,Richest Indian Billionaires (Hurun 2025),16,Benu Gopal Bangur,11 Billion USD
+Indian Brands & Companies,Richest Indian Billionaires (Hurun 2025),17,Rahul Bajaj Family,10 Billion USD
+Indian Brands & Companies,Richest Indian Billionaires (Hurun 2025),18,M.A. Yusuff Ali,9.8 Billion USD
+Indian Brands & Companies,Richest Indian Billionaires (Hurun 2025),19,Ravi Pillai,9.5 Billion USD
+Indian Brands & Companies,Richest Indian Billionaires (Hurun 2025),20,S. Gopalakrishnan,9 Billion USD
+
+Real Estate (India),Most Expensive Cities by Avg House Price per sq ft (2025),1,Mumbai,₹38,000
+Real Estate (India),Most Expensive Cities by Avg House Price per sq ft (2025),2,Delhi NCR,₹28,000
+Real Estate (India),Most Expensive Cities by Avg House Price per sq ft (2025),3,Bengaluru,₹22,000
+Real Estate (India),Most Expensive Cities by Avg House Price per sq ft (2025),4,Hyderabad,₹19,500
+Real Estate (India),Most Expensive Cities by Avg House Price per sq ft (2025),5,Pune,₹17,800
+Real Estate (India),Most Expensive Cities by Avg House Price per sq ft (2025),6,Chennai,₹16,500
+Real Estate (India),Most Expensive Cities by Avg House Price per sq ft (2025),7,Kolkata,₹14,200
+Real Estate (India),Most Expensive Cities by Avg House Price per sq ft (2025),8,Ahmedabad,₹13,800
+Real Estate (India),Most Expensive Cities by Avg House Price per sq ft (2025),9,Jaipur,₹12,500
+Real Estate (India),Most Expensive Cities by Avg House Price per sq ft (2025),10,Goa,₹12,000
+Real Estate (India),Most Expensive Cities by Avg House Price per sq ft (2025),11,Chandigarh,₹11,800
+Real Estate (India),Most Expensive Cities by Avg House Price per sq ft (2025),12,Lucknow,₹11,200
+Real Estate (India),Most Expensive Cities by Avg House Price per sq ft (2025),13,Surat,₹10,900
+Real Estate (India),Most Expensive Cities by Avg House Price per sq ft (2025),14,Indore,₹10,500
+Real Estate (India),Most Expensive Cities by Avg House Price per sq ft (2025),15,Coimbatore,₹10,200
+Real Estate (India),Most Expensive Cities by Avg House Price per sq ft (2025),16,Vadodara,₹9,800
+Real Estate (India),Most Expensive Cities by Avg House Price per sq ft (2025),17,Nagpur,₹9,500
+Real Estate (India),Most Expensive Cities by Avg House Price per sq ft (2025),18,Visakhapatnam,₹9,200
+Real Estate (India),Most Expensive Cities by Avg House Price per sq ft (2025),19,Bhopal,₹8,900
+Real Estate (India),Most Expensive Cities by Avg House Price per sq ft (2025),20,Thiruvananthapuram,₹8,700
+
+Indian Music & Streaming,Most Streamed Indian Songs on Spotify (All Time India),1,Chaand Baaliyan,1.8B
+Indian Music & Streaming,Most Streamed Indian Songs on Spotify (All Time India),2,Excuses,1.6B
+Indian Music & Streaming,Most Streamed Indian Songs on Spotify (All Time India),3,Brown Munde,1.5B
+Indian Music & Streaming,Most Streamed Indian Songs on Spotify (All Time India),4,295,1.4B
+Indian Music & Streaming,Most Streamed Indian Songs on Spotify (All Time India),5,Insane,1.3B
+Indian Music & Streaming,Most Streamed Indian Songs on Spotify (All Time India),6,Goat,1.2B
+Indian Music & Streaming,Most Streamed Indian Songs on Spotify (All Time India),7,Check Kar,1.1B
+Indian Music & Streaming,Most Streamed Indian Songs on Spotify (All Time India),8,Softly,1.05B
+Indian Music & Streaming,Most Streamed Indian Songs on Spotify (All Time India),9,Do Gallan,1.0B
+Indian Music & Streaming,Most Streamed Indian Songs on Spotify (All Time India),10,Naina,980M
+Indian Music & Streaming,Most Streamed Indian Songs on Spotify (All Time India),11,Obsessed,950M
+Indian Music & Streaming,Most Streamed Indian Songs on Spotify (All Time India),12,Still Rollin,920M
+Indian Music & Streaming,Most Streamed Indian Songs on Spotify (All Time India),13,Winning Speech,900M
+Indian Music & Streaming,Most Streamed Indian Songs on Spotify (All Time India),14,With You,880M
+Indian Music & Streaming,Most Streamed Indian Songs on Spotify (All Time India),15,9:45,850M
+Indian Music & Streaming,Most Streamed Indian Songs on Spotify (All Time India),16,Kaleshi Chori,820M
+Indian Music & Streaming,Most Streamed Indian Songs on Spotify (All Time India),17,Chaleya,800M
+Indian Music & Streaming,Most Streamed Indian Songs on Spotify (All Time India),18,Heeriye,780M
+Indian Music & Streaming,Most Streamed Indian Songs on Spotify (All Time India),19,Akhiyaan Gulaab,750M
+Indian Music & Streaming,Most Streamed Indian Songs on Spotify (All Time India),20,Satranga,720M
+
+Indian Cars & Bikes,Best Selling Cars in India (2025 YTD),1,Maruti Suzuki Swift,2.1 Lakh units
+Indian Cars & Bikes,Best Selling Cars in India (2025 YTD),2,Hyundai Creta,1.9 Lakh units
+Indian Cars & Bikes,Best Selling Cars in India (2025 YTD),3,Maruti Brezza,1.8 Lakh units
+Indian Cars & Bikes,Best Selling Cars in India (2025 YTD),4,Tata Punch,1.75 Lakh units
+Indian Cars & Bikes,Best Selling Cars in India (2025 YTD),5,Maruti Ertiga,1.6 Lakh units
+Indian Cars & Bikes,Best Selling Cars in India (2025 YTD),6,Mahindra Scorpio,1.5 Lakh units
+Indian Cars & Bikes,Best Selling Cars in India (2025 YTD),7,Tata Nexon,1.45 Lakh units
+Indian Cars & Bikes,Best Selling Cars in India (2025 YTD),8,Maruti WagonR,1.4 Lakh units
+Indian Cars & Bikes,Best Selling Cars in India (2025 YTD),9,Kia Seltos,1.3 Lakh units
+Indian Cars & Bikes,Best Selling Cars in India (2025 YTD),10,Mahindra XUV700,1.25 Lakh units
+Indian Cars & Bikes,Best Selling Cars in India (2025 YTD),11,Maruti Baleno,1.2 Lakh units
+Indian Cars & Bikes,Best Selling Cars in India (2025 YTD),12,Hyundai Venue,1.15 Lakh units
+Indian Cars & Bikes,Best Selling Cars in India (2025 YTD),13,Toyota Innova Crysta,1.1 Lakh units
+Indian Cars & Bikes,Best Selling Cars in India (2025 YTD),14,Mahindra Thar,1.05 Lakh units
+Indian Cars & Bikes,Best Selling Cars in India (2025 YTD),15,Maruti Dzire,1.0 Lakh units
+Indian Cars & Bikes,Best Selling Cars in India (2025 YTD),16,Honda City,98k units
+Indian Cars & Bikes,Best Selling Cars in India (2025 YTD),17,Tata Tiago,95k units
+Indian Cars & Bikes,Best Selling Cars in India (2025 YTD),18,Hyundai i20,92k units
+Indian Cars & Bikes,Best Selling Cars in India (2025 YTD),19,Kia Sonet,90k units
+Indian Cars & Bikes,Best Selling Cars in India (2025 YTD),20,MG Hector,88k units
+
+Indian Geography & Tourism,Most Populous Indian States & UTs (2025 Proj),1,Uttar Pradesh,241 Million
+Indian Geography & Tourism,Most Populous Indian States & UTs (2025 Proj),2,Maharashtra,128 Million
+Indian Geography & Tourism,Most Populous Indian States & UTs (2025 Proj),3,Bihar,131 Million
+Indian Geography & Tourism,Most Populous Indian States & UTs (2025 Proj),4,West Bengal,102 Million
+Indian Geography & Tourism,Most Populous Indian States & UTs (2025 Proj),5,Madhya Pradesh,88 Million
+Indian Geography & Tourism,Most Populous Indian States & UTs (2025 Proj),6,Tamil Nadu,78 Million
+Indian Geography & Tourism,Most Populous Indian States & UTs (2025 Proj),7,Rajasthan,82 Million
+Indian Geography & Tourism,Most Populous Indian States & UTs (2025 Proj),8,Karnataka,69 Million
+Indian Geography & Tourism,Most Populous Indian States & UTs (2025 Proj),9,Gujarat,72 Million
+Indian Geography & Tourism,Most Populous Indian States & UTs (2025 Proj),10,Andhra Pradesh,54 Million
+Indian Geography & Tourism,Most Populous Indian States & UTs (2025 Proj),11,Odisha,47 Million
+Indian Geography & Tourism,Most Populous Indian States & UTs (2025 Proj),12,Telangana,39 Million
+Indian Geography & Tourism,Most Populous Indian States & UTs (2025 Proj),13,Kerala,36 Million
+Indian Geography & Tourism,Most Populous Indian States & UTs (2025 Proj),14,Jharkhand,41 Million
+Indian Geography & Tourism,Most Populous Indian States & UTs (2025 Proj),15,Assam,36 Million
+Indian Geography & Tourism,Most Populous Indian States & UTs (2025 Proj),16,Punjab,31 Million
+Indian Geography & Tourism,Most Populous Indian States & UTs (2025 Proj),17,Chhattisgarh,31 Million
+Indian Geography & Tourism,Most Populous Indian States & UTs (2025 Proj),18,Haryana,31 Million
+Indian Geography & Tourism,Most Populous Indian States & UTs (2025 Proj),19,Delhi (UT),22 Million
+Indian Geography & Tourism,Most Populous Indian States & UTs (2025 Proj),20,Uttarakhand,12 Million
+
+Indian Shopping & Luxury,Most Expensive Sarees Ever Sold in India,1,Vivaah Patu Silk Saree,₹39.3 Lakh
+Indian Shopping & Luxury,Most Expensive Sarees Ever Sold in India,2,Kanjeevaram Bridal Silk,₹28 Lakh
+Indian Shopping & Luxury,Most Expensive Sarees Ever Sold in India,3,Paithani Zari Saree,₹22 Lakh
+Indian Shopping & Luxury,Most Expensive Sarees Ever Sold in India,4,Banarasi Gold Zari,₹18 Lakh
+Indian Shopping & Luxury,Most Expensive Sarees Ever Sold in India,5,Patola Double Ikat,₹15 Lakh
+Indian Shopping & Luxury,Most Expensive Sarees Ever Sold in India,6,Sambalpuri Silk,₹12 Lakh
+Indian Shopping & Luxury,Most Expensive Sarees Ever Sold in India,7,Tant Cotton Handloom,₹10 Lakh
+Indian Shopping & Luxury,Most Expensive Sarees Ever Sold in India,8,Chanderi Silk,₹9.5 Lakh
+Indian Shopping & Luxury,Most Expensive Sarees Ever Sold in India,9,Bandhani Silk,₹8.8 Lakh
+Indian Shopping & Luxury,Most Expensive Sarees Ever Sold in India,10,Dharmavaram Silk,₹8.2 Lakh
+Indian Shopping & Luxury,Most Expensive Sarees Ever Sold in India,11,Mysore Silk,₹7.9 Lakh
+Indian Shopping & Luxury,Most Expensive Sarees Ever Sold in India,12,Pochampally Ikat,₹7.5 Lakh
+Indian Shopping & Luxury,Most Expensive Sarees Ever Sold in India,13,Gadwal Silk,₹7.2 Lakh
+Indian Shopping & Luxury,Most Expensive Sarees Ever Sold in India,14,Uppada Silk,₹6.8 Lakh
+Indian Shopping & Luxury,Most Expensive Sarees Ever Sold in India,15,Tussar Silk,₹6.5 Lakh
+Indian Shopping & Luxury,Most Expensive Sarees Ever Sold in India,16,Kota Doria,₹6.2 Lakh
+Indian Shopping & Luxury,Most Expensive Sarees Ever Sold in India,17,Maheshwari Silk,₹5.9 Lakh
+Indian Shopping & Luxury,Most Expensive Sarees Ever Sold in India,18,Bomkai Silk,₹5.6 Lakh
+Indian Shopping & Luxury,Most Expensive Sarees Ever Sold in India,19,Kosa Silk,₹5.3 Lakh
+Indian Shopping & Luxury,Most Expensive Sarees Ever Sold in India,20,Bhagalpuri Silk,₹5.1 Lakh
+
+Indian Web & Apps,Most Downloaded Indian Apps (2025),1,Instagram,620M
+Indian Web & Apps,Most Downloaded Indian Apps (2025),2,WhatsApp,580M
+Indian Web & Apps,Most Downloaded Indian Apps (2025),3,Meesho,420M
+Indian Web & Apps,Most Downloaded Indian Apps (2025),4,PhonePe,380M
+Indian Web & Apps,Most Downloaded Indian Apps (2025),5,Flipkart,350M
+Indian Web & Apps,Most Downloaded Indian Apps (2025),6,Paytm,320M
+Indian Web & Apps,Most Downloaded Indian Apps (2025),7,Google Pay,300M
+Indian Web & Apps,Most Downloaded Indian Apps (2025),8,JioCinema,280M
+Indian Web & Apps,Most Downloaded Indian Apps (2025),9,MX Player,260M
+Indian Web & Apps,Most Downloaded Indian Apps (2025),10,Hotstar,240M
+Indian Web & Apps,Most Downloaded Indian Apps (2025),11,ShareChat,220M
+Indian Web & Apps,Most Downloaded Indian Apps (2025),12,Zomato,200M
+Indian Web & Apps,Most Downloaded Indian Apps (2025),13,Swiggy,190M
+Indian Web & Apps,Most Downloaded Indian Apps (2025),14,Airtel Thanks,180M
+Indian Web & Apps,Most Downloaded Indian Apps (2025),15,JioSaavn,170M
+Indian Web & Apps,Most Downloaded Indian Apps (2025),16,Myntra,160M
+Indian Web & Apps,Most Downloaded Indian Apps (2025),17,Ajio,150M
+Indian Web & Apps,Most Downloaded Indian Apps (2025),18,Groww,140M
+Indian Web & Apps,Most Downloaded Indian Apps (2025),19,Upstox,130M
+Indian Web & Apps,Most Downloaded Indian Apps (2025),20,Dream11,120M
+
+Indian Reality TV & OTT,Most Viewed Indian Web Series (All Platforms 2025),1,Mirzapur Season 3,420M views
+Indian Reality TV & OTT,Most Viewed Indian Web Series (All Platforms 2025),2,Panchayat Season 4,380M views
+Indian Reality TV & OTT,Most Viewed Indian Web Series (All Platforms 2025),3,The Family Man Season 3,350M views
+Indian Reality TV & OTT,Most Viewed Indian Web Series (All Platforms 2025),4,Paatal Lok Season 2,320M views
+Indian Reality TV & OTT,Most Viewed Indian Web Series (All Platforms 2025),5,Guns & Gulaabs,290M views
+Indian Reality TV & OTT,Most Viewed Indian Web Series (All Platforms 2025),6,Farzi,280M views
+Indian Reality TV & OTT,Most Viewed Indian Web Series (All Platforms 2025),7,Asur Season 2,260M views
+Indian Reality TV & OTT,Most Viewed Indian Indian Web Series (All Platforms 2025),8,Heeramandi,250M views
+Indian Reality TV & OTT,Most Viewed Indian Web Series (All Platforms 2025),9,The Railway Men,240M views
+Indian Reality TV & OTT,Most Viewed Indian Web Series (All Platforms 2025),10,Kota Factory Season 3,230M views
+Indian Reality TV & OTT,Most Viewed Indian Web Series (All Platforms 2025),11,TVF Aspirants S2,220M views
+Indian Reality TV & OTT,Most Viewed Indian Web Series (All Platforms 2025),12,Scam 1992,210M views
+Indian Reality TV & OTT,Most Viewed Indian Web Series (All Platforms 2025),13,Sacred Games,200M views
+Indian Reality TV & OTT,Most Viewed Indian Web Series (All Platforms 2025),14,Delhi Crime,190M views
+Indian Reality TV & OTT,Most Viewed Indian Web Series (All Platforms 2025),15,Made in Heaven S2,180M views
+Indian Reality TV & OTT,Most Viewed Indian Web Series (All Platforms 2025),16,Special OPS,170M views
+Indian Reality TV & OTT,Most Viewed Indian Web Series (All Platforms 2025),17,Breathe Into The Shadows,160M views
+Indian Reality TV & OTT,Most Viewed Indian Web Series (All Platforms 2025),18,Criminal Justice,150M views
+Indian Reality TV & OTT,Most Viewed Indian Web Series (All Platforms 2025),19,Undekhi,140M views
+Indian Reality TV & OTT,Most Viewed Indian Web Series (All Platforms 2025),20,Aarya,130M views
+
+Indian Books & Literature,Best Selling Indian Books of All Time,1,The Immortals of Meluha,9M+ copies
+Indian Books & Literature,Best Selling Indian Books of All Time,2,Five Point Someone,8M+ copies
+Indian Books & Literature,Best Selling Indian Books of All Time,3,2 States,7M+ copies
+Indian Books & Literature,Best Selling Indian Books of All Time,4,One Indian Girl,6M+ copies
+Indian Books & Literature,Best Selling Indian Books of All Time,5,The Secret of the Nagas,5.5M+ copies
+Indian Books & Literature,Best Selling Indian Books of All Time,6,Half Girlfriend,5M+ copies
+Indian Books & Literature,Best Selling Indian Books of All Time,7,The Oath of the Vayuputras,4.8M+ copies
+Indian Books & Literature,Best Selling Indian Books of All Time,8,One Night @ the Call Center,4.5M+ copies
+Indian Books & Literature,Best Selling Indian Books of All Time,9,Revolution 2020,4M+ copies
+Indian Books & Literature,Best Selling Indian Books of All Time,10,The 3 Mistakes of My Life,3.8M+ copies
+Indian Books & Literature,Best Selling Indian Books of All Time,11,Scion of Ikshvaku,3.5M+ copies
+Indian Books & Literature,Best Selling Indian Books of All Time,12,Life is What You Make It,3.2M+ copies
+Indian Books & Literature,Best Selling Indian Books of All Time,13,The Alchemist (Indian edition),3M+ copies
+Indian Books & Literature,Best Selling Indian Books of All Time,14,The Monk Who Sold His Ferrari (Indian ed),2.8M+ copies
+Indian Books & Literature,Best Selling Indian Books of All Time,15,Rich Dad Poor Dad (Indian ed),2.7M+ copies
+Indian Books & Literature,Best Selling Indian Books of All Time,16,The Palace of Illusions,2.5M+ copies
+Indian Books & Literature,Best Selling Indian Books of All Time,17,Sita Warrior of Mithila,2.4M+ copies
+Indian Books & Literature,Best Selling Indian Books of All Time,18,The Rozabal Line,2.2M+ copies
+Indian Books & Literature,Best Selling Indian Books of All Time,19,Wish I Could Tell You,2M+ copies
+Indian Books & Literature,Best Selling Indian Books of All Time,20,400 Days,1.9M+ copies
+
+Indian Politics,Most Followed Indian Politicians on Instagram (2025),1,Narendra Modi,97M
+Indian Politics,Most Followed Indian Politicians on Instagram (2025),2,Rahul Gandhi,28M
+Indian Politics,Most Followed Indian Politicians on Instagram (2025),3,Amit Shah,26M
+Indian Politics,Most Followed Indian Politicians on Instagram (2025),4,Yogi Adityanath,24M
+Indian Politics,Most Followed Indian Politicians on Instagram (2025),5,Arvind Kejriwal,18M
+Indian Politics,Most Followed Indian Politicians on Instagram (2025),6,Mamata Banerjee,12M
+Indian Politics,Most Followed Indian Politicians on Instagram (2025),7,Nitin Gadkari,10M
+Indian Politics,Most Followed Indian Politicians on Instagram (2025),8,Priyanka Gandhi,9.5M
+Indian Politics,Most Followed Indian Politicians on Instagram (2025),9,MK Stalin,8.8M
+Indian Politics,Most Followed Indian Politicians on Instagram (2025),10,Smriti Irani,8.5M
+Indian Politics,Most Followed Indian Politicians on Instagram (2025),11,Rajnath Singh,8M
+Indian Politics,Most Followed Indian Politicians on Instagram (2025),12,Siddaramaiah,7.5M
+Indian Politics,Most Followed Indian Politicians on Instagram (2025),13,K Chandrashekar Rao,7M
+Indian Politics,Most Followed Indian Politicians on Instagram (2025),14,Naveen Patnaik,6.8M
+Indian Politics,Most Followed Indian Politicians on Instagram (2025),15,Akhilesh Yadav,6.5M
+Indian Politics,Most Followed Indian Politicians on Instagram (2025),16,Mallikarjun Kharge,6M
+Indian Politics,Most Followed Indian Politicians on Instagram (2025),17,Shashi Tharoor,5.8M
+Indian Politics,Most Followed Indian Politicians on Instagram (2025),18,J P Nadda,5.5M
+Indian Politics,Most Followed Indian Politicians on Instagram (2025),19,Uddhav Thackeray,5.2M
+Indian Politics,Most Followed Indian Politicians on Instagram (2025),20,Hemant Soren,5M
+
+Indian Food & Restaurants,Highest Rated Restaurants in India (Zomato 2025),1,Masque - Mumbai,4.9
+Indian Food & Restaurants,Highest Rated Restaurants in India (Zomato 2025),2,The Bombay Canteen - Mumbai,4.9
+Indian Food & Restaurants,Highest Rated Restaurants in India (Zomato 2025),3,Indian Accent - Delhi,4.9
+Indian Food & Restaurants,Highest Rated Restaurants in India (Zomato 2025),4,Ekaa - Mumbai,4.9
+Indian Food & Restaurants,Highest Rated Restaurants in India (Zomato 2025),5,Avartana - Chennai,4.9
+Indian Food & Restaurants,Highest Rated Restaurants in India (Zomato 2025),6,Dum Pukht - Delhi,4.9
+Indian Food & Restaurants,Highest Rated Restaurants in India (Zomato 2025),7,Karavalli - Bengaluru,4.9
+Indian Food & Restaurants,Highest Rated Restaurants in India (Zomato 2025),8,Wasabi by Morimoto - Mumbai,4.8
+Indian Food & Restaurants,Highest Rated Restaurants in India (Zomato 2025),9,Bukhara - Delhi,4.8
+Indian Food & Restaurants,Highest Rated Restaurants in India (Zomato 2025),10,Comorin - Gurugram,4.8
+Indian Food & Restaurants,Highest Rated Restaurants in India (Zomato 2025),11,FabCafe - Mumbai,4.8
+Indian Food & Restaurants,Highest Rated Restaurants in India (Zomato 2025),12,O by Tamara - Kochi,4.8
+Indian Food & Restaurants,Highest Rated Restaurants in India (Zomato 2025),13,The Table - Mumbai,4.8
+Indian Food & Restaurants,Highest Rated Restaurants in India (Zomato 2025),14,Yauatcha - Bengaluru,4.8
+Indian Food & Restaurants,Highest Rated Restaurants in India (Zomato 2025),15,Toast & Tonic - Bengaluru,4.8
+Indian Food & Restaurants,Highest Rated Restaurants in India (Zomato 2025),16,Peter Cat - Kolkata,4.8
+Indian Food & Restaurants,Highest Rated Restaurants in India (Zomato 2025),17,Trishna - Mumbai,4.8
+Indian Food & Restaurants,Highest Rated Restaurants in India (Zomato 2025),18,Miso Sexy - Mumbai,4.8
+Indian Food & Restaurants,Highest Rated Restaurants in India (Zomato 2025),19,Fig & Maple - Delhi,4.8
+Indian Food & Restaurants,Highest Rated Restaurants in India (Zomato 2025),20,Soho Street - Kolkata,4.8
