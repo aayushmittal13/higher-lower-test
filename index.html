@@ -8,7 +8,7 @@
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+
     <style>
         @keyframes pulse {
             0%, 100% { opacity: 1; }
@@ -157,41 +157,50 @@
                     const response = await fetch('data.json');
                     const text = await response.text();
                     
-                    Papa.parse(text, {
-                        header: true,
-                        complete: (results) => {
-                            const groupedData = {};
-                            
-                            results.data.forEach(row => {
-                                if (row.Category && row.Name && row.Value) {
-                                    const category = row.Category;
-                                    const subcategory = row.Subcategory || category;
-                                    
-                                    if (!groupedData[category]) {
-                                        groupedData[category] = {
-                                            name: category,
-                                            subcategory: subcategory,
-                                            emoji: categoryEmojis[category] || '📊',
-                                            items: []
-                                        };
-                                    }
-                                    
-                                    groupedData[category].items.push({
-                                        name: row.Name,
-                                        value: parseValue(row.Value),
-                                        displayValue: row.Value,
-                                        rank: parseInt(row.Rank) || 0
-                                    });
-                                }
-                            });
-                            
-                            const categoriesArray = Object.values(groupedData);
-                            setCategories(categoriesArray);
-                            setLoading(false);
+                    // Parse CSV manually
+                    const lines = text.split('\n').filter(line => line.trim());
+                    const headers = lines[0].split(',');
+                    
+                    const groupedData = {};
+                    
+                    for (let i = 1; i < lines.length; i++) {
+                        const values = lines[i].split(',');
+                        if (values.length < 5) continue;
+                        
+                        const category = values[0];
+                        const subcategory = values[1];
+                        const rank = values[2];
+                        const name = values[3];
+                        const value = values[4];
+                        
+                        if (!category || !name || !value) continue;
+                        
+                        // Use subcategory as the unique key
+                        const key = subcategory || category;
+                        
+                        if (!groupedData[key]) {
+                            groupedData[key] = {
+                                name: category,
+                                subcategory: subcategory || category,
+                                emoji: categoryEmojis[category] || '📊',
+                                items: []
+                            };
                         }
-                    });
+                        
+                        groupedData[key].items.push({
+                            name: name,
+                            value: parseValue(value),
+                            displayValue: value,
+                            rank: parseInt(rank) || 0
+                        });
+                    }
+                    
+                    const categoriesArray = Object.values(groupedData);
+                    setCategories(categoriesArray);
+                    setLoading(false);
                 } catch (error) {
                     console.error('Error loading game data:', error);
+                    alert('Error: ' + error.message);
                     setLoading(false);
                 }
             };
