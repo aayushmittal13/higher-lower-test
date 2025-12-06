@@ -166,13 +166,14 @@
                     
                     for (let i = 1; i < lines.length; i++) {
                         const values = lines[i].split(',');
-                        if (values.length < 5) continue;
+                        if (values.length < 6) continue;
                         
                         const category = values[0];
                         const subcategory = values[1];
                         const rank = values[2];
                         const name = values[3];
                         const value = values[4];
+                        const imageURL = values[5];
                         
                         if (!category || !name || !value) continue;
                         
@@ -192,6 +193,7 @@
                             name: name,
                             value: parseValue(value),
                             displayValue: value,
+                            imageURL: imageURL || '',
                             rank: parseInt(rank) || 0
                         });
                     }
@@ -507,9 +509,21 @@
                                                 </div>
                                             )}
 
-                                            {/* Emoji Icon */}
+                                            {/* Image */}
                                             <div className="w-full h-48 mb-4 rounded-xl overflow-hidden bg-gradient-to-br from-orange-200 to-green-200 flex items-center justify-center">
-                                                <div className="text-8xl">{selectedCategory.emoji}</div>
+                                                {item.imageURL ? (
+                                                    <img 
+                                                        src={item.imageURL} 
+                                                        alt={item.name}
+                                                        className="w-full h-full object-cover"
+                                                        onError={(e) => {
+                                                            e.target.style.display = 'none';
+                                                            e.target.parentElement.innerHTML = '<div class="text-8xl">' + selectedCategory.emoji + '</div>';
+                                                        }}
+                                                    />
+                                                ) : (
+                                                    <div className="text-8xl">{selectedCategory.emoji}</div>
+                                                )}
                                             </div>
 
                                             {/* Name */}
