@@ -154,7 +154,11 @@
             };
 
             const parseCSVLine = (line) => {
-                const result = [];
+                // Split by comma but we know the structure:
+                // Category,Subcategory,Rank,Name,Value,ImageURL
+                // Value might contain commas, so we need special handling
+                
+                const parts = [];
                 let current = '';
                 let inQuotes = false;
                 
@@ -164,14 +168,34 @@
                     if (char === '"') {
                         inQuotes = !inQuotes;
                     } else if (char === ',' && !inQuotes) {
-                        result.push(current.trim());
+                        parts.push(current.trim());
                         current = '';
                     } else {
                         current += char;
                     }
                 }
-                result.push(current.trim());
-                return result;
+                parts.push(current.trim());
+                
+                // If we have more than 6 parts, the Value column had commas
+                // Merge parts[4] onwards until we have exactly 6 columns
+                if (parts.length > 6) {
+                    const fixedParts = [
+                        parts[0], // Category
+                        parts[1], // Subcategory
+                        parts[2], // Rank
+                        parts[3], // Name
+                        parts.slice(4, parts.length - 1).join(','), // Value (merge middle parts)
+                        parts[parts.length - 1] // ImageURL (last part)
+                    ];
+                    return fixedParts;
+                }
+                
+                // If we have 5 columns, ImageURL is missing
+                if (parts.length === 5) {
+                    parts.push('');
+                }
+                
+                return parts;
             };
 
             const loadGameData = async () => {
