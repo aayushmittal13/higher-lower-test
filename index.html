@@ -115,6 +115,7 @@
             const [animation, setAnimation] = useState('');
             const [loading, setLoading] = useState(true);
             const [showSuccess, setShowSuccess] = useState(false);
+            const [clickedSide, setClickedSide] = useState(null);
 
             useEffect(() => {
                 loadGameData();
@@ -274,11 +275,13 @@
                 setResult(null);
                 setAnimation('');
                 setShowSuccess(false);
+                setClickedSide(null);
             };
 
             const handleGuess = (selected) => {
                 if (revealed || gameOver) return;
 
+                setClickedSide(selected);
                 const [left, right] = currentPair;
                 const correct = (selected === 'left' && left.value >= right.value) || 
                                (selected === 'right' && right.value >= left.value);
@@ -471,34 +474,35 @@
                         {currentPair.length === 2 && (
                             <div className="grid md:grid-cols-2 gap-4 relative">
                                 {currentPair.map((item, idx) => {
-                                    const isWinner = revealed && ((idx === 0 && item.value >= currentPair[1].value) || (idx === 1 && item.value >= currentPair[0].value));
-                                    const isLoser = revealed && !isWinner;
+                                    const side = idx === 0 ? 'left' : 'right';
+                                    const wasClicked = clickedSide === side;
+                                    const isCorrect = result === 'correct';
                                     
                                     return (
                                         <button
                                             key={idx}
-                                            onClick={() => handleGuess(idx === 0 ? 'left' : 'right')}
+                                            onClick={() => handleGuess(side)}
                                             disabled={revealed || gameOver}
                                             className={`relative bg-white rounded-3xl shadow-2xl p-8 transition-all transform hover:scale-105 hover:shadow-3xl ${
                                                 revealed ? 'cursor-default' : 'cursor-pointer'
                                             } ${
-                                                isWinner ? 'ring-8 ring-green-500 bg-green-50' : ''
+                                                wasClicked && isCorrect ? 'ring-8 ring-green-500 bg-green-50' : ''
                                             } ${
-                                                isLoser ? 'ring-8 ring-red-500 bg-red-50 animate-pulse' : ''
+                                                wasClicked && !isCorrect ? 'ring-8 ring-red-500 bg-red-50 animate-pulse' : ''
                                             }`}
                                         >
-                                            {/* Result Badge */}
-                                            {revealed && (
-                                                <div className={`absolute top-4 left-4 px-4 py-2 rounded-full font-bold text-white text-lg ${
-                                                    isWinner ? 'bg-green-500 animate-bounce' : 'bg-red-500'
+                                            {/* Result Badge - ONLY on clicked card */}
+                                            {revealed && wasClicked && (
+                                                <div className={`absolute -top-6 left-1/2 transform -translate-x-1/2 px-8 py-4 rounded-2xl font-bold text-white text-2xl shadow-2xl z-20 ${
+                                                    isCorrect ? 'bg-green-500 animate-bounce' : 'bg-red-500'
                                                 }`}>
-                                                    {isWinner ? '✓ Higher!' : '✗ Lower'}
+                                                    {isCorrect ? '✓ CORRECT!' : '✗ WRONG!'}
                                                 </div>
                                             )}
 
                                             {/* Success Animation */}
-                                            {showSuccess && isWinner && (
-                                                <div className="absolute top-4 right-4 text-4xl font-bold text-green-500 float-up">
+                                            {showSuccess && wasClicked && isCorrect && (
+                                                <div className="absolute top-4 right-4 text-5xl font-bold text-green-500 float-up">
                                                     +1
                                                 </div>
                                             )}
