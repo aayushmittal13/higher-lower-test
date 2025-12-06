@@ -331,21 +331,25 @@
                 // Progressive difficulty based on score
                 let minPercent, maxPercent;
                 if (score < 5) {
-                    // Rounds 1-5: EASY (huge difference)
-                    minPercent = 0.5; // 50% lower
-                    maxPercent = 2.0;  // 100% higher
+                    // Rounds 1-5: VERY EASY (massive difference)
+                    minPercent = 0.3; // Can be 70% lower
+                    maxPercent = 3.0;  // Can be 200% higher (3x)
                 } else if (score < 10) {
-                    // Rounds 6-10: MEDIUM 
+                    // Rounds 6-10: EASY
+                    minPercent = 0.4;  // 60% lower
+                    maxPercent = 2.5;  // 150% higher
+                } else if (score < 15) {
+                    // Rounds 11-15: MEDIUM
+                    minPercent = 0.5;  // 50% lower
+                    maxPercent = 2.0;  // 100% higher
+                } else if (score < 20) {
+                    // Rounds 16-20: HARD
                     minPercent = 0.6;  // 40% lower
                     maxPercent = 1.6;  // 60% higher
-                } else if (score < 15) {
-                    // Rounds 11-15: HARD
+                } else {
+                    // Rounds 21+: EXPERT
                     minPercent = 0.7;  // 30% lower
                     maxPercent = 1.4;  // 40% higher
-                } else {
-                    // Rounds 16+: EXPERT
-                    minPercent = 0.8;  // 20% lower
-                    maxPercent = 1.3;  // 30% higher
                 }
                 
                 const minValue = firstItem.value * minPercent;
@@ -511,22 +515,6 @@
                                 <div>
                                     <div className="text-2xl font-bold text-gray-800">{globalBestScore}</div>
                                     <div className="text-xs text-gray-600">Global Best</div>
-                                </div>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <div className={`text-2xl ${
-                                    score < 5 ? 'text-green-500' : 
-                                    score < 10 ? 'text-yellow-500' : 
-                                    score < 15 ? 'text-orange-500' : 
-                                    'text-red-500'
-                                }`}>
-                                    {score < 5 ? '😊' : score < 10 ? '🤔' : score < 15 ? '😰' : '🔥'}
-                                </div>
-                                <div>
-                                    <div className="text-sm font-bold text-gray-800">
-                                        {score < 5 ? 'Easy' : score < 10 ? 'Medium' : score < 15 ? 'Hard' : 'Expert'}
-                                    </div>
-                                    <div className="text-xs text-gray-600">Difficulty</div>
                                 </div>
                             </div>
                         </div>
