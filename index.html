@@ -39,7 +39,7 @@
     <script type="text/babel">
         const { useState, useEffect } = React;
 
-        // Category emoji mapping
+        // Category emoji mapping with fallback images
         const categoryEmojis = {
             'Bollywood & Indian Cinema': '🎬',
             'Cricket': '🏏',
@@ -56,6 +56,25 @@
             'Indian Books & Literature': '📚',
             'Indian Politics': '🏛️',
             'Indian Food & Restaurants': '🍛'
+        };
+
+        // Fallback images for categories
+        const categoryFallbacks = {
+            'Bollywood & Indian Cinema': 'https://cdn-icons-png.flaticon.com/512/3163/3163498.png',
+            'Cricket': 'https://cdn-icons-png.flaticon.com/512/1533/1533913.png',
+            'Indian Celebrities & Influencers': 'https://cdn-icons-png.flaticon.com/512/1077/1077114.png',
+            'Indian YouTube': 'https://cdn-icons-png.flaticon.com/512/1384/1384060.png',
+            'Indian Brands & Companies': 'https://cdn-icons-png.flaticon.com/512/3135/3135706.png',
+            'Real Estate (India)': 'https://cdn-icons-png.flaticon.com/512/619/619032.png',
+            'Indian Music & Streaming': 'https://cdn-icons-png.flaticon.com/512/727/727267.png',
+            'Indian Cars & Bikes': 'https://cdn-icons-png.flaticon.com/512/171/171239.png',
+            'Indian Geography & Tourism': 'https://cdn-icons-png.flaticon.com/512/854/854878.png',
+            'Indian Shopping & Luxury': 'https://cdn-icons-png.flaticon.com/512/2331/2331966.png',
+            'Indian Web & Apps': 'https://cdn-icons-png.flaticon.com/512/733/733585.png',
+            'Indian Reality TV & OTT': 'https://cdn-icons-png.flaticon.com/512/3074/3074767.png',
+            'Indian Books & Literature': 'https://cdn-icons-png.flaticon.com/512/167/167755.png',
+            'Indian Politics': 'https://cdn-icons-png.flaticon.com/512/3004/3004458.png',
+            'Indian Food & Restaurants': 'https://cdn-icons-png.flaticon.com/512/3075/3075977.png'
         };
 
         // SVG Icons
@@ -562,12 +581,27 @@
                                                         alt={item.name}
                                                         className="w-full h-full object-cover"
                                                         onError={(e) => {
+                                                            // Try category fallback image first
+                                                            const fallbackImg = categoryFallbacks[selectedCategory.name];
+                                                            if (fallbackImg && e.target.src !== fallbackImg) {
+                                                                e.target.src = fallbackImg;
+                                                            } else {
+                                                                // If fallback also fails, show emoji
+                                                                e.target.style.display = 'none';
+                                                                e.target.parentElement.innerHTML = '<div class="text-8xl">' + selectedCategory.emoji + '</div>';
+                                                            }
+                                                        }}
+                                                    />
+                                                ) : (
+                                                    <img 
+                                                        src={categoryFallbacks[selectedCategory.name] || 'https://via.placeholder.com/400x300?text=' + encodeURIComponent(item.name)}
+                                                        alt={item.name}
+                                                        className="w-full h-full object-cover"
+                                                        onError={(e) => {
                                                             e.target.style.display = 'none';
                                                             e.target.parentElement.innerHTML = '<div class="text-8xl">' + selectedCategory.emoji + '</div>';
                                                         }}
                                                     />
-                                                ) : (
-                                                    <div className="text-8xl">{selectedCategory.emoji}</div>
                                                 )}
                                             </div>
 
