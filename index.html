@@ -8,6 +8,7 @@
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <style>
         @keyframes pulse {
             0%, 100% { opacity: 1; }
@@ -23,6 +24,13 @@
         .animate-bounce {
             animation: bounce 1s infinite;
         }
+        @keyframes float-up {
+            0% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(-50px); opacity: 0; }
+        }
+        .float-up {
+            animation: float-up 1s ease-out;
+        }
     </style>
 </head>
 <body>
@@ -30,6 +38,25 @@
 
     <script type="text/babel">
         const { useState, useEffect } = React;
+
+        // Category emoji mapping
+        const categoryEmojis = {
+            'Bollywood & Indian Cinema': '🎬',
+            'Cricket': '🏏',
+            'Indian Celebrities & Influencers': '⭐',
+            'Indian YouTube': '📺',
+            'Indian Brands & Companies': '💼',
+            'Real Estate (India)': '🏠',
+            'Indian Music & Streaming': '🎵',
+            'Indian Cars & Bikes': '🚗',
+            'Indian Geography & Tourism': '🗺️',
+            'Indian Shopping & Luxury': '💎',
+            'Indian Web & Apps': '📱',
+            'Indian Reality TV & OTT': '📺',
+            'Indian Books & Literature': '📚',
+            'Indian Politics': '🏛️',
+            'Indian Food & Restaurants': '🍛'
+        };
 
         // SVG Icons
         const Trophy = () => (
@@ -74,30 +101,95 @@
         );
 
         function HigherOrLowerGame() {
-            const [gameData, setGameData] = useState(null);
+            const [categories, setCategories] = useState([]);
             const [selectedCategory, setSelectedCategory] = useState(null);
             const [score, setScore] = useState(0);
             const [streak, setStreak] = useState(0);
             const [bestStreak, setBestStreak] = useState(0);
             const [globalBestScore, setGlobalBestScore] = useState(0);
             const [currentPair, setCurrentPair] = useState([]);
+            const [usedItems, setUsedItems] = useState([]);
             const [revealed, setRevealed] = useState(false);
             const [result, setResult] = useState(null);
             const [gameOver, setGameOver] = useState(false);
             const [animation, setAnimation] = useState('');
             const [loading, setLoading] = useState(true);
+            const [showSuccess, setShowSuccess] = useState(false);
 
             useEffect(() => {
                 loadGameData();
                 loadGlobalBestScore();
             }, []);
 
+            const parseValue = (valueStr) => {
+                if (!valueStr) return 0;
+                const str = valueStr.toString().trim();
+                
+                // Remove currency symbols and units
+                let cleaned = str.replace(/[₹$,]/g, '').trim();
+                
+                // Handle different suffixes
+                if (cleaned.includes('Cr')) {
+                    return parseFloat(cleaned.replace('Cr', '').trim());
+                } else if (cleaned.includes('Lakh')) {
+                    return parseFloat(cleaned.replace('Lakh', '').trim()) / 100;
+                } else if (cleaned.includes('k units')) {
+                    return parseFloat(cleaned.replace('k units', '').trim()) / 1000;
+                } else if (cleaned.includes('M')) {
+                    return parseFloat(cleaned.replace('M', '').trim());
+                } else if (cleaned.includes('B')) {
+                    return parseFloat(cleaned.replace('B', '').trim()) * 1000;
+                } else if (cleaned.includes('Billion USD')) {
+                    return parseFloat(cleaned.replace('Billion USD', '').trim());
+                } else if (cleaned.includes('Million')) {
+                    return parseFloat(cleaned.replace('Million', '').trim());
+                } else if (cleaned.includes('copies')) {
+                    return parseFloat(cleaned.replace(/[M+copies]/g, '').trim());
+                } else if (cleaned.includes('views')) {
+                    return parseFloat(cleaned.replace('views', '').trim());
+                }
+                
+                return parseFloat(cleaned) || 0;
+            };
+
             const loadGameData = async () => {
                 try {
                     const response = await fetch('data.json');
-                    const data = await response.json();
-                    setGameData(data);
-                    setLoading(false);
+                    const text = await response.text();
+                    
+                    Papa.parse(text, {
+                        header: true,
+                        complete: (results) => {
+                            const groupedData = {};
+                            
+                            results.data.forEach(row => {
+                                if (row.Category && row.Name && row.Value) {
+                                    const category = row.Category;
+                                    const subcategory = row.Subcategory || category;
+                                    
+                                    if (!groupedData[category]) {
+                                        groupedData[category] = {
+                                            name: category,
+                                            subcategory: subcategory,
+                                            emoji: categoryEmojis[category] || '📊',
+                                            items: []
+                                        };
+                                    }
+                                    
+                                    groupedData[category].items.push({
+                                        name: row.Name,
+                                        value: parseValue(row.Value),
+                                        displayValue: row.Value,
+                                        rank: parseInt(row.Rank) || 0
+                                    });
+                                }
+                            });
+                            
+                            const categoriesArray = Object.values(groupedData);
+                            setCategories(categoriesArray);
+                            setLoading(false);
+                        }
+                    });
                 } catch (error) {
                     console.error('Error loading game data:', error);
                     setLoading(false);
@@ -128,15 +220,51 @@
 
             const selectCategory = (category) => {
                 setSelectedCategory(category);
-                generateNewPair(category.items);
+                setUsedItems([]);
+                generateNewPair(category.items, []);
             };
 
-            const generateNewPair = (items) => {
-                const shuffled = [...items].sort(() => Math.random() - 0.5);
-                setCurrentPair([shuffled[0], shuffled[1]]);
+            const generateNewPair = (items, used) => {
+                // Filter out used items
+                let availableItems = items.filter(item => 
+                    !used.some(usedItem => usedItem.name === item.name)
+                );
+                
+                // Reset used items if running low
+                if (availableItems.length < 10) {
+                    availableItems = items;
+                    setUsedItems([]);
+                    used = [];
+                }
+                
+                // Sort by value for smart pairing
+                const sorted = [...availableItems].sort((a, b) => a.value - b.value);
+                
+                // Pick first item randomly
+                const firstIdx = Math.floor(Math.random() * sorted.length);
+                const firstItem = sorted[firstIdx];
+                
+                // Find items within ±40% value range
+                const minValue = firstItem.value * 0.6;
+                const maxValue = firstItem.value * 1.4;
+                
+                const closeItems = sorted.filter(item => 
+                    item.name !== firstItem.name &&
+                    item.value >= minValue && 
+                    item.value <= maxValue
+                );
+                
+                // If no close items found, pick from wider range
+                const secondItem = closeItems.length > 0
+                    ? closeItems[Math.floor(Math.random() * closeItems.length)]
+                    : sorted.filter(item => item.name !== firstItem.name)[Math.floor(Math.random() * (sorted.length - 1))];
+                
+                setCurrentPair([firstItem, secondItem]);
+                setUsedItems([...used, firstItem, secondItem]);
                 setRevealed(false);
                 setResult(null);
                 setAnimation('');
+                setShowSuccess(false);
             };
 
             const handleGuess = (selected) => {
@@ -151,16 +279,19 @@
                 setAnimation(correct ? 'correct' : 'wrong');
 
                 if (correct) {
+                    setShowSuccess(true);
                     const newScore = score + 1;
                     setScore(newScore);
                     setStreak(streak + 1);
                     if (streak + 1 > bestStreak) setBestStreak(streak + 1);
                     updateGlobalBestScore(newScore);
-                    setTimeout(() => generateNewPair(selectedCategory.items), 5000);
+                    setTimeout(() => {
+                        generateNewPair(selectedCategory.items, usedItems);
+                    }, 2500);
                 } else {
                     setStreak(0);
-                    setGameOver(true);
                     updateGlobalBestScore(score);
+                    setTimeout(() => setGameOver(true), 5000);
                 }
             };
 
@@ -169,6 +300,7 @@
                 setStreak(0);
                 setGameOver(false);
                 setSelectedCategory(null);
+                setUsedItems([]);
             };
 
             const shareScore = () => {
@@ -189,7 +321,7 @@
                 );
             }
 
-            if (!gameData) {
+            if (categories.length === 0) {
                 return (
                     <div className="min-h-screen bg-gradient-to-br from-orange-400 via-white to-green-400 flex items-center justify-center">
                         <div className="text-2xl font-bold text-red-600">Error loading game data</div>
@@ -217,24 +349,19 @@
                             <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">Choose a Category</h2>
                             
                             <div className="grid md:grid-cols-3 gap-4">
-                                {gameData.categories.map((category, idx) => (
+                                {categories.map((category, idx) => (
                                     <button
                                         key={idx}
                                         onClick={() => selectCategory(category)}
                                         className="bg-white rounded-2xl shadow-xl p-6 hover:scale-105 transition-all transform hover:shadow-2xl"
                                     >
                                         <div className="text-center">
-                                            <div className={`inline-block px-3 py-1 rounded-full text-xs font-semibold mb-3 ${
-                                                category.type === 'serious' ? 'bg-blue-500 text-white' :
-                                                category.type === 'funny' ? 'bg-pink-500 text-white' :
-                                                'bg-purple-500 text-white'
-                                            }`}>
-                                                {category.type}
-                                            </div>
-                                            <h3 className="text-lg font-bold text-gray-800 leading-tight">
+                                            <div className="text-5xl mb-3">{category.emoji}</div>
+                                            <h3 className="text-lg font-bold text-gray-800 leading-tight mb-2">
                                                 {category.name}
                                             </h3>
-                                            <p className="text-gray-500 text-sm mt-2">
+                                            <p className="text-sm text-gray-500 mb-2">{category.subcategory}</p>
+                                            <p className="text-gray-500 text-sm">
                                                 {category.items.length} items
                                             </p>
                                         </div>
@@ -254,7 +381,7 @@
                             <h1 className="text-5xl font-bold text-gray-800 mb-2 drop-shadow-lg">
                                 🇮🇳 Higher or Lower
                             </h1>
-                            <p className="text-gray-600 text-lg">{selectedCategory?.name}</p>
+                            <p className="text-gray-600 text-lg">{selectedCategory?.subcategory}</p>
                         </div>
 
                         {/* Stats Bar */}
@@ -334,43 +461,62 @@
                         {/* Game Cards */}
                         {currentPair.length === 2 && (
                             <div className="grid md:grid-cols-2 gap-4 relative">
-                                {currentPair.map((item, idx) => (
-                                    <button
-                                        key={idx}
-                                        onClick={() => handleGuess(idx === 0 ? 'left' : 'right')}
-                                        disabled={revealed || gameOver}
-                                        className={`relative bg-white rounded-3xl shadow-2xl p-8 transition-all transform hover:scale-105 hover:shadow-3xl ${
-                                            revealed ? 'cursor-default' : 'cursor-pointer'
-                                        } ${
-                                            animation === 'correct' && result === 'correct'
-                                                ? 'ring-4 ring-green-500 animate-pulse'
-                                                : animation === 'wrong' && result === 'wrong'
-                                                ? 'ring-4 ring-red-500 animate-pulse'
-                                                : ''
-                                        }`}
-                                    >
-                                        {/* Image */}
-                                        <div className="w-full h-48 mb-4 rounded-xl overflow-hidden bg-gradient-to-br from-orange-200 to-green-200 flex items-center justify-center">
-                                            <div className="text-6xl">📊</div>
-                                        </div>
-
-                                        {/* Name */}
-                                        <h3 className="text-2xl font-bold text-gray-800 mb-4 text-center">
-                                            {item.name}
-                                        </h3>
-
-                                        {/* Value */}
-                                        <div className="text-center">
-                                            {revealed ? (
-                                                <div className="text-4xl font-bold text-orange-500">
-                                                    {item.value.toLocaleString()}
+                                {currentPair.map((item, idx) => {
+                                    const isWinner = revealed && ((idx === 0 && item.value >= currentPair[1].value) || (idx === 1 && item.value >= currentPair[0].value));
+                                    const isLoser = revealed && !isWinner;
+                                    
+                                    return (
+                                        <button
+                                            key={idx}
+                                            onClick={() => handleGuess(idx === 0 ? 'left' : 'right')}
+                                            disabled={revealed || gameOver}
+                                            className={`relative bg-white rounded-3xl shadow-2xl p-8 transition-all transform hover:scale-105 hover:shadow-3xl ${
+                                                revealed ? 'cursor-default' : 'cursor-pointer'
+                                            } ${
+                                                isWinner ? 'ring-8 ring-green-500 bg-green-50' : ''
+                                            } ${
+                                                isLoser ? 'ring-8 ring-red-500 bg-red-50 animate-pulse' : ''
+                                            }`}
+                                        >
+                                            {/* Result Badge */}
+                                            {revealed && (
+                                                <div className={`absolute top-4 left-4 px-4 py-2 rounded-full font-bold text-white text-lg ${
+                                                    isWinner ? 'bg-green-500 animate-bounce' : 'bg-red-500'
+                                                }`}>
+                                                    {isWinner ? '✓ Higher!' : '✗ Lower'}
                                                 </div>
-                                            ) : (
-                                                <div className="text-4xl font-bold text-gray-300">???</div>
                                             )}
-                                        </div>
-                                    </button>
-                                ))}
+
+                                            {/* Success Animation */}
+                                            {showSuccess && isWinner && (
+                                                <div className="absolute top-4 right-4 text-4xl font-bold text-green-500 float-up">
+                                                    +1
+                                                </div>
+                                            )}
+
+                                            {/* Emoji Icon */}
+                                            <div className="w-full h-48 mb-4 rounded-xl overflow-hidden bg-gradient-to-br from-orange-200 to-green-200 flex items-center justify-center">
+                                                <div className="text-8xl">{selectedCategory.emoji}</div>
+                                            </div>
+
+                                            {/* Name */}
+                                            <h3 className="text-2xl font-bold text-gray-800 mb-4 text-center min-h-[60px] flex items-center justify-center">
+                                                {item.name}
+                                            </h3>
+
+                                            {/* Value */}
+                                            <div className="text-center">
+                                                {revealed ? (
+                                                    <div className="text-3xl font-bold text-orange-500">
+                                                        {item.displayValue}
+                                                    </div>
+                                                ) : (
+                                                    <div className="text-4xl font-bold text-gray-300">???</div>
+                                                )}
+                                            </div>
+                                        </button>
+                                    );
+                                })}
                                 
                                 {/* VS Badge */}
                                 <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-orange-500 to-green-500 text-white font-bold text-2xl px-6 py-3 rounded-full shadow-2xl z-10 hidden md:block">
