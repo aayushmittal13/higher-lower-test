@@ -253,16 +253,24 @@
                             };
                         }
                         
-                        groupedData[key].items.push({
-                            name: name,
-                            value: parseValue(value),
-                            displayValue: value,
-                            imageURL: imageURL || '',
-                            rank: parseInt(rank) || 0
-                        });
+                        const parsedValue = parseValue(value);
+                        
+                        // Only add if we have a valid value
+                        if (parsedValue > 0) {
+                            groupedData[key].items.push({
+                                name: name,
+                                value: parsedValue,
+                                displayValue: value,
+                                imageURL: imageURL || '',
+                                rank: parseInt(rank) || 0
+                            });
+                        }
                     }
                     
-                    const categoriesArray = Object.values(groupedData);
+                    const categoriesArray = Object.values(groupedData)
+                        .filter(cat => cat.items.length >= 10); // Only show categories with at least 10 items
+                    
+                    console.log('Loaded categories:', categoriesArray.map(c => `${c.subcategory} (${c.items.length} items)`));
                     setCategories(categoriesArray);
                     setLoading(false);
                 } catch (error) {
