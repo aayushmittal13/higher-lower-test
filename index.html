@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#fb923c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Higher or Lower - India Edition</title>
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
@@ -10,6 +13,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
+        /* Prevent zoom on double-tap for iOS */
+        * {
+            touch-action: manipulation;
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        body {
+            overscroll-behavior-y: none;
+            -webkit-font-smoothing: antialiased;
+        }
+
         @keyframes pulse {
             0%, 100% { opacity: 1; }
             50% { opacity: .5; }
@@ -30,6 +49,33 @@
         }
         .float-up {
             animation: float-up 1s ease-out;
+        }
+        
+        /* Mobile-optimized card grid */
+        @media (max-width: 768px) {
+            .game-grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .vs-badge-mobile {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0.5rem 0;
+            }
+        }
+        
+        /* Better touch targets */
+        button {
+            min-height: 44px;
+            min-width: 44px;
+        }
+        
+        /* Image loading optimization */
+        img {
+            image-rendering: -webkit-optimize-contrast;
         }
     </style>
 </head>
@@ -173,10 +219,6 @@
             };
 
             const parseCSVLine = (line) => {
-                // Split by comma but we know the structure:
-                // Category,Subcategory,Rank,Name,Value,ImageURL
-                // Value might contain commas, so we need special handling
-                
                 const parts = [];
                 let current = '';
                 let inQuotes = false;
@@ -195,21 +237,18 @@
                 }
                 parts.push(current.trim());
                 
-                // If we have more than 6 parts, the Value column had commas
-                // Merge parts[4] onwards until we have exactly 6 columns
                 if (parts.length > 6) {
                     const fixedParts = [
-                        parts[0], // Category
-                        parts[1], // Subcategory
-                        parts[2], // Rank
-                        parts[3], // Name
-                        parts.slice(4, parts.length - 1).join(','), // Value (merge middle parts)
-                        parts[parts.length - 1] // ImageURL (last part)
+                        parts[0],
+                        parts[1],
+                        parts[2],
+                        parts[3],
+                        parts.slice(4, parts.length - 1).join(','),
+                        parts[parts.length - 1]
                     ];
                     return fixedParts;
                 }
                 
-                // If we have 5 columns, ImageURL is missing
                 if (parts.length === 5) {
                     parts.push('');
                 }
@@ -222,7 +261,6 @@
                     const response = await fetch('data.json');
                     const text = await response.text();
                     
-                    // Parse CSV manually
                     const lines = text.split('\n').filter(line => line.trim());
                     const headers = lines[0].split(',');
                     
@@ -241,7 +279,6 @@
                         
                         if (!category || !name || !value) continue;
                         
-                        // Use subcategory as the unique key
                         const key = subcategory || category;
                         
                         if (!groupedData[key]) {
@@ -255,7 +292,6 @@
                         
                         const parsedValue = parseValue(value);
                         
-                        // Only add if we have a valid value
                         if (parsedValue > 0) {
                             groupedData[key].items.push({
                                 name: name,
@@ -268,7 +304,7 @@
                     }
                     
                     const categoriesArray = Object.values(groupedData)
-                        .filter(cat => cat.items.length >= 10); // Only show categories with at least 10 items
+                        .filter(cat => cat.items.length >= 10);
                     
                     console.log('Loaded categories:', categoriesArray.map(c => `${c.subcategory} (${c.items.length} items)`));
                     setCategories(categoriesArray);
@@ -309,60 +345,48 @@
             };
 
             const generateNewPair = (items, used) => {
-                // Filter out used items
                 let availableItems = items.filter(item => 
                     !used.some(usedItem => usedItem.name === item.name)
                 );
                 
-                // Reset used items if running low
                 if (availableItems.length < 10) {
                     availableItems = items;
                     setUsedItems([]);
                     used = [];
                 }
                 
-                // Sort by value for smart pairing
                 const sorted = [...availableItems].sort((a, b) => a.value - b.value);
                 
-                // Pick first item randomly
                 const firstIdx = Math.floor(Math.random() * sorted.length);
                 const firstItem = sorted[firstIdx];
                 
-                // Progressive difficulty based on score
                 let minPercent, maxPercent;
                 if (score < 5) {
-                    // Rounds 1-5: VERY EASY (massive difference)
-                    minPercent = 0.3; // Can be 70% lower
-                    maxPercent = 3.0;  // Can be 200% higher (3x)
+                    minPercent = 0.3;
+                    maxPercent = 3.0;
                 } else if (score < 10) {
-                    // Rounds 6-10: EASY
-                    minPercent = 0.4;  // 60% lower
-                    maxPercent = 2.5;  // 150% higher
+                    minPercent = 0.4;
+                    maxPercent = 2.5;
                 } else if (score < 15) {
-                    // Rounds 11-15: MEDIUM
-                    minPercent = 0.5;  // 50% lower
-                    maxPercent = 2.0;  // 100% higher
+                    minPercent = 0.5;
+                    maxPercent = 2.0;
                 } else if (score < 20) {
-                    // Rounds 16-20: HARD
-                    minPercent = 0.6;  // 40% lower
-                    maxPercent = 1.6;  // 60% higher
+                    minPercent = 0.6;
+                    maxPercent = 1.6;
                 } else {
-                    // Rounds 21+: EXPERT
-                    minPercent = 0.7;  // 30% lower
-                    maxPercent = 1.4;  // 40% higher
+                    minPercent = 0.7;
+                    maxPercent = 1.4;
                 }
                 
                 const minValue = firstItem.value * minPercent;
                 const maxValue = firstItem.value * maxPercent;
                 
-                // Find items within difficulty range
                 const closeItems = sorted.filter(item => 
                     item.name !== firstItem.name &&
                     item.value >= minValue && 
                     item.value <= maxValue
                 );
                 
-                // If no items in range, widen search
                 const secondItem = closeItems.length > 0
                     ? closeItems[Math.floor(Math.random() * closeItems.length)]
                     : sorted.filter(item => item.name !== firstItem.name)[Math.floor(Math.random() * (sorted.length - 1))];
@@ -425,16 +449,16 @@
 
             if (loading) {
                 return (
-                    <div className="min-h-screen bg-gradient-to-br from-orange-400 via-white to-green-400 flex items-center justify-center">
-                        <div className="text-2xl font-bold text-gray-800">Loading...</div>
+                    <div className="min-h-screen bg-gradient-to-br from-orange-400 via-white to-green-400 flex items-center justify-center p-4">
+                        <div className="text-xl md:text-2xl font-bold text-gray-800">Loading...</div>
                     </div>
                 );
             }
 
             if (categories.length === 0) {
                 return (
-                    <div className="min-h-screen bg-gradient-to-br from-orange-400 via-white to-green-400 flex items-center justify-center">
-                        <div className="text-2xl font-bold text-red-600">Error loading game data</div>
+                    <div className="min-h-screen bg-gradient-to-br from-orange-400 via-white to-green-400 flex items-center justify-center p-4">
+                        <div className="text-xl md:text-2xl font-bold text-red-600">Error loading game data</div>
                     </div>
                 );
             }
@@ -442,36 +466,36 @@
             // Category Selection Screen
             if (!selectedCategory && !gameOver) {
                 return (
-                    <div className="min-h-screen bg-gradient-to-br from-orange-400 via-white to-green-400 p-4">
+                    <div className="min-h-screen bg-gradient-to-br from-orange-400 via-white to-green-400 p-3 md:p-4">
                         <div className="max-w-6xl mx-auto">
-                            <div className="text-center mb-8">
-                                <h1 className="text-6xl font-bold text-gray-800 mb-2 drop-shadow-lg">
+                            <div className="text-center mb-6 md:mb-8">
+                                <h1 className="text-3xl md:text-6xl font-bold text-gray-800 mb-2 drop-shadow-lg">
                                     🇮🇳 Higher or Lower
                                 </h1>
-                                <p className="text-gray-600 text-xl mb-4">India Edition</p>
+                                <p className="text-gray-600 text-base md:text-xl mb-3 md:mb-4">India Edition</p>
                                 {globalBestScore > 0 && (
-                                    <div className="inline-block bg-yellow-500 text-white px-6 py-2 rounded-full font-bold">
+                                    <div className="inline-block bg-yellow-500 text-white px-4 md:px-6 py-1.5 md:py-2 rounded-full font-bold text-sm md:text-base">
                                         🏆 Global Best: {globalBestScore}
                                     </div>
                                 )}
                             </div>
 
-                            <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">Choose a Category</h2>
+                            <h2 className="text-xl md:text-3xl font-bold text-gray-800 mb-4 md:mb-6 text-center">Choose a Category</h2>
                             
-                            <div className="grid md:grid-cols-3 gap-4">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
                                 {categories.map((category, idx) => (
                                     <button
                                         key={idx}
                                         onClick={() => selectCategory(category)}
-                                        className="bg-white rounded-2xl shadow-xl p-6 hover:scale-105 transition-all transform hover:shadow-2xl"
+                                        className="bg-white rounded-xl md:rounded-2xl shadow-xl p-4 md:p-6 hover:scale-105 transition-all transform hover:shadow-2xl active:scale-95"
                                     >
                                         <div className="text-center">
-                                            <div className="text-5xl mb-3">{category.emoji}</div>
-                                            <h3 className="text-lg font-bold text-gray-800 leading-tight mb-2">
+                                            <div className="text-4xl md:text-5xl mb-2 md:mb-3">{category.emoji}</div>
+                                            <h3 className="text-base md:text-lg font-bold text-gray-800 leading-tight mb-1 md:mb-2">
                                                 {category.name}
                                             </h3>
-                                            <p className="text-sm text-gray-500 mb-2">{category.subcategory}</p>
-                                            <p className="text-gray-500 text-sm">
+                                            <p className="text-xs md:text-sm text-gray-500 mb-1 md:mb-2">{category.subcategory}</p>
+                                            <p className="text-gray-500 text-xs md:text-sm">
                                                 {category.items.length} items
                                             </p>
                                         </div>
@@ -484,70 +508,70 @@
             }
 
             return (
-                <div className="min-h-screen bg-gradient-to-br from-orange-400 via-white to-green-400 p-4">
+                <div className="min-h-screen bg-gradient-to-br from-orange-400 via-white to-green-400 p-3 md:p-4">
                     <div className="max-w-6xl mx-auto">
                         {/* Header */}
-                        <div className="text-center mb-6">
-                            <h1 className="text-5xl font-bold text-gray-800 mb-2 drop-shadow-lg">
+                        <div className="text-center mb-4 md:mb-6">
+                            <h1 className="text-3xl md:text-5xl font-bold text-gray-800 mb-1 md:mb-2 drop-shadow-lg">
                                 🇮🇳 Higher or Lower
                             </h1>
-                            <p className="text-gray-600 text-lg">{selectedCategory?.subcategory}</p>
+                            <p className="text-gray-600 text-sm md:text-lg">{selectedCategory?.subcategory}</p>
                         </div>
 
-                        {/* Stats Bar */}
-                        <div className="bg-white/80 backdrop-blur rounded-2xl shadow-xl p-4 mb-6 flex justify-around items-center">
-                            <div className="flex items-center gap-2">
+                        {/* Stats Bar - Mobile Optimized */}
+                        <div className="bg-white/80 backdrop-blur rounded-xl md:rounded-2xl shadow-xl p-3 md:p-4 mb-4 md:mb-6 flex justify-around items-center">
+                            <div className="flex flex-col items-center gap-1">
                                 <div className="text-yellow-500"><Trophy /></div>
-                                <div>
-                                    <div className="text-2xl font-bold text-gray-800">{score}</div>
+                                <div className="text-center">
+                                    <div className="text-xl md:text-2xl font-bold text-gray-800">{score}</div>
                                     <div className="text-xs text-gray-600">Score</div>
                                 </div>
                             </div>
-                            <div className="flex items-center gap-2">
+                            <div className="flex flex-col items-center gap-1">
                                 <div className="text-orange-500"><Zap /></div>
-                                <div>
-                                    <div className="text-2xl font-bold text-gray-800">{streak}</div>
+                                <div className="text-center">
+                                    <div className="text-xl md:text-2xl font-bold text-gray-800">{streak}</div>
                                     <div className="text-xs text-gray-600">Streak</div>
                                 </div>
                             </div>
-                            <div className="flex items-center gap-2">
-                                <div className="text-green-500">🌟</div>
-                                <div>
-                                    <div className="text-2xl font-bold text-gray-800">{globalBestScore}</div>
-                                    <div className="text-xs text-gray-600">Global Best</div>
+                            <div className="flex flex-col items-center gap-1">
+                                <div className="text-green-500 text-2xl">🌟</div>
+                                <div className="text-center">
+                                    <div className="text-xl md:text-2xl font-bold text-gray-800">{globalBestScore}</div>
+                                    <div className="text-xs text-gray-600">Global</div>
                                 </div>
                             </div>
                         </div>
 
-                        {/* Game Over Screen */}
+                        {/* Game Over Screen - Mobile Optimized */}
                         {gameOver && (
-                            <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
-                                <div className="bg-white rounded-3xl shadow-2xl p-8 max-w-md w-full mx-4 text-center">
-                                    <div className="text-6xl mb-4">🎮</div>
-                                    <h2 className="text-3xl font-bold text-gray-800 mb-4">Game Over!</h2>
-                                    <div className="mb-6">
-                                        <div className="text-5xl font-bold text-orange-500 mb-2">{score}</div>
+                            <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+                                <div className="bg-white rounded-2xl md:rounded-3xl shadow-2xl p-6 md:p-8 max-w-md w-full text-center">
+                                    <div className="text-5xl md:text-6xl mb-3 md:mb-4">🎮</div>
+                                    <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3 md:mb-4">Game Over!</h2>
+                                    <div className="mb-4 md:mb-6">
+                                        <div className="text-4xl md:text-5xl font-bold text-orange-500 mb-2">{score}</div>
                                         <div className="text-gray-600">Final Score</div>
-                                        <div className="mt-4 text-sm text-gray-500">
+                                        <div className="mt-3 md:mt-4 text-sm text-gray-500">
                                             Best Streak: {bestStreak} 🔥
                                         </div>
                                         {score === globalBestScore && score > 0 && (
-                                            <div className="mt-2 text-green-600 font-bold">
+                                            <div className="mt-2 text-green-600 font-bold text-sm md:text-base">
                                                 🎉 New Global Record!
                                             </div>
                                         )}
                                     </div>
-                                    <div className="flex gap-3">
+                                    <div className="flex flex-col sm:flex-row gap-3">
                                         <button
                                             onClick={resetGame}
-                                            className="flex-1 bg-gradient-to-r from-orange-500 to-green-500 text-white py-3 px-6 rounded-xl font-semibold hover:shadow-lg transition-all flex items-center justify-center gap-2"
+                                            className="flex-1 bg-gradient-to-r from-orange-500 to-green-500 text-white py-3 px-4 md:px-6 rounded-xl font-semibold hover:shadow-lg transition-all flex items-center justify-center gap-2 active:scale-95"
                                         >
                                             <RotateCcw />
                                             Play Again
                                         </button>
                                         <button
                                             onClick={shareScore}
-                                            className="flex-1 bg-blue-500 text-white py-3 px-6 rounded-xl font-semibold hover:shadow-lg transition-all flex items-center justify-center gap-2"
+                                            className="flex-1 bg-blue-500 text-white py-3 px-4 md:px-6 rounded-xl font-semibold hover:shadow-lg transition-all flex items-center justify-center gap-2 active:scale-95"
                                         >
                                             <Share2 />
                                             Share
@@ -557,117 +581,127 @@
                             </div>
                         )}
 
-                        {/* Back Button */}
+                        {/* Back Button - Mobile Optimized */}
                         {!gameOver && (
                             <button
                                 onClick={() => setSelectedCategory(null)}
-                                className="mb-4 bg-white/80 backdrop-blur px-4 py-2 rounded-xl font-semibold hover:shadow-lg transition-all flex items-center gap-2"
+                                className="mb-3 md:mb-4 bg-white/80 backdrop-blur px-3 md:px-4 py-2 rounded-lg md:rounded-xl font-semibold hover:shadow-lg transition-all flex items-center gap-2 text-sm md:text-base active:scale-95"
                             >
                                 <ArrowLeft />
                                 Change Category
                             </button>
                         )}
 
-                        {/* Game Cards */}
+                        {/* Game Cards - Mobile Optimized Vertical Layout */}
                         {currentPair.length === 2 && (
-                            <div className="grid md:grid-cols-2 gap-4 relative">
+                            <div className="game-grid relative">
                                 {currentPair.map((item, idx) => {
                                     const side = idx === 0 ? 'left' : 'right';
                                     const wasClicked = clickedSide === side;
                                     const isCorrect = result === 'correct';
                                     
                                     return (
-                                        <button
-                                            key={idx}
-                                            onClick={() => handleGuess(side)}
-                                            disabled={revealed || gameOver}
-                                            className={`relative bg-white rounded-3xl shadow-2xl p-8 transition-all transform hover:scale-105 hover:shadow-3xl ${
-                                                revealed ? 'cursor-default' : 'cursor-pointer'
-                                            } ${
-                                                wasClicked && isCorrect ? 'ring-8 ring-green-500 bg-green-50' : ''
-                                            } ${
-                                                wasClicked && !isCorrect ? 'ring-8 ring-red-500 bg-red-50 animate-pulse' : ''
-                                            }`}
-                                        >
-                                            {/* Result Badge - ONLY on clicked card */}
-                                            {revealed && wasClicked && (
-                                                <div className={`absolute -top-6 left-1/2 transform -translate-x-1/2 px-8 py-4 rounded-2xl font-bold text-white text-2xl shadow-2xl z-20 ${
-                                                    isCorrect ? 'bg-green-500 animate-bounce' : 'bg-red-500'
-                                                }`}>
-                                                    {isCorrect ? '✓ CORRECT!' : '✗ WRONG!'}
-                                                </div>
-                                            )}
-
-                                            {/* Success Animation */}
-                                            {showSuccess && wasClicked && isCorrect && (
-                                                <div className="absolute top-4 right-4 text-5xl font-bold text-green-500 float-up">
-                                                    +1
-                                                </div>
-                                            )}
-
-                                            {/* Image */}
-                                            <div className="w-full h-48 mb-4 rounded-xl overflow-hidden bg-gradient-to-br from-orange-200 to-green-200 flex items-center justify-center">
-                                                {item.imageURL ? (
-                                                    <img 
-                                                        src={item.imageURL} 
-                                                        alt={item.name}
-                                                        className="w-full h-full object-contain"
-                                                        style={{objectPosition: 'center'}}
-                                                        onError={(e) => {
-                                                            // Try category fallback image first
-                                                            const fallbackImg = categoryFallbacks[selectedCategory.name];
-                                                            if (fallbackImg && e.target.src !== fallbackImg) {
-                                                                e.target.src = fallbackImg;
-                                                            } else {
-                                                                // If fallback also fails, show emoji
-                                                                e.target.style.display = 'none';
-                                                                e.target.parentElement.innerHTML = '<div class="text-8xl">' + selectedCategory.emoji + '</div>';
-                                                            }
-                                                        }}
-                                                    />
-                                                ) : (
-                                                    <img 
-                                                        src={categoryFallbacks[selectedCategory.name] || 'https://via.placeholder.com/400x300?text=' + encodeURIComponent(item.name)}
-                                                        alt={item.name}
-                                                        className="w-full h-full object-contain"
-                                                        onError={(e) => {
-                                                            e.target.style.display = 'none';
-                                                            e.target.parentElement.innerHTML = '<div class="text-8xl">' + selectedCategory.emoji + '</div>';
-                                                        }}
-                                                    />
-                                                )}
-                                            </div>
-
-                                            {/* Name */}
-                                            <h3 className="text-2xl font-bold text-gray-800 mb-4 text-center min-h-[60px] flex items-center justify-center">
-                                                {item.name}
-                                            </h3>
-
-                                            {/* Value */}
-                                            <div className="text-center">
-                                                {revealed ? (
-                                                    <div className="text-3xl font-bold text-orange-500">
-                                                        {item.displayValue}
+                                        <div key={idx} className="relative">
+                                            <button
+                                                onClick={() => handleGuess(side)}
+                                                disabled={revealed || gameOver}
+                                                className={`w-full relative bg-white rounded-2xl md:rounded-3xl shadow-2xl p-4 md:p-8 transition-all transform hover:scale-105 hover:shadow-3xl ${
+                                                    revealed ? 'cursor-default' : 'cursor-pointer active:scale-95'
+                                                } ${
+                                                    wasClicked && isCorrect ? 'ring-4 md:ring-8 ring-green-500 bg-green-50' : ''
+                                                } ${
+                                                    wasClicked && !isCorrect ? 'ring-4 md:ring-8 ring-red-500 bg-red-50 animate-pulse' : ''
+                                                }`}
+                                            >
+                                                {/* Result Badge - ONLY on clicked card - Mobile Optimized */}
+                                                {revealed && wasClicked && (
+                                                    <div className={`absolute -top-4 md:-top-6 left-1/2 transform -translate-x-1/2 px-4 md:px-8 py-2 md:py-4 rounded-xl md:rounded-2xl font-bold text-white text-lg md:text-2xl shadow-2xl z-20 ${
+                                                        isCorrect ? 'bg-green-500 animate-bounce' : 'bg-red-500'
+                                                    }`}>
+                                                        {isCorrect ? '✓ CORRECT!' : '✗ WRONG!'}
                                                     </div>
-                                                ) : (
-                                                    <div className="text-4xl font-bold text-gray-300">???</div>
                                                 )}
-                                            </div>
-                                        </button>
+
+                                                {/* Success Animation - Mobile Optimized */}
+                                                {showSuccess && wasClicked && isCorrect && (
+                                                    <div className="absolute top-2 md:top-4 right-2 md:right-4 text-3xl md:text-5xl font-bold text-green-500 float-up">
+                                                        +1
+                                                    </div>
+                                                )}
+
+                                                {/* Image - Mobile Optimized Height */}
+                                                <div className="w-full h-32 md:h-48 mb-3 md:mb-4 rounded-xl overflow-hidden bg-gradient-to-br from-orange-200 to-green-200 flex items-center justify-center">
+                                                    {item.imageURL ? (
+                                                        <img 
+                                                            src={item.imageURL} 
+                                                            alt={item.name}
+                                                            className="w-full h-full object-contain"
+                                                            loading="lazy"
+                                                            style={{objectPosition: 'center'}}
+                                                            onError={(e) => {
+                                                                const fallbackImg = categoryFallbacks[selectedCategory.name];
+                                                                if (fallbackImg && e.target.src !== fallbackImg) {
+                                                                    e.target.src = fallbackImg;
+                                                                } else {
+                                                                    e.target.style.display = 'none';
+                                                                    e.target.parentElement.innerHTML = '<div class="text-5xl md:text-8xl">' + selectedCategory.emoji + '</div>';
+                                                                }
+                                                            }}
+                                                        />
+                                                    ) : (
+                                                        <img 
+                                                            src={categoryFallbacks[selectedCategory.name] || 'https://via.placeholder.com/400x300?text=' + encodeURIComponent(item.name)}
+                                                            alt={item.name}
+                                                            className="w-full h-full object-contain"
+                                                            loading="lazy"
+                                                            onError={(e) => {
+                                                                e.target.style.display = 'none';
+                                                                e.target.parentElement.innerHTML = '<div class="text-5xl md:text-8xl">' + selectedCategory.emoji + '</div>';
+                                                            }}
+                                                        />
+                                                    )}
+                                                </div>
+
+                                                {/* Name - Mobile Optimized */}
+                                                <h3 className="text-lg md:text-2xl font-bold text-gray-800 mb-3 md:mb-4 text-center min-h-[40px] md:min-h-[60px] flex items-center justify-center px-2">
+                                                    {item.name}
+                                                </h3>
+
+                                                {/* Value - Mobile Optimized */}
+                                                <div className="text-center">
+                                                    {revealed ? (
+                                                        <div className="text-2xl md:text-3xl font-bold text-orange-500">
+                                                            {item.displayValue}
+                                                        </div>
+                                                    ) : (
+                                                        <div className="text-3xl md:text-4xl font-bold text-gray-300">???</div>
+                                                    )}
+                                                </div>
+                                            </button>
+                                            
+                                            {/* VS Badge for Mobile - Between cards */}
+                                            {idx === 0 && (
+                                                <div className="vs-badge-mobile md:hidden">
+                                                    <div className="bg-gradient-to-r from-orange-500 to-green-500 text-white font-bold text-xl px-5 py-2 rounded-full shadow-xl">
+                                                        VS
+                                                    </div>
+                                                </div>
+                                            )}
+                                        </div>
                                     );
                                 })}
                                 
-                                {/* VS Badge */}
-                                <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-orange-500 to-green-500 text-white font-bold text-2xl px-6 py-3 rounded-full shadow-2xl z-10 hidden md:block">
+                                {/* VS Badge - Desktop Only */}
+                                <div className="hidden md:block absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-orange-500 to-green-500 text-white font-bold text-2xl px-6 py-3 rounded-full shadow-2xl z-10">
                                     VS
                                 </div>
                             </div>
                         )}
 
-                        {/* Instructions */}
+                        {/* Instructions - Mobile Optimized */}
                         {score === 0 && !revealed && (
-                            <div className="mt-6 text-center text-gray-600 animate-bounce">
-                                👆 Click the card with the HIGHER value!
+                            <div className="mt-4 md:mt-6 text-center text-gray-600 animate-bounce text-sm md:text-base px-4">
+                                👆 Tap the card with the HIGHER value!
                             </div>
                         )}
                     </div>
